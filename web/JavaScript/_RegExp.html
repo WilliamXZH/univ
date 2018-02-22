@@ -1,0 +1,30 @@
+<html>
+	<body>
+		<p id="demo"></p>
+		<script>/*
+			var patt1=new RegExp("e");
+			document.write(patt1.test("The best things in life are free"));
+			document.write(patt1.exec("The best things in life are free"))
+			var patt2=new RegExp("e","g");
+			do{
+				result=patt2.exec("The best things in life are free");
+				document.write(result);
+			}while(result!=null)
+			document.write(patt1.test("The best things in life are free"));
+			patt1.compile("d");
+			document.write(patt1.test("The best things in life are free"));
+
+			*/
+			var w=window.innerWidth;
+			//w=document.documentElement.clientWidth;
+			w=document.body.clientWidth;
+
+			var h=window.innerHeight;
+			h=document.documentElement.clientHeight;
+			h=document.body.clientHeight;
+
+			x=document.getElementById("demo");
+			x.innerHTML="浏览器的内部窗口宽度："+w+",高度"+h+"。";
+		</script>
+	</body>
+</html>

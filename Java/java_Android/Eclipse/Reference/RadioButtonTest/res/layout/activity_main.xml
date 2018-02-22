@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:orientation = "vertical" >
+    <TextView
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text = "请选择您使用的网络" />
+    <RadioGroup android:id = "@+id/choosenet"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:orientation = "vertical" >
+        <RadioButton android:id = "@+id/chinamobile"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:checked = "true"
+            android:text = "中国移动" />
+        <RadioButton android:id = "@+id/chinaunion"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "中国联通" />
+        <RadioButton android:id = "@+id/chinatelcom"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "中国电信" />
+    </RadioGroup>
+    <Button android:id = "@+id/submit"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:onClick = "choosed"
+        android:text = "确定" />
+</LinearLayout>

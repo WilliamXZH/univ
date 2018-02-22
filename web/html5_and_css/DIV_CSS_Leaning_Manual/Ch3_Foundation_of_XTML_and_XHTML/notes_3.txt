@@ -1,0 +1,59 @@
+第3章 XTML和XHTML
+
+本章导读
+FrongPage,DreamWaver
+
+技术要点
+*掌握HTML文档的基本结构
+*编辑XTML网页正文
+*在HTML网页中插入图片
+*在XTML网页中使用列表
+*在HTML网页中使用表格
+*建立超链接
+*什么是XHTML
+*xhtml文档基本结构
+*XHTML和XTML的比较
+
+3.1 HTML文档的基本结构
+
+3.1.1 HTML文件结构
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+
+3.1.2 缩写HTML文件注意事项
+
+3.1.3 HTML文档中的注释
+
+
+3.2 编辑HTML网页正文
+
+3.2.1 输入网页标题
+
+3.2.2 划分正文段落
+
+3.2.3 设置文本格式
+
+属性名称  说明 取值
+face      字体 默认宋体
+color     颜色 十六进制或英文单词
+size      字号 1~7，默认3
+
+文本格式标签
+<b></b>   粗体      使文本成为粗体
+<i></i>   斜体      使文本成为斜体
+<u></u>   下划线    给文本加上下划线
+<sup></sup>上标体   
+<sub></sub>
+<s><s>    删除线
+
+
+<b><strong>
+<i><em><city>
+
+
+3.3 在HTML网页中插入图片
+
+3.3.1 插入网页图片
+
+

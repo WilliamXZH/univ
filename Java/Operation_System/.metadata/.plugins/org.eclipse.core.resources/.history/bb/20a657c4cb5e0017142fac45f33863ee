@@ -1,0 +1,11 @@
+package pers.william.po;
+
+public class Response implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

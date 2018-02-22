@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="900.0" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IndexController">
+   <children>
+      <TabPane prefHeight="900.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab closable="false" text="医疗基本信息维护">
+               <content>
+                  <GridPane prefHeight="807.0" prefWidth="900.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="240.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="677.0" minWidth="10.0" prefWidth="660.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ListView fx:id="choiceList" prefHeight="940.0" prefWidth="280.0" />
+                        <AnchorPane fx:id="drugPanel" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label fx:id="titleLabel" layoutX="14.0" layoutY="14.0" prefHeight="45.0" text="药品信息维护" />
+                               <TableView  fx:id="drugTable" editable="true" onMouseClicked="#drugTableClicked" layoutY="155.0" prefHeight="686.0" prefWidth="658.0">
+                                 <columns>
+                                    <TableColumn fx:id="codeCol" prefWidth="150.0" text="编号" />
+                                    <TableColumn fx:id="nameCol" prefWidth="150.0" text="名称" />
+                                    <TableColumn fx:id="englishCol" minWidth="0.0" prefWidth="138.0" text="英文名" />
+                                    <TableColumn fx:id="signCol" prefWidth="215.0" text="处方药" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="addButton" layoutX="14.0" layoutY="96.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="30.0" prefWidth="50.0" text="添加" />
+                              <Button fx:id="modifyButton" layoutX="114.0" layoutY="96.0" mnemonicParsing="false" onAction="#modifyClicked" prefHeight="30.0" prefWidth="50.0" text="修改" />
+                              <Button fx:id="delButton" layoutX="214.0" layoutY="96.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="50.0" text="删除" />
+                              <TextField fx:id="searchText" layoutX="314.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Button fx:id="searchButton" layoutX="524.0" layoutY="96.0" mnemonicParsing="false" onAction="#searchClicked" prefHeight="30.0" prefWidth="50.0" text="检索" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="医疗待遇审批">
+            <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="240.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="677.0" minWidth="10.0" prefWidth="660.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ListView prefHeight="940.0" prefWidth="280.0" />
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="医保中心报销">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="-5.0" layoutY="198.0" prefHeight="536.0" prefWidth="900.0">
+                          <columns>
+                            <TableColumn editable="false" maxWidth="162.0" minWidth="162.0" prefWidth="162.0" sortType="DESCENDING" sortable="false" text="编号" />
+                            <TableColumn editable="false" minWidth="4.0" prefWidth="145.0" sortType="DESCENDING" sortable="false" text="姓名" />
+                              <TableColumn editable="false" prefWidth="196.0" sortType="DESCENDING" sortable="false" text="报销金额" />
+                              <TableColumn editable="false" minWidth="4.0" prefWidth="190.0" sortType="DESCENDING" sortable="false" text="自费金额" />
+                              <TableColumn editable="false" minWidth="4.0" prefWidth="206.0" sortType="DESCENDING" sortable="false" text="状态" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="newButton" layoutX="600.0" layoutY="774.0" mnemonicParsing="false" text="新增" />
+                        <Button layoutX="759.0" layoutY="774.0" mnemonicParsing="false" text="删除" />
+                        <Button layoutX="799.0" layoutY="103.0" mnemonicParsing="false" text="查找" />
+                        <TextField layoutX="461.0" layoutY="103.0" />
+                        <Label layoutX="367.0" layoutY="111.0" text="关键字:" />
+                        <Label layoutX="33.0" layoutY="24.0" text="医保中心报销" />
+                        <Label layoutX="33.0" layoutY="157.0" text="报销记录：" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+            <Tab closable="false" text="综合查询" />
+            <Tab closable="false" text="公共业务">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="personPanel" prefHeight="807.0" prefWidth="900.0">
+                           <children>
+                              <Label fx:id="titleLabel1" layoutX="14.0" layoutY="14.0" prefHeight="45.0" text="个人基本信息维护" />
+                              <TableView fx:id="personTable" editable="true" layoutY="155.0" prefHeight="656.0" prefWidth="900.0">
+                                 <columns>
+                                    <TableColumn fx:id="personCol1" prefWidth="180.0" resizable="false" text="ID" />
+                                    <TableColumn fx:id="personCol2" minWidth="0.0" prefWidth="180.0" resizable="false" text="证件类别" />
+                                    <TableColumn fx:id="personCol3" prefWidth="180.0" resizable="false" text="姓名" />
+                                    <TableColumn fx:id="personCol4" prefWidth="80.0" resizable="false" text="性别" />
+                                    <TableColumn fx:id="personCol5" prefWidth="280.0" resizable="false" text="出生日期" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="addButton1" layoutX="129.0" layoutY="96.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="30.0" prefWidth="50.0" text="添加" />
+                              <Button fx:id="modifyButton1" layoutX="229.0" layoutY="96.0" mnemonicParsing="false" onAction="#modifyClicked" prefHeight="30.0" prefWidth="50.0" text="修改" />
+                              <Button fx:id="delButton1" layoutX="329.0" layoutY="96.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="50.0" text="删除" />
+                              <TextField fx:id="searchText1" layoutX="429.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0" />
+                              <Button fx:id="searchButton1" layoutX="639.0" layoutY="96.0" mnemonicParsing="false" onAction="#searchClicked" prefHeight="30.0" prefWidth="50.0" text="检索" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+               </content></Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

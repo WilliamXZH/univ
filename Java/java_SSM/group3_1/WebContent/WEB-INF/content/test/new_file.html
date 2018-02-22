@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>判断单选框是否选中</title>  
+</head>  
+<body>  
+<input type="radio" value="选我1" name="gander">  
+<input type="radio" value="选我2" name="gander">  
+<script>  
+    window.onload=function(){  
+        var ganders=document.getElementsByName("gander"),length=ganders.length,i=0;  
+            for(;i<length;i++){  
+                   ganders[i].onclick=function(){  
+                       this.checked&&alert(this.value); //如果当前点击的单选框被选中，则输出当前单选框的值  
+                   };  
+            }  
+    }  
+</script>  
+</body>  
+</html> 

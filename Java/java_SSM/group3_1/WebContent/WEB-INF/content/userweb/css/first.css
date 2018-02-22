@@ -1,0 +1,41 @@
+.my_image{
+	display: inline;
+	float: left;
+	margin-top: 100px;
+	margin-left: 80px;
+	
+}
+.say_sth{
+	width: 450px;
+	float: left;
+	margin-top: 130px;
+	margin-left: 50px;
+	
+}
+.say_sth label{
+	font: "微软雅黑";
+	font-size:20px ;
+	color: blue;
+}
+.my_title{
+	font: "微软雅黑";
+	font-size:20px ;
+	color: black;
+}
+.my_subtitle{
+	font: "微软雅黑";
+	font-size:15px ;
+	color: black;
+	font-weight: 200;
+}
+.my_subwarning{
+	font: "微软雅黑";
+	font-size:15px ;
+	color: red;
+	font-weight: 200;
+}
+.my_image2{
+	position: absolute;
+	top: 400px;
+	left: 500px;
+}

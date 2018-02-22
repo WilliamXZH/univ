@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;pers.william.composite.thirdexper_2.Builder&apos; to &apos;ConcreteBuilder&apos;&#x0D;&#x0A;- Original project: &apos;Composite&apos;&#x0D;&#x0A;- Original element: &apos;pers.william.composite.thirdexper_2.Builder&apos;&#x0D;&#x0A;- Renamed element: &apos;pers.william.composite.thirdexper_2.ConcreteBuilder&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Builder&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;pers.william.composite.thirdexper_2{Builder.java[Builder" matchStrategy="1" name="ConcreteBuilder" qualified="false" references="true" similarDeclarations="false" stamp="1478530881616" textual="false" version="1.0"/>
+</session>

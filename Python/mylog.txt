@@ -1,0 +1,21 @@
+mylog.txt
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+None
+None
+None
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>
+<_io.TextIOWrapper name='<stderr>' mode='w' encoding='cp936'>

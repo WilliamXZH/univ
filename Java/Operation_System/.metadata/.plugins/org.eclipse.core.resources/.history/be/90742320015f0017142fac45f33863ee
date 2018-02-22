@@ -1,0 +1,47 @@
+package pers.william.po;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.io.Reader;
+import java.io.Writer;
+import java.net.Socket;
+
+public class Response implements Runnable {
+	
+	Socket s ;
+
+	public Response(Socket s) {
+		super();
+		this.s = s;
+	}
+
+	@Override
+	public void run() {
+		
+		//System.out.println(s);
+		BufferedReader reader = null;
+		PrintStream writer = null;
+		try {
+			reader = new BufferedReader(new InputStreamReader(s.getInputStream()));
+			writer = new PrintStream(s.getOutputStream());
+			
+			String request = reader.readLine();
+			System.out.println(request);
+			
+			writer.println("HTTP/1.1 200 OK");
+			writer.println();
+			writer.flush();
+			Thread.sleep(3000);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

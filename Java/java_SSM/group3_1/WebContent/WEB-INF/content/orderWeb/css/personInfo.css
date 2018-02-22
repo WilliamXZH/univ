@@ -1,0 +1,39 @@
+td.name_info{
+	font: "微软雅黑";
+	font-size: 15px;
+	font-weight: 200;	
+}
+
+
+
+td.unknown_info{
+	font:"楷体";
+	font-size: 15px;
+	font-weight: 200;
+	color: #737373;
+}
+tr.text_format{
+		display: block;
+		margin-top: 30px;
+		margin-left: 300px;
+}
+#change_sth input[type="submit"] {
+	background: #919191;
+   	margin-left: 350px;
+	margin-top:20px ;
+	height: 42px;
+	width: 180px;
+    border: 0;
+    padding: 10px 15px;
+    color: #ffffff;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+	outline:none;
+}
+#change_sth input[type="submit"]:hover {
+  background:#FF8D1B;
+}
+

@@ -1,0 +1,47 @@
+<BorrowerDatabase>
+  <Borrower id="ID001" name="James Addy">
+    <BorrowedItems>
+      <CatalogItem id="B003">Refactoring</CatalogItem>
+      <CatalogItem id="R001">Getz/Gilberto</CatalogItem>
+      <CatalogItem id="B012">Rapid Development</CatalogItem>
+    </BorrowedItems>
+  </Borrower>
+  <Borrower id="ID002" name="John Doust">
+  </Borrower>
+  <Borrower id="ID003" name="Constance Foster">
+    <BorrowedItems>
+      <CatalogItem id="B006">The Psychology of Comp. Progr.</CatalogItem>
+    </BorrowedItems>
+  </Borrower>
+  <Borrower id="ID004" name="Harold Gurske">
+    <BorrowedItems>
+      <CatalogItem id="B002">Patterns</CatalogItem>
+    </BorrowedItems>
+  </Borrower>
+  <Borrower id="ID005" name="Mary A. Rogers">
+  </Borrower>
+  <Borrower id="ID006" name="Laura Novelle">
+    <BorrowedItems>
+      <CatalogItem id="B007">Programming Pearls </CatalogItem>
+      <CatalogItem id="B009">Peopleware</CatalogItem>
+    </BorrowedItems>
+  </Borrower>
+  <Borrower id="ID007" name="David M. Prescott">
+    <BorrowedItems>
+      <CatalogItem id="B011">Core J2EE Patterns</CatalogItem>
+    </BorrowedItems>
+  </Borrower>
+  <Borrower id="ID008" name="Francis Matthews">
+    <BorrowedItems>
+      <CatalogItem id="R003">Supernatural</CatalogItem>
+      <CatalogItem id="B005">Code Complete</CatalogItem>
+    </BorrowedItems>
+  </Borrower>
+  <Borrower id="ID009" name="Thomas Ferris">
+  </Borrower>
+  <Borrower id="ID010" name="John Johnson">
+    <BorrowedItems>
+      <CatalogItem id="B004">Man-Month</CatalogItem>
+    </BorrowedItems>
+  </Borrower>
+</BorrowerDatabase>

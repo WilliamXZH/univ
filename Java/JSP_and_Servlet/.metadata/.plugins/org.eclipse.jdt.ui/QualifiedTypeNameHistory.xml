@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Statement"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.beans.Statement"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="question.Container"/>
+<fullyQualifiedTypeName name="database.MySQLDB"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="database.QAAOper"/>
+<fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+<fullyQualifiedTypeName name="pers.william.test.Utils"/>
+<fullyQualifiedTypeName name="pers.william.test.BankRecord"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="database.UserOper"/>
+<fullyQualifiedTypeName name="database.ServiceOper"/>
+<fullyQualifiedTypeName name="database.NewsOper"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.io.DataOutputStream"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
+<fullyQualifiedTypeName name="pers.william.database.QAAOper"/>
+<fullyQualifiedTypeName name="pers.william.users.User"/>
+<fullyQualifiedTypeName name="pers.william.users.Member"/>
+<fullyQualifiedTypeName name="pers.william.users.NonAdmin"/>
+<fullyQualifiedTypeName name="pers.william.database.NewsOper"/>
+<fullyQualifiedTypeName name="pers.william.service.OrderItem"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="pers.william.service.OrderContainer"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="pers.william.utils.NumOper"/>
+<fullyQualifiedTypeName name="pers.william.utils.RSOper"/>
+</qualifiedTypeNameHistroy>

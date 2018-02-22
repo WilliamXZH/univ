@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="kind">
+        <item>工商政策法规</item>
+        <item>税务 </item>
+        <item>政府政策</item>
+    </string-array>
+
+
+</resources>

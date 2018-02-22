@@ -1,0 +1,11 @@
+<complexType name="extendedLecturerType">
+	<sequence>
+		<element name="firstname" type="string"
+			minOccurs="0" maxOccurs="unbounded"/>
+		<element name="lastname" type="string"/>
+		<element name="email" type="string"
+			minOccurs="0" maxOccurs="1"/>
+	</sequence>
+	<attribute name="title" type="string" use="optional"/>
+	<attribute name="rank" type="string" use="required"/>
+</complexType> 

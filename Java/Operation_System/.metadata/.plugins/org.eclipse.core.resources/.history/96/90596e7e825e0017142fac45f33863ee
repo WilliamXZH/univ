@@ -1,0 +1,28 @@
+package pers.william.main;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+public class MainThread {
+
+	private static Integer port = 9999;
+	private static ServerSocket serverSocket = null;
+	private static ThreadPoolExecutor threadPoolExecutor = null;
+	
+	public static void main(String [] args) throws IOException{
+		serverSocket = new ServerSocket(port);
+		threadPoolExecutor = new ThreadPoolExecutor(5, 10, 100, 
+				TimeUnit.MILLISECONDS,new ArrayBlockingQueue<Runnable>(5) );
+		
+		while(true){
+			 System.out.println("线程池中线程数目："+threadPoolExecutor.getPoolSize()+"，队列中等待执行的任务数目："+
+		             threadPoolExecutor.getQueue().size()+"，已执行玩别的任务数目："+threadPoolExecutor.getCompletedTaskCount());
+			
+			Socket socket = serverSocket.accept();
+		}
+	}
+}

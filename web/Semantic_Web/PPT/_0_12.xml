@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:news="http://www.news.fake/news#">
+
+<rdf:Description
+rdf:about="http://news.qq.com/a/20170401/036490.htm">
+    <news:author>www.qq.com</news:author>
+    <news:category>国内新闻</news:category >
+    <news:subcategory>政治</news:subcategory >
+    <news:date>2017-04-01 17:55:57</news:date>
+    <news:description>新华社沈阳4月1日消息，3月28日至30日，沈阳、鞍山、抚顺15个基层法院分别对辽宁41名涉拉票贿选人员作出一审宣判。  
+    </news:description>
+</rdf:Description>
+
+</rdf:RDF>

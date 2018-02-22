@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+	<!-- head -->
+
+	<head>
+		<title>车票查询</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- bootstrap-CSS -->
+		<link rel="stylesheet" href="css/bootstrap-select.css">
+		<!-- bootstrap-select-CSS -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/sand.js"></script>
+		<script type="text/javascript" src="js/bootstrap-select.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript" src="js/easyResponsiveTabs.js"></script>
+
+		<script type="text/javascript" src="js/responsiveslides.min.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/china.js"></script>
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript">
+			var jquery1_7 = jQuery.noConflict();
+		</script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script src="js/jquery.flexslider-min.js"></script>
+		<script src="js/jquery.cycle.all.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!--meta data-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!--//meta data-->
+		<!-- online fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Oxygen:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+		<!-- /online fonts -->
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/style_ticketQuery.css" rel="stylesheet" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/faqstyle.css" type="text/css" media="all" />
+		<link href="css/medile.css" rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/bootstrap-select.css" />
+		<!-- banner-slider -->
+		<link href="css/jquery.slidey.min.css" rel="stylesheet">
+		<!-- //banner-slider -->
+		<!-- pop-up -->
+		<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- //pop-up -->
+		<!-- font-awesome icons -->
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<!-- //font-awesome icons -->
+		<!-- js -->
+		<!-- //js -->
+		<!-- banner-bottom-plugin -->
+		<!-- //banner-bottom-plugin -->
+		<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+		<!-- start-smoth-scrolling -->
+
+	</head>
+	<!-- //head -->
+
+	<body>
+		<!--header-->
+		<header>
+			<div class="container">
+				<!--logo-->
+
+				<div class="clearfix"></div>
+				<!-- bootstrap-pop-up -->
+				<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								登录/注册
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							</div>
+							<section>
+								<div class="modal-body">
+									<div class="w3_login_module">
+										<div class="module form-module">
+											<div class="toggle"><i class="fa fa-times fa-pencil"></i>
+												<div class="tooltip">点我切换</div>
+											</div>
+											<div class="form">
+												<h3>登录现有账号</h3>
+												<form action="#" method="post">
+													<input type="text" name="Username" placeholder="用户名" required="">
+													<input type="password" name="Password" placeholder="密码" required="">
+													<input type="submit" value="登录">
+												</form>
+											</div>
+											<div class="form">
+												<h3>创建新的账户</h3>
+												<form action="#" method="post">
+													<input type="text" name="Username" placeholder="用户名" required="">
+													<input type="text" name="name" placeholder="姓名" required="">
+													<input type="password" name="Password" placeholder="密码" required="">
+													<input type="password" name="Passwordagain" placeholder="密码确认" required="">
+													<input type="email" name="Email" placeholder="邮箱地址" required="">
+													<input type="text" name="Phone" placeholder="电话号码" required="">
+													<select class="choice_sth">
+														<option value="#" style="text-align: center;">
+															<--请选择证件类型-->
+														</option>
+														<option value="护照"> &nbsp;护照</option>
+														<option value="身份证"> 身份证</option>
+													</select>
+													<input type="text" name="identifer" placeholder="证件号" required="">
+													<select class="choice_sth">
+														<option value="#" style="text-align: center;">
+															<--请选择乘客类型-->
+														</option>
+														<option value="学生"> 学生</option>
+														<option value="成人"> 成人</option>
+														<option value="军人"> 军人</option>
+													</select>
+													<select class="choice_sth">
+														<option value="#" style="text-align: center;">
+															<--请选择性别-->
+														</option>
+														<option value="男"> 男</option>
+														<option value="女"> 女</option>
+													</select>
+													<div id="check_sth">
+														<div id="check_number">
+															<input type="text" name="check" placeholder="验证码" required="">
+														</div id="check_button">
+														<div>
+															<input type="submit" value="发送验证码" />
+														</div>
+
+													</div>
+													<input type="submit" value="注册">
+													<input type="checkbox" id="I_agree" />我已经阅读并同意遵守
+													<a href="#">《xxx服务条款》
+														<a/>
+												</form>
+											</div>
+											<div class="cta">
+												<a href="#">忘记密码了？</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+				<script>
+					$('.toggle').click(function() {
+						// Switches the Icon
+						$(this).children('i').toggleClass('fa-pencil');
+						// Switches the forms  
+						$('.form').animate({
+							height: "toggle",
+							'padding-top': 'toggle',
+							'padding-bottom': 'toggle',
+							opacity: "toggle"
+						}, "slow");
+					});
+				</script>
+				<!-- //bootstrap-pop-up -->
+			</div>
+			<div class="tm-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-4 col-sm-3 tm-site-name-container">
+							<a href="NotIndex.html" class="tm-site-name">Logo here</a>
+						</div>
+						<div class="col-lg-6 col-md-8 col-sm-9">
+							<div class="mobile-menu-icon">
+								<i class="fa fa-bars"></i>
+							</div>
+							<nav class="tm-nav" style="width: 700px;">
+								<ul>
+									<li>
+										<a href="NotIndex.html" class="active">主页</a>
+									</li>
+									<li>
+										<a href="#">常见问题</a>
+									</li>
+									<li>
+										<a href="#">铁路常识</a>
+									</li>
+									<li>
+										<a href="#">站车风采</a>
+									</li>
+									<li>
+										<a href="#">温馨服务</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<!--//logo-->
+
+				<div class="w3layouts-login">
+					<a data-toggle="modal" data-target="#myModal" href="#"><i class="glyphicon glyphicon-user"> </i>登录/注册</a>
+
+				</div>
+			</div>
+			<!--/banner/-->
+		</header>
+		<!--mainbody-->
+		<div id="presentPath">
+			<a href="NotIndex.html">主页</a>
+			<span>/</span>
+			<a href="#">车票查询</a>
+		</div>
+		<div id="condition">
+			<div id="ifBack">
+				<input type="radio" name="ifBack" value="oneWay">
+				<span>单程票</span>
+				</input><br/>
+				<input type="radio" name="ifBack" value="roundWay">
+				<sapn>往返票</sapn>
+				</input>
+			</div>
+			<script>
+				window.onload=function judge() {
+					var ifback = document.getElementsByName("ifBack");
+					var length = ifback.length;
+					var i = 0;
+					for(; i < length; i++) {
+						ifback[i].onclick = function() {
+							var ticketType = this.value;
+							alert(this.value);
+							if(ticketType = "oneWay") {
+								$("#btn1").hide();
+								$("#btn2").hide();
+							} else {
+								$("#btn1").show();
+								$("#btn2").show();
+							}
+						};
+					}
+
+				}
+			</script>
+			<div id="keyCondition">
+				<div id="depart">
+					<label>出发地</label>
+					<input name="DPT" id="citySelect1" value="城市名">
+				</div>
+				<div id="destination">
+					<label>目的地</label>
+					<input name="DST" id="citySelect2" value="城市名">
+				</div>
+				<script type="text/javascript" src="js/cityPicker.js"></script>
+				<link rel="stylesheet" href="css/cityPicker.css" />
+				<div id="DPTtime">
+					<label>出发日期</label>
+					<input type="text" name="DPTtime" id="datepicker" readonly="true">
+				</div>
+				<div id="DSTtime">
+					<label>返回日期</label>
+					<input type="text" name="DSTtime" id="clender">
+				</div>
+			</div>
+			<div id="queryButton">
+				<input type="button" name="ticketQuery" id="ticketQuery" value="查  询" style="width: 100px;" />
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div id="filtration">
+			<div id="trainftTable">
+				<span>列车类型：</span>
+				<input id="train_checkall" type="button" name="selectAll" value="全部" style="font-size: 12px;" />
+				<input type="checkbox" name="trainft" class="trainft" />高铁/城际
+				<input type="checkbox" name="trainft" class="trainft" />动车
+				<input type="checkbox" name="trainft" class="trainft" />直达
+				<input type="checkbox" name="trainft" class="trainft" />特快
+				<input type="checkbox" name="trainft" class="trainft" />快速
+			</div>
+			<div id="seatftTable">
+				<span>座位类型：</span>
+				<input id="seat_checkall" type="button" name="selectAll" value="全部" style="font-size: 12px;" />
+				<input type="checkbox" name="seatft" class="seatft" value="商务座" />商务座
+				<input type="checkbox" name="seatft" class="seatft" />一等座
+				<input type="checkbox" name="seatft" class="seatft" />二等座
+				<input type="checkbox" name="seatft" class="seatft" />高级软卧
+				<input type="checkbox" name="seatft" class="seatft" />软卧
+				<input type="checkbox" name="seatft" class="seatft" />动卧
+				<input type="checkbox" name="seatft" class="seatft" />硬卧
+				<input type="checkbox" name="seatft" class="seatft" />软座
+				<input type="checkbox" name="seatft" class="seatft" />硬座
+				<input type="checkbox" name="seatft" class="seatft" />无座
+			</div>
+		</div>
+		<script>
+			$("#train_checkall").click(
+				function() {
+					var i = 0;
+					$("input[name='trainft']").each(function(index, content) {
+						if($(content).attr("checked") == "checked") {
+							i++;
+						}
+					});
+					if(i < $("input[name='trainft']").length) {
+						$("input[name='trainft']").attr("checked", true);
+					} else {
+						$("input[name='trainft']").removeAttr("checked");
+					}
+				}
+			);
+			$("#seat_checkall").click(
+				function() {
+					var i = 0;
+					$("input[name='seatft']").each(function(index, content) {
+						if($(content).attr("checked") == "checked") {
+							i++;
+						}
+					});
+					if(i < $("input[name='seatft']").length) {
+						$("input[name='seatft']").attr("checked", true);
+					} else {
+						$("input[name='seatft']").removeAttr("checked");
+					}
+				}
+			);
+		</script>
+		<!--table-->
+		<input id="btn1" onclick="btn10()" type="button" value="去程" name="go" class="gogogo" />
+		<input id="btn2" onclick="btn20()" type="button" value="返程" name="come" class="comecome" />
+		<div class="search_box">
+			<form action="" method="post">
+
+				<div id="search1" class="my_table_first" style="display: none;">
+					<table class="table" cellspacing="" cellpadding="">
+						<tr style="background-color: #000000;">
+							<th>车次</th>
+							<th>出发时间/到达时间</th>
+							<th>始发站/终点站</th>
+							<th>耗时</th>
+							<th>参考票价</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><label class="train_number">G117</label></td>
+							<td>
+								<li class="train_time"><label class="train_number">09:00</label></li>
+								<li class="train_time"><label class="train_arrive">15:39</label></li>
+							</td>
+							<td>
+								<li class="train_time"><label class="td_style">沈阳</label></li>
+								<li class="train_time"><label class="td_style">南京</label></li>
+							</td>
+							<td><label class="td_style">5小时59分</label></td>
+							<td class="test" style="width: 250px;">
+								<li class="train_time"><label class="td_style">二等座</label><span>¥ </span> <label class="ticket_price">553.0</label>余票<label class="ticket_number">0</label>张</li>
+								<li class="train_time"><label class="td_style">一等座</label><span>¥ </span> <label class="ticket_price">933.0</label>余票<label class="ticket_number">0</label>张</li>
+								<li class="train_time"><label class="td_style">商务座</label><span>¥ </span> <label class="ticket_price"> 1753.0</label>余票<label class="ticket_number">999</label>张</li>
+								<li class="train_time"><label class="td_style">无座票</label><span>¥ </span> <label class="ticket_price">553.0</label>余票<label class="ticket_number">0</label>张</li>
+							</td>
+							<td>
+								<li class="train_time"><input type="radio" class="choice_ticket" name="seatType" value="二等座" /></li>
+								<li class="train_time"><input type="radio" class="choice_ticket" name="seatType" value="二等座" /></li>
+								<li class="train_time"><input type="radio" class="choice_ticket" name="seatType" value="二等座" /></li>
+								<li class="train_time"><input type="radio" class="choice_ticket" name="seatType" value="二等座" /></li>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="my_table_second" id="search2" style="display:block;">
+					<table class="table">
+						<tr style="background-color: #000000;">
+							<th>车次</th>
+							<th>出发时间/到达时间</th>
+							<th>始发站/终点站</th>
+							<th>耗时</th>
+							<th>参考票价</th>
+							<th></th>
+						</tr>
+						<tr>
+							<td><label class="train_number">G117</label></td>
+							<td>
+								<li class="train_time"><label class="train_number">09:00</label></li>
+								<li class="train_time"><label class="train_arrive">15:39</label></li>
+							</td>
+							<td>
+								<li class="train_time"><label class="td_style">上海</label></li>
+								<li class="train_time"><label class="td_style">南京</label></li>
+							</td>
+							<td><label class="td_style">5小时59分</label></td>
+							<td class="test" style="width: 250px;">
+								<li class="train_time"><label class="td_style">二等座</label><span>¥ </span> <label class="ticket_price">553.0</label>余票<label class="ticket_number">0</label>张</li>
+								<li class="train_time"><label class="td_style">一等座</label><span>¥ </span> <label class="ticket_price">933.0</label>余票<label class="ticket_number">0</label>张</li>
+								<li class="train_time"><label class="td_style">商务座</label><span>¥ </span> <label class="ticket_price"> 1753.0</label>余票<label class="ticket_number">999</label>张</li>
+								<li class="train_time"><label class="td_style">无座票</label><span>¥ </span> <label class="ticket_price">553.0</label>余票<label class="ticket_number">0</label>张</li>
+							</td>
+							<td>
+								<li class="train_time"><input type="radio" class="choice_ticket" name="seatType2" value="二等座" /></li>
+								<li class="train_time"><input type="radio" class="choice_ticket" name="seatType2" value="二等座" /></li>
+								<li class="train_time"><input type="radio" class="choice_ticket" name="seatType2" value="二等座" /></li>
+								<li class="train_time"><input type="radio" class="choice_ticket" name="seatType2" value="二等座" /></li>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</form>
+			<input type="submit" name="choseMyTicket" id="choseMyTicket" value="提交" class="ImSure" />
+
+		</div>
+		<script type="text/javascript">
+			function btn10() {
+
+				document.getElementById('search1').style.display = 'block';
+				document.getElementById('search2').style.display = 'none';
+				document.getElementById('btn1').style.backgroundColor = '#017EBA';
+				document.getElementById('btn1').style.color = 'white';
+				document.getElementById('btn2').style.backgroundColor = 'lightgray';
+				document.getElementById('btn2').style.color = 'black';
+			}
+
+			function btn20() {
+
+				document.getElementById('search2').style.display = 'block';
+				document.getElementById('search1').style.display = 'none';
+				document.getElementById('btn2').style.backgroundColor = '#017EBA';
+				document.getElementById('btn2').style.color = 'white';
+				document.getElementById('btn1').style.backgroundColor = 'lightgray';
+				document.getElementById('btn1').style.color = 'black';
+			}
+		</script>
+		<!--//table-->
+		<!--//mainbody-->
+		<!--//header-->
+		<div class="cuttingLine1 ">
+			<div class="tm-section-header ">
+				<div class="col-lg-3 col-md-3 col-sm-3 ">
+					<hr>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 ">
+					<h1 class="tm-section-title ">ABOUT US</h1></div>
+				<div class="col-lg-3 col-md-3 col-sm-3 ">
+					<hr>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<footer id="footerContainer">
+			<div class="footer ">
+				<div class="container ">
+					<div class="row ">
+						<div class="col-md-4 col-sm-6 col-xs-12 ">
+							<div class="quicklinks ">
+								<h4 class="footerh ">相关链接</h4>
+								<br/>
+								<ul>
+									<li><i class="fa fa-angle-right "></i>
+										<a href="# ">企业差旅索引</a>
+									</li>
+									<li><i class="fa fa-angle-right "></i>
+										<a href="# ">网络社会征信网</a>
+									</li>
+									<li><i class="fa fa-angle-right "></i>
+										<a href="# ">加盟合作</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 ">
+							<div class="quickcontact ">
+								<h4 class="footerh ">联系我们</h4>
+								<br/>
+								<ul>
+									<li><i class="fa fa-phone "></i> 123456789</li>
+									<li><i class="fa fa-envelope "></i> abc@website.com</li>
+									<li><i class="fa fa-map-marker "></i> 2B Barcelon, Newyork -32011</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-12 col-xs-12 ">
+							<div class="follow ">
+								<h4 class="footerh ">微信公众号</h4>
+								<br/>
+								<img src="images/er_ctrip_wechat.jpg " />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div class="row " style="background: white; ">
+					<div class="col-md-12 ">
+						<p style="color: black; ">Copyright &copy; 2017.Company name All rights reserved.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="toTopButton "></div>
+		</footer>
+		<!--//footer-->
+		<script>
+			$(function() {
+				$("#datepicker").datepicker({
+					minDate: 0,
+					maxDate: "+2M",
+					/*dateFormat: 'yyyy/MM/dd',*/
+					onClose: function(selectedDate) {
+						$("#clender").val($("#datepicker").val());
+						$("#datepicker").datepicker("option", "setDate", new Date($("#datepicker").val()));
+					}
+				});
+
+				Date.prototype.format = function(fmt) {
+					var o = {
+						"M+": this.getMonth() + 1, //月份 
+						"d+": this.getDate(), //日 
+						"h+": this.getHours(), //小时 
+						"m+": this.getMinutes(), //分 
+						"s+": this.getSeconds(), //秒 
+						"q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+						"S": this.getMilliseconds() //毫秒 
+					};
+					if(/(y+)/.test(fmt)) {
+						fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+					}
+					for(var k in o) {
+						if(new RegExp("(" + k + ")").test(fmt)) {
+							fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+						}
+					}
+					return fmt;
+				}
+				$("#datepicker").val(new Date().format("MM/dd/yyyy"));
+				$("#clender").val(new Date().format("MM/dd/yyyy"));
+
+				function nationalDays(date) {
+					var startTime = $("#datepicker").val();
+					var formatTime = $("#datepicker").val().split("/")[2] + "-" + $("#datepicker").val().split("/")[0] + "-" + $("#datepicker").val().split("/")[1];
+					if(new Date(new Date(date).format("yyyy-MM-dd")) < new Date(new Date(formatTime).format("yyyy-MM-dd"))) {
+						return [false, ''];
+					}
+					return [true, ''];
+				}
+				$("#clender").datepicker({
+					beforeShowDay: nationalDays
+						/*dateFormat: 'yyyy/MM/dd',*/
+						/*onClose: function(selectedDate) {
+							$("#datepicker").datepicker("option", "maxDate", selectedDate);
+						}*/
+				});
+				$("#datepicker1").datepicker();
+			});
+		</script>
+	</body>
+
+</html>

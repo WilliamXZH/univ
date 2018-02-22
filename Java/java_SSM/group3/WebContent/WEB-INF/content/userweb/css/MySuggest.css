@@ -1,0 +1,60 @@
+.my_first_line{
+	margin-left: 20px;
+	margin-top: 50px;
+}
+.my_second_line{
+	margin-left: 20px;
+	margin-top: 50px;
+}
+.my_third_line{
+	margin-left: 130px;
+	margin-top: 50px;
+	border-radius: 5px;
+}
+.my_second_line label{
+	margin-left: 30px;
+	font-weight: 200;
+}
+.my_first_line label{
+	margin-left: 50px;
+	font-weight: 200;
+}
+.myname{
+	width: 200px;
+	padding-left:10px ;
+	margin-left: 15px;
+	height: 42px;
+	border: 1px solid #D9D9D9;
+	border-radius: 5px;
+}
+.my_Suggest_type{
+	width: 200px;
+	height: 42px;
+	color: darkgray;
+	background-color: #FFFFFF;
+	
+}
+.my_textarea_sty{
+	padding-left:20px ;
+	padding-top: 18px;
+	width:600px;
+	color: darkgray;
+	background-color: #FFFFFF;
+	border: 1px solid #D9D9D9;
+}
+
+.my_style1{
+	
+	margin-left: 200px;
+	background: #017Eba;
+	height: 42px;
+	width: 100px;
+    border: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+.my_style1:hover{
+	 background:#EEEEEE;
+	 color: #017Eba;
+}

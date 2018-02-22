@@ -1,0 +1,11 @@
+第2章 算法分析
+
+2.1 数学基础
+相对增长率(relative rate of growth)
+
+上界(upper bound)
+下界(lower bound)
+
+
+
+

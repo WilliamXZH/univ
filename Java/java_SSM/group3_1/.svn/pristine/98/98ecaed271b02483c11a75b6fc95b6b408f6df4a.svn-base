@@ -1,0 +1,129 @@
+.wthree-news-left2{
+	float: left;
+	width: inherit;
+	height: 600px;
+/*	margin-left: 15px;
+*/}
+
+
+
+.first{
+	margin-top: 20px;
+	width: 30%;
+	height:300px ;
+	padding-left:80px ;
+	float:left;
+	/*border-right: 1px dashed #9D9D9D;*/
+}
+.first label{
+	font:"微软雅黑";
+	font-size: 20px;
+}
+.first label a{
+	font: "微软雅黑";
+	color: #9D9D9D;
+	font-weight: 200;
+	font-size: 10px;
+	
+}
+.second{
+	margin-left: 22px;
+	float: left;
+	margin-top: 20px;
+	width: 30%;
+	padding-left:80px ;
+	height:300px ;
+	/*border: 1px solid red;	*/
+	/*border-right: 1px dashed #9D9D9D;
+}*/
+}
+.second label{
+	font:"微软雅黑";
+	font-size: 20px;
+}
+.second label a{
+	font: "微软雅黑";
+	color: #9D9D9D;
+	font-weight: 200;
+	font-size: 10px;
+}
+.third{
+	margin-left: 22px;
+	float: left;
+	margin-top: 20px;
+	width: 30%;
+	height:300px ;
+	padding-left:80px ;
+	/*border: 1px solid red;	*/
+	/*border-right: 1px dashed #9D9D9D;*/
+}
+.third label{
+	font:"微软雅黑";
+	font-size: 20px;
+}
+.third label a{
+	font: "微软雅黑";
+	color: #9D9D9D;
+	font-weight: 200;
+	font-size: 10px;
+}
+.fourth{
+	
+	float: left;
+	margin-top: 20px;
+	width: 30%;
+	height:300px ;
+	padding-left:80px ;
+/*	border: 1px solid red;	*/
+/*border-right: 1px dashed #9D9D9D;*/
+}
+.fourth label{
+	font:"微软雅黑";
+	font-size: 20px;
+}
+.fourth label a{
+	font: "微软雅黑";
+	color: #9D9D9D;
+	font-weight: 200;
+	font-size: 10px;
+}
+.fifth{
+	margin-left: 22px;
+	float: left;
+	margin-top: 20px;
+	width: 30%;
+	height:300px ;
+	padding-left:80px ;
+	/*border: 1px solid red;	*/
+	/*border-right: 1px dashed #9D9D9D;*/
+}
+.fifth label{
+	font:"微软雅黑";
+	font-size: 20px;
+}
+.fifth label a{
+	font: "微软雅黑";
+	color: #9D9D9D;
+	font-weight: 200;
+	font-size: 10px;
+}
+.sixth{
+	margin-left: 22px;
+	float: left;
+	margin-top: 20px;
+	width: 30%;
+	height:300px ;
+	padding-left:80px ;
+	/*border: 1px solid red;	*/
+	/*border-right: 1px dashed #9D9D9D;*/
+}
+.sixth label{
+	font:"微软雅黑";
+	font-size: 20px;
+}
+.sixth label a{
+	font: "微软雅黑";
+	color: #9D9D9D;
+	font-weight: 200;
+	font-size: 10px;
+}

@@ -1,0 +1,4 @@
+<order orderNo="23456" customer="John Smith" date="October 15,2002">
+<item itemNo="a528" quantity="1" />
+<item itemNo="c817" quantity="3" />
+</order>

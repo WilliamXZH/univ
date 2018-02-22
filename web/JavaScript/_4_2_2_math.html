@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script>
+			function fix(fixNumber,decimalPlaces)
+			{
+				var div=Math.pow(10,decimalPlaces);
+				fixNumber=Math.round(fixNumber*div)/div;
+				return fixNumber;
+			}
+		</script>
+	</head>
+	<body>
+		<script>
+			var radius=prompt("Give the radius of the circle","");
+			var area=(Math.PI)*radius*radius;
+			document.write("The area is "+area+"<br>");
+
+			var myNumber=-101;
+			document.write(Math.abs(myNumber)+"<br>");
+
+			var myNumber=101.01;
+			document.write(Math.ceil(myNumber)+"<br>");
+			document.write(parseInt(myNumber)+"<br>");
+			document.write(Math.floor(-9.99)+"<br>");
+			document.write(Math.round(44.5)+"<br>");
+
+			var throwCount;
+			var diceThrow;
+			for(throwCount=0;throwCount<10;throwCount++)
+			{
+				diceThrow=(Math.floor(Math.random()*6)+1);
+				document.write(diceThrow+" ");
+			}
+
+			var number1=prompt("Enter the number with decimal places you want to fix","");
+			var number2=prompt("How many decimal places do you want?","");
+			document.write(number1+" fixed to "+number2+"decimal places is:");
+			document.write(fix(number1,number2));
+		</script>
+	</body>
+</html>

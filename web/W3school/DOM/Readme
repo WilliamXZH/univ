@@ -1,0 +1,18 @@
+functions:
+	getElementById()
+	getElementsByTagName()
+	getElementsByClassName()//在 Internet Explorer 5,6,7,8 中无效。
+	appendChild()
+	removeChild()
+	replaceChild()
+	insertBefore()
+	createAttribute()
+	createElement()
+	createTextNode()
+	getAttribute()
+	setAttribute()
+attributes:
+	innerHTML
+	nodeName
+	nodeValue
+	nodeType(元素:1,属性:2,文本:3,注释:8,文档:9)

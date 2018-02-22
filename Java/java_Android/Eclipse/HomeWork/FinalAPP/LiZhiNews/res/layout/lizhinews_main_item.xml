@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/ivItemIcon"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/dujia"
+        android:src="@drawable/ic_bakgrady" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivItemIcon"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvSubject"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="match_parent"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:textColor="#555"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvIndicateCategory"
+            android:layout_width="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginRight="10dp"
+            android:textColor="#fff"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

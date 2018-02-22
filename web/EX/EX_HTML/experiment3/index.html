@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>漠澜之家
+		</title>
+		<link rel="stylesheet" type="text/css" href="style2.css" />
+		<link rel="stylesheet" style="text/css" href="style.css" />
+		<style>
+			div.slideBox{ position:relative; width:670px; height:300px; overflow:hidden;}
+			div.slideBox ul.items{ position:absolute; float:left; background:none; list-style:none; padding:0px; margin:0px;}
+			div.slideBox ul.items li{ float:left; background:none; list-style:none; padding:0px; margin:0px;}
+			div.slideBox ul.items li a{ float:left; line-height:normal !important; padding:0px !important; border:none/*For IE.ADD.JENA.201206300844*/;}
+			div.slideBox ul.items li a img{ margin:0px !important; padding:0px !important; display:block; border:none/*For IE.ADD.JENA.201206300844*/;}
+			div.slideBox div.tips{ position:absolute; bottom:0px; width:100%; height:50px; background-color:#000; overflow:hidden;}
+			div.slideBox div.tips div.title{ position:absolute; left:0px; top:0px; height:100%;}
+			div.slideBox div.tips div.title a{ color:#FFF; font-size:18px; line-height:50px; margin-left:10px; text-decoration:none;}
+			div.slideBox div.tips div.title a:hover{ text-decoration:underline !important;}
+			div.slideBox div.tips div.nums{ position:absolute; right:0px; top:0px; height:100%;}
+			div.slideBox div.tips div.nums a{ display:inline-block; >float:left/*For IE.ADD.JENA.201206300844*/; width:20px; height:20px; background-color:#FFF; text-indent:-99999px; margin:15px 10px 0px 0px;}
+			div.slideBox div.tips div.nums a.active{ background-color:#093;}
+		</style>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="modal.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("a.forgot").click(function(){
+				$("#login-modal").modal("hide");
+				$("#forgetform").modal({show:!0})
+			});
+			
+			$("#signup-modal").modal("hide");
+			$("#forgetform").modal("hide");
+			$("#login-modal").modal("hide");
+			$("#activation-modal").modal("hide");
+			$("#setpassword-modal").modal("hide");
+			
+		});
+
+		</script>
+		<script style="text/javascript">
+			var img_names=["img/挡不住的青春.jpeg","img/假如你不够快乐.jpeg","img/跨越自己.jpeg","img/旅程.jpeg","img/热爱生命.jpeg","img/如果生活不够慷慨.jpeg","img/倘若才华得不到承认.jpeg","img/我微笑着走向生活.jpeg","img/只要明天还在.jpeg"];
+			var timer=0;
+			var wait=3;
+			var cur_slide=1;
+			window.onload=nextImg;
+			function nextImg()
+			{
+				if(++cur_slide>=img_names.length)cur_slide=0;
+				if(timer!=0)clearTimeout(timer);
+				timer=setTimeout("nextImg()",wait*1000);
+				var img_element=document.getElementById('slide');
+				img_element.setAttribute("src",img_names[cur_slide]);
+			}
+			(function($){$.fn.slideBox=function(options){
+				var defaults={
+					direction:'left',duration:0.6,easing:'swing',delay:3,startIndex:0,hideClickBar:true,clickBarRadius:5,hideBottomBar:false,width:null,height:null
+				};
+				var settings=$.extend(defaults,options||{});
+				var wrapper=$(this),ul=wrapper.children('ul.items'),lis=ul.find('li'),firstPic=lis.first().find('img');
+				var li_num=lis.size(),li_height=0,li_width=0;
+				var order_by='ASC';
+				var init=function(){
+					if(!wrapper.size())return false;
+					li_height=settings.height?settings.height:lis.first().height();
+					li_width=settings.width?settings.width:lis.first().width();
+					wrapper.css({width:li_width+'px',height:li_height+'px'});
+					lis.css({width:li_width+'px',height:li_height+'px'});
+					if(settings.direction=='left'){ul.css('width',li_num*li_width+'px')}
+					else{ul.css('height',li_num*li_height+'px')};
+					ul.find('li:eq('+settings.startIndex+')').addClass('active');
+					if(!settings.hideBottomBar){
+						var tips=$('<div class="tips"></div>').css('opacity',0.6).appendTo(wrapper);
+						var title=$('<div class="title"></div>').html(function(){
+							var active=ul.find('li.active').find('a'),text=active.attr('title'),href=active.attr('href');
+							return $('<a>').attr('href',href).text(text)}).appendTo(tips);
+							var nums=$('<div class="nums"></div>').hide().appendTo(tips);
+							lis.each(function(i,n){
+								var a=$(n).find('a'),text=a.attr('title'),
+								href=a.attr('href'),css='';
+								i==settings.startIndex&&(css='active');
+								$('<a>').attr('href',href).text(text).addClass(css).css('borderRadius',settings.clickBarRadius+'px').mouseover(function(){$(this).addClass('active').siblings().removeClass('active');
+								ul.find('li:eq('+$(this).index()+')').addClass('active').siblings().removeClass('active');
+								start();
+								stop()
+								}).appendTo(nums)});
+								if(settings.hideClickBar){
+									tips.hover(function(){nums.animate({top:'0px'},'fast')},function(){
+										nums.animate({top:tips.height()+'px'},'fast')
+									});
+									nums.show().delay(2000).animate({top:tips.height()+'px'},'fast')
+								}
+								else{nums.show()}};
+								lis.size()>1&&start()};
+								var start=function(){
+									var active=ul.find('li.active'),active_a=active.find('a');
+									var index=active.index();
+									if(settings.direction=='left'){
+										offset=index*li_width*-1;
+										param={'left':offset+'px'}
+									}
+									else{
+									offset=index*li_height*-1;param={'top':offset+'px'}
+									};
+									wrapper.find('.nums').find('a:eq('+index+')').addClass('active').siblings().removeClass('active');
+									wrapper.find('.title').find('a').attr('href',active_a.attr('href')).text(active_a.attr('title'));
+									ul.stop().animate(param,settings.duration*1000,settings.easing,function(){active.removeClass('active');
+									if(order_by=='ASC'){
+										if(active.next().size()){
+											active.next().addClass('active')}else{order_by='DESC';
+											active.prev().addClass('active')}
+										}else if(order_by=='DESC'){
+											if(active.prev().size()){
+												active.prev().addClass('active')}
+											else{
+												order_by='ASC';active.next().addClass('active')
+											}
+										}
+									});
+									wrapper.data('timeid',window.setTimeout(start,settings.delay*1000))};
+									var stop=function(){
+										window.clearTimeout(wrapper.data('timeid'))};
+										wrapper.hover(function(){stop()},function(){
+											window.setTimeout(start,settings.delay*1000);
+										});
+										var imgLoader=new Image();
+										imgLoader.onload=function(){
+										imgLoader.onload=null;init()
+						};
+						imgLoader.src=firstPic.attr('src')
+					}
+				})(jQuery);
+		</script>
+		<script>
+			jQuery(function($){
+				$('#demo2').slideBox({
+					direction : 'top',//left,top#方向
+					duration : 0.3,//滚动持续时间，单位：秒
+					easing : 'linear',//swing,linear//滚动特效
+					delay : 5,//滚动延迟时间，单位：秒
+					startIndex : 1,//初始焦点顺序
+					hideClickBar : true,
+					hideBottomBar : false
+				});
+			});
+		</script>
+
+	</head>
+	<body >
+	<table width="100%" border="0">
+	<tr>
+		<td width="45%" rowspan="2"><a href="index.html"><img src="img/温馨小屋.jpeg" width="10%" height="10%" /></a></td>
+		<td width="10%" align="center">漠澜之家</td>
+	<td width="45%" align="right"><a class="btn01" data-toggle="modal" href="#login-modal">登录</a>/<a class="btn02" data-toggle="modal" href="#signup-modal">注册</a>
+	</td>
+	</tr>
+	  <tr>
+	  <td align="center"><a href="index.html" class="topic">COSY HOUSE</a>
+	  </td>
+		<td width="45%" align="right"><form id="form1" name="form1" method="post" action="">
+		  <label for="textfield"></label>
+		  <input type="text" name="textfield" id="textfield" />
+		  <input type="submit" name="button" id="button" value="search" />
+		</form></td>
+	  </tr>
+	</table>
+	<hr />
+	<table width="100%" border="0" >
+	  <tr align="center">
+		<td width="20%"><a class="title" href="index1.html">心言新语</a></td>
+		<td width="20%"><a class="title" href="index2.html">时光荏苒</a></td>
+		<td width="20%"><a class="title" href="index3.html">默然相惜</a></td>
+		<td width="20%"><a class="title" href="index4.html">荻花错繁</a></td>
+		<td width="20%"><a class="title" href="index5.html">唯美经典</a></td>
+	  </tr>
+	</table>
+	<hr />
+	<table width="100%" border="0" rules="none">
+	  <tr>
+		<td width="50%" height="25%" align="left"  colspan=""> <p style="text-align:left">明天变成了今天成为了昨天，最后成为记忆里不再重要的某一天，我们突然发现自己在不知不觉中已被时间推着向前走，这不是静止在火车里，与向列车交错时，仿佛自己在前进的错觉，而是我们真实的在成长，在这件事里成了另一个自己。</p>
+		<p style="text-align:left">When tmorrow turns in today, yesterday, and someday that no more important in your memory, we suddenly realize that we are pushed forward by time. this is not a train in still which you may feel forward when another train goes by. It is the truth thst we've all grown up. And we become different</p></td>
+		<td width="50%" rowspan="2" align="center">
+		  <p onclick="autostart()" id="auto">每天早晨那熟悉的旋律，你记得吗？</p>
+		  <script>
+		  var x=0;
+		  function autostart(){
+			  if(x%2==0)
+			  {
+				  var px=document.getElementById("auto");
+				  px.innerHTML="每天早晨那熟悉的旋律，你记得吗？"+"<object classid='CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6' classid='CLSID:CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA'> <param name='type' value='audio/mpeg' /><param name='URL'  value='songs/The Sound Of Silence.mp3'><param name='uiMode' value='full' /><param name='autoStart' value='true' /><embed type='audio/mpeg' src='songs/The Sound Of Silence.mp3' autostart='1' pluginspage='http://www.microsoft.com/windows/windowsmedia/' width='0' height='0' hidden/></object>";
+			  }
+			  else
+			  {
+				  var px=document.getElementById("auto");
+				  px.innerHTML="每天早晨那熟悉的旋律，你记得吗？";
+			  }
+			  x++;
+		  }
+		  </script>
+		  The Sound Of Silence<br />
+		  Hello darkness , my old friend<br />
+		  I've come to talk with you again<br />
+		  Because a vision softly creeping <br />
+		  And the vision that was planted in my brain<br />
+		  Still remains<br />
+		  Within the sound of silence<br />
+		  In restless dreams I walked alone<br />
+		  Narrow streets of cobblestone<br />
+		  Neath the halo of street lamp<br />
+		  I turned my collar to the cold and damp<br />
+		  When my eyes were stabbed by the flash of a neon light<br />
+		  And touched the sound of silence<br />
+		  And in the naked light I saw <br />
+		  Ten thousand people , maybe more<br />
+		  People talking without speaking<br />
+		  People hearing without listening<br />
+		  People writing songs that voices never share<br />
+		  And no one dare disturb the sound of silence<br />
+		  &quot;Fool&quot; said I ,&quot;You do not know&quot;<br />
+		  Silence like a cancer grows<br />
+		  Hear my words that Imight teach you<br />
+		  Take my arms that I might reach to you<br />
+		  But my words like silent as raindrops fell<br />
+		  And echoed in the wells of silence<br />
+		  And the people bowed and prayed to the neon god they made.<br />
+		  And the sign flashed out its warning<br />
+		  And the words that it was forming <br />
+		  And the sign said:<br />
+		  &quot;The words of the prophets are written on the subway walls&quot; and tenement halls<br />
+		  And whispered in the sound of silence.<br />
+		</td>
+	  </tr>
+	<tr>
+		<td height="25%">
+			<div id="demo2" class="slideBox">
+			  <ul class="items">
+				<li><a href="" title="挡不住的青春"><img src="img/挡不住的青春.jpeg"></a></li>
+				<li><a href="" title="假如你不够快乐"><img src="img/假如你不够快乐.jpeg"></a></li>
+				<li><a href="" title="跨越自己"><img src="img/跨越自己.jpeg"></a></li>
+				<li><a href="" title="旅程"><img src="img/旅程.jpeg"></a></li>
+				<li><a href="" title="热爱生命"><img src="img/热爱生命.jpeg"></a></li>
+				<li><a href="" title="如果生活不够慷慨"><img src="img/如果生活不够慷慨.jpeg"></a></li>
+				<li><a href="" title="倘若才华得不到承认"><img src="img/倘若才华得不到承认.jpeg"></a></li>
+				<li><a href="" title="我微笑着走向生活"><img src="img/我微笑着走向生活.jpeg"></a></li>
+				<li><a href="" title="只要明天还在"><img src="img/只要明天还在.jpeg"></a></li>
+			  </ul>
+			</div>
+
+			<!--img id="slide" src="" onclick="nextImg();" alt=img_names[cur_slide] /-->
+		</td>
+	</tr>
+	</table>
+
+	<div class="modal" id="login-modal">
+	<a class="close" data-dismiss="modal">×</a>
+	<h1>登录</h1>
+	<ul class="login-bind-tp">
+		<li class="qweibo"> <a href="http://connect.qq.com/qqlogin"><em>&nbsp;</em> QQ登录</a> </li>
+		<li class="sina"> <a href="http://t.qq.com/"><em>&nbsp;</em> 微博登录</a> </li>
+		<li class="douban"> <a href="http://accounts.douban.com/login"><em>&nbsp;</em> 豆瓣登录</a> </li>
+	</ul>
+	<p>或者使用已有帐号登陆：</p>
+	<form class="login-form clearfix" method="post" action="index.html">
+		<div class="form-arrow"></div>
+		<input name="email" type="text" placeholder="邮箱：">
+		<input name="password" type="password" placeholder="密码：">
+		<input type="submit" name="type" class="button-blue login" value="登录">
+		<input type="hidden" name="return-url" value="">
+		<div class="clearfix"></div>
+		<label class="remember"><input name="remember" type="checkbox" checked/>下次自动登录 </label>
+		<a class="forgot">忘记密码？</a>
+		<ul class="third-parties">
+			<li><p>新浪微博帐号</p></li>
+			<li><p>腾讯微博帐号</p></li>
+			<li><p>豆瓣帐号</p></li>
+			<li><p></p></li>
+		</ul>
+	</form>
+</div>
+
+
+<div class="modal" id="signup-modal">
+	<a class="close" data-dismiss="modal">×</a>
+	<h1>注册</h1>
+	<ul class="login-bind-tp">
+		<li class="qweibo"> <a href="http://connect.qq.com/qqlogin"><em>&nbsp;</em> QQ登录</a> </li>
+		<li class="sina"> <a href="http://t.qq.com/"><em>&nbsp;</em> 微博登录</a> </li>
+		<li class="douban"> <a href="http://accounts.douban.com/login"><em>&nbsp;</em> 豆瓣登录</a> </li>
+	</ul>
+	<p>或者使用邮箱注册：</p>
+	<form class="signup-form clearfix" method="post" action="http://www.17sucai.com">
+		<p class="error"></p>
+		<input name="email" type="text" placeholder="邮箱：">
+		<input name="password" type="password" placeholder="密码：">
+		<input name="password1" type="password" placeholder="确认密码：">
+		<input name="username" type="text" placeholder="用户名：">
+		<input type="hidden" name="title" value="">
+		<input type="hidden" name="url" value="">
+		<div class="clearfix"></div>
+		<input type="button" name="type" class="button-blue reg" value="注册" data-action="regist">
+		<ul class="third-parties">
+			<li><p>新浪微博帐号</p></li>
+			<li><p>腾讯微博帐号</p></li>
+			<li><p>豆瓣帐号</p></li>
+		</ul>
+	</form>
+</div>
+
+
+<div class="modal" id="forgetform">
+	<a class="close" data-dismiss="modal">×</a>
+	<h1>忘记密码</h1>
+	<form class="forgot-form" method="post" action="index.html">
+		<input name="email" value="" placeholder="注册邮箱：">
+		<div class="clearfix"></div>
+		<input type="submit" name="type" class="forgot button-blue" value="发送重设密码邮件">
+	</form>
+</div>
+	</body>
+</html>

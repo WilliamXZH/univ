@@ -1,0 +1,46 @@
+package pers.william.model;
+
+import java.util.List;
+
+public class User {
+	
+	private Integer userid;
+	private List<Item> ratings;
+	
+	private Double avg=0.0;
+	
+	public User(){
+		super();
+	}
+	
+	public User(Integer userid, List<Item> ratings) {
+		super();
+		this.userid = userid;
+		this.ratings = ratings;
+	}
+	public Integer getUserid() {
+		return userid;
+	}
+	public void setUserid(Integer userid) {
+		this.userid = userid;
+	}
+	public List<Item> getRatings() {
+		return ratings;
+	}
+	public void setRatings(List<Item> ratings) {
+		this.ratings = ratings;
+	}
+	
+	public Double getAverage(){
+		if(avg==0){
+			int length = ratings.size();
+			for(Item item:ratings){
+				avg += item.getRating()/length;
+			}
+		}
+		
+		return avg;
+	}
+	
+	
+}

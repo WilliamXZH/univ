@@ -1,0 +1,24 @@
+<resources>
+
+    <string name="app_name">喵喵新闻</string>
+
+    <string name="headline">头条</string>
+
+    <string name="jiangsu">江苏</string>
+
+    <string name="lizhipai">荔枝派</string>
+
+    <string name="dujia">独家一番</string>
+
+    <string name="sport">体育</string>
+    <string name="loading">正在加载</string>
+    
+    <string name="internation">国际</string>
+    <color name="selected">#f00</color>
+    <color name="unSelected">#aaa</color>
+    <color name="back">#ff0</color>
+    <string name="connectnews">相关新闻</string>
+    <string name="daodu">导读</string>
+    <string name="ceshi">新闻</string>
+
+</resources>

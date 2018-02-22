@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAE4"
+    android:orientation="vertical" >
+
+    <Button 
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="myclick1"
+        android:text="按钮对话框"/>
+    
+    <Button 
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="myclick2"
+        android:text="列表对话框"/>
+    
+    <Button 
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="myclick3"
+        android:text="单选对话框"/>
+    
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="myclick4"
+        android:text="多选对话框" />
+    
+    <Button 
+        android:id="@+id/btn5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="myclick5"
+        android:text="带图标列表对话框"/>
+    
+</LinearLayout>

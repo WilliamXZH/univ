@@ -1,0 +1,89 @@
+create or replace procedure two(device_id in device.deviceid%type,
+pay_fee in receivables.basicfee%type) is
+  to_payfee receivables.basicfee%type;
+  --max_id payfee.id%type;
+  max_id number:=1;
+  main_fee receivables.basicfee%type:=pay_fee;
+  tar_dev device%rowtype;
+  serial payfee.bankserial%type;
+  --device_balance device.balance%type;  
+  
+  --Exception
+  null_exception exception;
+  
+  cursor cur_d is
+    select * from device natural join receivables 
+    where deviceid=device_id and flag='0' order by yearmonth;
+  dr cur_d%rowtype;
+begin
+  select (max(id)+1) into max_id from payfee;
+  select * into tar_dev from device where deviceid=device_id;
+  main_fee:=main_fee+tar_dev.balance;
+  
+  if tar_dev.deviceid is null then 
+    raise null_exception;
+  end if;
+  
+  dbms_output.put_line('----------------------------------------');
+  dbms_output.put_line('设备编号：'||tar_dev.deviceid);
+  dbms_output.put_line('客户号ID：'||tar_dev.clientid);
+  dbms_output.put_line('设备类型：'||tar_dev.type);
+  dbms_output.put_line('设备余额：'||tar_dev.balance);
+  dbms_output.put_line('----------------------------------------');
+  dbms_output.put_line('          缴费年月  应付金额 实付金额');
+  dbms_output.put_line('----------------------------------------');
+  
+  open cur_d;
+  --while cur_d%found loop
+  loop
+    exit when cur_d%notfound;
+    fetch cur_d into dr;
+    
+    
+    if dr.type='01'
+      then to_payfee:=dr.basicfee*1.18;
+    else to_payfee:=dr.basicfee*1.23;
+    end if;
+    
+    dbms_output.put_line(dr.deviceid||'  '||max_id);  
+    --max_id:=max_id+1;
+    --dbms_output.put_line(dr.deviceid||'  '||max_id);  
+      
+    if main_fee<to_payfee then
+      dbms_output.put_line('金额不足：'||
+      dr.yearmonth||'  '||to_payfee||'  '||main_fee);
+      exit;
+    else   
+      max_id:=max_id+1;
+      --dbms_output.put_line(max_id);
+      serial:= 'ZS'||to_char(sysdate,'yyyymmdd')||to_char(max_id,'999999');   
+      --dbms_output.put_line(serial);   
+    
+      insert into payfee values
+      (max_id,
+      device_id,
+      to_char(to_payfee,'9999.99')
+      ,sysdate,'90','2001',serial);
+      main_fee:=main_fee-to_payfee;   
+      
+      dbms_output.put_line('缴费成功：'||
+        dr.yearmonth||'  '||to_payfee||'  '||main_fee);
+      update receivables set flag=1 
+        where deviceid=device_id and yearmonth=dr.yearmonth;
+    end if;
+  end loop;
+
+  dbms_output.put_line('----------------------------------------');
+  update device set balance=main_fee where deviceid=device_id;
+  commit;
+  dbms_output.put_line('还剩'||main_fee||'元已存到设备余额里');
+  
+  close cur_d; 
+exception
+  --when null_exception then
+  --  dbms_output.put_line();  
+  when no_data_found then
+    dbms_output.put_line('错误:此设备编号不存在!');
+    
+end two;
+/

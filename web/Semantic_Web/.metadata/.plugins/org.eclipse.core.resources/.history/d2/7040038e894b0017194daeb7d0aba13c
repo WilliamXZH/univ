@@ -1,0 +1,20 @@
+package pers.william.util.impl;
+
+import java.util.List;
+
+import pers.william.util.BaseOperation;
+
+public class BaseOperationImpl{
+
+	public static Double getAverage(List<Double> list) {
+
+		Integer length = list.size();
+		Double avg = new Double(0);
+		
+		for(Double d:list){
+			avg += d/length;
+		}
+		return avg;
+	}
+
+}

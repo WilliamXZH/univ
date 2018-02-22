@@ -1,0 +1,12 @@
+<classpath>
+  <container id="web!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="F:/code/Java/java_SSM/web/WebContent/WEB-INF/lib/c3p0-0.9.2.1.jar">
+      <source-attachment-path>C:/Users/Administrator/AppData/Local/Temp/.org.sf.feeling.decompiler1510151126857/source/c3p0-0.9.2.1-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="SSM!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="F:/code/Java/java_SSM/SSM/WebContent/WEB-INF/lib/hadoop-common-2.7.1.jar">
+      <source-attachment-path>C:/Users/Administrator/AppData/Local/Temp/.org.sf.feeling.decompiler1507909395100/source/hadoop-common-2.7.1-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

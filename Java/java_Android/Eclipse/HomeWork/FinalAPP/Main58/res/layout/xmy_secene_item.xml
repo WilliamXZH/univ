@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+
+    <!-- android:drawableTop="@drawable/lzw_tu_p1"
+     android:drawableBottom="@drawable/xmy_secene_trigon" -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="18sp" 
+        android:drawablePadding="20dp"
+        />
+   <!--  <ImageView
+        android:id="@+id/imgtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/xmy_secene_left"
+        android:layout_marginTop="@dimen/xmy_video_right_top"
+        android:src="@drawable/xmy_secene_true" /> -->
+
+</RelativeLayout>

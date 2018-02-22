@@ -1,0 +1,35 @@
+.new_title{
+	font-size: 20px;
+	padding-top: 30px;
+}
+.new_subtitle{
+	font-size: 15px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	font-weight: 200;
+	padding-left: 10px;
+}
+.new_subtitle:hover{
+	background: #e3e8eb;
+	color: blue;
+	
+}
+.new_subtitleonfocus {
+	background: white;
+	color: black;
+	font-size: 15px;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 200;
+	padding-left: 20px;
+	
+}
+.my_a{
+	font-size: 15px;
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 200;
+	
+}

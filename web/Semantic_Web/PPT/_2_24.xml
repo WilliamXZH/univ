@@ -1,0 +1,13 @@
+<order>
+	<orderNo>23456</orderNo>
+	<customer>John Smith</customer>
+	<date>October 15, 2002</date>
+	<item>
+		<itemNo>a528</itemNo>
+		<quantity>1</quantity>
+	</item>
+	<item>
+		<itemNo>c817</itemNo>
+		<quantity>3</quantity>
+		</item>
+</order> 

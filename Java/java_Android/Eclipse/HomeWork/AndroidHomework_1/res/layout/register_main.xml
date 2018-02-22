@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#a0a002"
+     >
+	<LinearLayout
+        android:id="@+id/layout_back"
+        android:layout_gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+	    <TextView
+	        android:id="@+id/back_label"
+	        android:layout_width="50sp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/back" />
+    </LinearLayout>
+<!--     <LinearLayout style="@style/style_sub_layout"
+        android:id="@+id/layout_nickname" >
+        <TextView style="style_dimens"
+            android:id="@+id/nickname_label"
+            />"
+        
+    </LinearLayout> -->
+    <LinearLayout
+        android:id="@+id/layout_register_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:id="@+id/layout_fullname"
+        style="@style/style_sub_layout" >
+
+        <TextView 
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:id="@+id/name_create_label"
+            android:text="@string/name"
+            android:gravity="center"
+            />
+        <EditText android:id="@+id/name_create"
+            android:inputType="text"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content" />
+        
+    </LinearLayout>
+    <LinearLayout style="@style/style_sub_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_stuid" >
+
+        <TextView
+            android:id="@+id/stuid_label"
+            android:gravity="center"
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:text="@string/stuid" />
+
+        <EditText
+            android:id="@+id/stuid_create"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </LinearLayout>
+    <LinearLayout style="@style/style_sub_layout"
+        android:id="@+id/layout_sex"
+        >
+        <TextView 
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:text="@string/sex"
+            android:gravity="center"
+            />
+	    <RadioGroup 
+	        style="@style/style_sub_layout"
+	        android:id="@+id/sex_group"
+	        >
+	        <RadioButton 
+	            android:layout_width="75sp"
+	            android:layout_height="wrap_content"
+	            android:text="@string/male"
+	            android:checked="true"
+	            />
+	        <RadioButton 
+	            android:layout_width="75sp"
+	            android:layout_height="wrap_content"
+	            android:text="@string/female"
+	            />
+	    </RadioGroup>
+    </LinearLayout>
+    <LinearLayout style="@style/style_sub_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_birthday" >
+	    <TextView 
+	        android:id="@+id/birth_label"
+	        android:layout_width="80sp"
+	        android:layout_height="match_parent"
+	        android:text="@string/birthday"
+	        android:gravity="center"
+	        />
+	    <TextView android:id="@+id/showtime"
+        android:layout_width="150sp"
+        android:onClick="datePicker"
+        android:text="@string/please_select_date"
+        android:layout_height="wrap_content" />   
+<!--         <EditText
+        android:id="@+id/showtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入日期"
+        android:minWidth="400px"
+        android:onClick="datePicker"
+        android:textSize="20dp"
+        android:text="2013-10-1" /> -->
+	    
+<!--         <DatePicker android:id="@+id/datePicker"
+        android:layout_width="75sp"
+        android:layout_height="wrap_content" />
+   		<TimePicker android:id="@+id/timePicker"
+        android:layout_width="75sp"
+        android:layout_height="wrap_content" /> -->
+        
+    </LinearLayout>
+    <LinearLayout style="@style/style_sub_layout"
+        android:id="@+id/layout_password" >
+
+        <TextView
+            android:id="@+id/password_create_label"
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/password" />
+        <EditText android:id="@+id/password_create"
+            android:inputType="textPassword"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>    
+    <LinearLayout style="@style/style_sub_layout"
+        android:id="@+id/layout_password_resure" >
+
+        <TextView
+            android:id="@+id/password_resure_label"
+            android:gravity="center"
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:text="@string/password_resure" />
+        <EditText android:id="@+id/password_resure"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:layout_width="150sp"
+            />
+    </LinearLayout>
+    <LinearLayout style="@style/style_sub_layout"
+        android:id="@+id/layout_phone"
+        >
+        <TextView 
+            android:id="@+id/phone_label"
+            android:gravity="center"
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:text="@string/phone"
+            />
+        <EditText android:id="@+id/phone_create"
+            android:inputType="phone"
+            android:layout_height="wrap_content"
+            android:layout_width="150sp"
+            />
+    </LinearLayout>
+    <LinearLayout style="@style/style_sub_layout"
+        android:id="@+id/layout_mail"
+        >
+        
+        <TextView 
+            android:id="@+id/mail_label"
+            android:gravity="center"
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:text="@string/mail"
+            />
+        <EditText android:id="@+id/mail_create"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="150sp"
+            />
+    </LinearLayout>
+ 	<LinearLayout style="@style/style_sub_layout"
+        android:id="@+id/layout_address"
+ 	    >
+ 	    
+        <TextView 
+            android:id="@+id/address_label"
+            android:gravity="center"
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:text="@string/address"
+            />
+        <Spinner
+        android:id="@+id/province_select"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:entries="@array/province" />
+        <EditText 
+            android:id="@+id/city_create"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="70sp"
+            />
+
+ 	</LinearLayout>
+    <LinearLayout 
+        style="@style/style_sub_layout"
+        android:id="@+id/register_button"
+        android:layout_width="230sp"
+        android:background="#a0a0a0"
+        >
+        <Button android:layout_width="75dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_submit"
+            android:text="@string/submit"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:onClick="register"
+            />
+        <Button android:layout_width="80dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_todb"
+            android:text="@string/todb"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            android:onClick="toDB"
+            />
+        <Button android:layout_width="75dp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_readdb"
+            android:text="@string/readdb"
+            android:onClick="readDB"
+            />
+    </LinearLayout>
+    
+    </LinearLayout>    
+</LinearLayout>

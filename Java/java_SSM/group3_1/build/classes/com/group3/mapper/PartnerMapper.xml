@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.group3.mapper.PartnerMapper">
+
+	<insert id="partnerAdd">
+		insert into partner(MAIN_USER_ID,NAME,IDTF_TYPE,IDTF_NUM,TEL_NUM,USER_TYPE,GENDER)
+		values(#{mainUserId},#{name},#{idtfType},#{idtfNum},#{telNum},#{userType},#{gender})
+	</insert>
+	
+	<insert id="partnerAdd2">
+		insert into partner(MAIN_USER_ID,NAME,IDTF_TYPE,IDTF_NUM,TEL_NUM,USER_TYPE,GENDER)
+		values(#{id},#{userName},#{idtfType},#{idtfNum},#{telNum},#{userType},#{gender})
+	</insert>
+	
+	<select id="partnerEdit" resultMap="partnerResult">
+		select * from partner where MAIN_USER_ID = #{0} and NAME = #{1}
+	</select>
+	
+	<select id="getSelfInfo" resultMap="partnerResult">
+		select * from partner where MAIN_USER_ID = #{0} and NAME = #{1}
+	</select>
+	
+	<select id="getPartnerInfo" resultMap="partnerResult">
+		select * from partner where MAIN_USER_ID = #{ID}
+	</select>
+	
+	<resultMap id="partnerResult" type="com.group3.po.Partner">
+		<id property="mainUserId" column="MAIN_USER_ID" />
+		<id property="name" column="NAME" />
+		<result property="telNum" column="TEL_NUM" />
+		<result property="idtfType" column="IDTF_TYPE" />
+		<result property="idtfNum" column="IDTF_NUM" />
+		<result property="userType" column="USER_TYPE" />
+		<result property="gender" column="GENDER" />
+	</resultMap>
+	
+	<update id="partnerSave" parameterType="com.group3.po.Partner">
+		update PARTNER SET TEL_NUM=#{telNum},USER_TYPE=#{userType}
+		where MAIN_USER_ID = #{mainUserId} and NAME = #{name}
+	</update>
+	
+	<delete id="partnerDelete">
+		DELETE FROM PARTNER WHERE MAIN_USER_ID=#{mainUserId} AND NAME=#{name}
+	</delete>
+</mapper>

@@ -1,0 +1,18 @@
+<!ELEMENT email (head,body)>
+<!ELEMENT head (from,to+,cc*,subject)>
+<!ELEMENT from EMPTY>
+<!ATTLIST from	 name         CDATA   #IMPLIED
+	 address     CDATA   #REQUIRED>
+<!ELEMENT to EMPTY>
+<!ATTLIST to	 name      CDATA  #IMPLIED
+	 address  CDATA  #REQUIRED>
+<!ELEMENT cc EMPTY>
+<!ATTLIST cc			name      CDATA     #IMPLIED
+		address	 CDATA     #REQUIRED>
+<!ELEMENT subject (#PCDATA) >
+<!ELEMENT body (text, attachment*) >
+<!ELEMENT text (#PCDATA) >
+<!ELEMENT attachment EMPTY >
+<!ATTLIST attachment		
+		encoding   (mime|binhex)	 "mime" 
+		file	   CDATA	#REQUIRED>

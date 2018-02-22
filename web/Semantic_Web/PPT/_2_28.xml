@@ -1,0 +1,12 @@
+<email>
+	<head>
+		<from name="Michael Maher" 			 
+			address="michaelmaher@cs.gu.edu.au" />
+		<to name="Grigoris Antoniou"
+			address="grigoris@cs.unibremen.de" />
+		<subject>Where is your draft?</subject>
+	</head>
+	<body>
+		Grigoris, where is the draft of the paper you         promised me last week?
+	</body>
+</email>

@@ -1,0 +1,8 @@
+<complexType name="lecturerType">
+	<sequence>
+		<element name="firstname" type="string"
+			minOccurs=¡±0" maxOccurs="unbounded"/>
+		<element name="lastname" type="string"/>
+	</sequence>
+	<attribute name="title" type="string" 	use="optional"/>
+</complexType>

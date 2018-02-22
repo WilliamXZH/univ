@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical"
+    android:background="@drawable/border">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/rank_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="20px"
+        android:layout_toRightOf="@id/logo"
+        android:text="title/title of activities"
+        android:textColor="@color/blue"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/short_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:text="content content of activity.locatioin time etc."
+        android:textColor="@color/grey"
+        android:textSize="15dp" />
+</RelativeLayout>

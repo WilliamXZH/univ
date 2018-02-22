@@ -1,0 +1,15 @@
+<!--
+Wechat redpocket
+-Sender
+-Receivers
+-Amount of money 
+-Number of shares
+-Type: randomly, equally
+-Blessing wish
+	*Default: "Best Wishes"
+-Expire
+	*Fixed"24 hours"
+-->
+
+<!ELEMENT redpocket (sunder,receiver+,body)>
+<!>

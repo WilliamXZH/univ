@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="Advertisement.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1893" topLine="88" />
+	</File>
+	<File name="Advertisement.h" open="0" top="0" tabpos="0">
+		<Cursor position="261" topLine="36" />
+	</File>
+	<File name="Client.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1073" topLine="42" />
+	</File>
+	<File name="Client.h" open="0" top="0" tabpos="0">
+		<Cursor position="179" topLine="0" />
+	</File>
+	<File name="Date.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="2783" topLine="107" />
+	</File>
+	<File name="Date.h" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="testdate.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="872" topLine="36" />
+	</File>
+</CodeBlocks_layout_file>

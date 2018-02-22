@@ -1,0 +1,21 @@
+package ref.dahua.op.pre;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Secretary {
+
+	private List<StockObserver> observers = new ArrayList<StockObserver>();
+	private String action;
+	
+	public void attach(StockObserver observer){
+		observers.add(observer);
+	}
+	
+	public void notify(){
+		foreach(StockObserver o:observers){
+			o.update();
+		}
+	}
+	
+}

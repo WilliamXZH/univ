@@ -1,0 +1,177 @@
+
+/*密码*/
+.change_password{
+	width: 780px;
+	height: 220px;
+	margin-left: 15px;
+	margin-top: 20px;
+	border: 1px solid black;
+}
+.change_password img{
+	margin-left: 70px;
+	margin-top: 50px;
+}
+.change_password label{
+	display: block;
+	height: 22px;
+	width: 140px;
+	margin-left: 180px;
+	margin-top: -50px;
+	/*margin-top: 00px;*/
+	/*position: absolute;
+	top: 170px;
+	left: 250px;*/
+	font-size: 25px;
+	color: #9D9D9D;	
+}
+
+.change_password span{	
+	/*position: absolute;
+	top: 175px;
+	left: 390px;*/
+	display: block;
+	margin-top: -20px;
+	margin-left: 360px;
+	font-size: 15px;
+	color: #9D9D9D;		
+}
+.change_button1{
+	/*position: absolute;
+	top: 165px;
+	left: 670px;*/
+	display: block;
+	margin-top: -27px;
+	margin-left: 650px;
+	background: black;
+	height: 35px;
+	width: 100px;
+    border: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+.change_button1:hover{
+	 background:#fcdd44;
+}
+.image_line{
+	position: absolute;
+	top: 37px;
+	left: 300px;
+}
+/*邮箱*/
+
+.change_email{
+	width: 780px;
+	height: 220px;
+	margin-left: 15px;
+	margin-top: 20px;
+	border: 1px solid black;
+}
+.change_email img{
+	margin-left: 70px;
+	margin-top: 50px;
+}
+.change_email label{
+	display: block;
+	height: 22px;
+	width: 140px;
+	margin-left: 180px;
+	margin-top: -50px;
+	/*margin-top: 00px;*/
+	/*position: absolute;
+	top: 170px;
+	left: 250px;*/
+	font-size: 25px;
+	color: #9D9D9D;	
+}
+
+.change_email span{	
+	/*position: absolute;
+	top: 175px;
+	left: 390px;*/
+	display: block;
+	margin-top: -20px;
+	margin-left: 360px;
+	font-size: 15px;
+	color: #9D9D9D;		
+}
+/*.change_button1{
+	
+	display: block;
+	margin-top: -27px;
+	margin-left: 650px;
+	background: black;
+	height: 35px;
+	width: 100px;
+    border: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+.change_button1:hover{
+	 background:#fcdd44;
+}*/
+.image_line2{
+	position: absolute;
+	top: 280px;
+	left: 300px;
+}
+/*手机*/
+.change_phone{
+	width: 780px;
+	height: 220px;
+	margin-left: 15px;
+	margin-top: 30px;
+	border: 1px solid black;
+}
+.change_phone img{
+	margin-left: 70px;
+	margin-top: 50px;
+}
+.change_phone label{
+	display: block;
+	height: 22px;
+	width: 140px;
+	margin-left: 180px;
+	margin-top: -50px;
+	/*margin-top: 00px;*/
+	/*position: absolute;
+	top: 170px;
+	left: 250px;*/
+	font-size: 25px;
+	color: #9D9D9D;	
+}
+
+.change_phone span{	
+	/*position: absolute;
+	top: 175px;
+	left: 390px;*/
+	display: block;
+	margin-top: -20px;
+	margin-left: 360px;
+	font-size: 15px;
+	color: #9D9D9D;		
+}
+.change_button1{
+	/*position: absolute;
+	top: 165px;
+	left: 670px;*/
+	display: block;
+	margin-top: -27px;
+	margin-left: 650px;
+	background: black;
+	height: 35px;
+	width: 100px;
+    border: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+.change_button1:hover{
+	 background:#fcdd44;
+}
+.image_line3{
+	position: absolute;
+	top: 527px;
+	left: 300px;
+}

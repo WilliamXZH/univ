@@ -1,0 +1,25 @@
+package pers.william.main;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+public class MainThread {
+
+	private static Integer port = 9999;
+	private static ServerSocket serverSocket = null;
+	private static ThreadPoolExecutor threadPoolExecutor = null;
+	
+	public static void main(String [] args) throws IOException{
+		serverSocket = new ServerSocket(port);
+		threadPoolExecutor = new ThreadPoolExecutor(5, 10, 100, 
+				TimeUnit.MILLISECONDS,new ArrayBlockingQueue<Runnable>(5) );
+		
+		while(true){
+			Socket socket = serverSocket.accept();
+		}
+	}
+}

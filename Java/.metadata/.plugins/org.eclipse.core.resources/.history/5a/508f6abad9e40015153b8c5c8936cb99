@@ -1,0 +1,29 @@
+import java.io.BufferedReader;
+import java.io.DataOutput;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+public class ClientSocket {
+
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		/*Socket socket=new Socket("127.0.0.1",3336);
+		BufferedReader reader=new BufferedReader(new InputStreamReader(socket.getInputStream()));
+		PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
+		writer.println("USER root");
+		writer.flush();
+		String reponse = reader.readLine();*/
+		Socket s=new Socket("192.168.101.149",3336);
+		OutputStream os=s.getOutputStream();
+		DataOutputStream dos=new DataOutputStream(os);
+		dos.writeUTF("ÕıË°ø¢¥Û…µ±∆!");
+		dos.flush();
+		s.close();
+	}
+	
+
+}

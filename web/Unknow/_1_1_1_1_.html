@@ -1,0 +1,121 @@
+<html>
+	<head>
+	
+<style>
+*{ margin:0; padding:0; list-style:none;}
+.nav{ width:700px; height:30px; line-height:30px; margin:200px auto;}
+.nav li a{ color:#fff; text-decoration:none; display:block; float:left; height:30px; line-height:30px; padding:0px 15px; font-size:12px;background:#636871;}
+.nav li a:hover{ background:#4b505a;}
+.nav li{float:left;position:relative; height:30px; line-height:30px;}
+.nav li .second{position:absolute;left:0;display:none;}
+</style>
+
+	</head>
+	<body>
+		
+<div class="nav">
+	<li>
+		<a href='http://www.17sucai.com/'>首页</a>
+		<div class="second">
+			<a href='http://www.17sucai.com/'>首页</a>
+			<a href='http://www.17sucai.com/'>首页</a>
+			<a href='http://www.17sucai.com/'>首页</a>
+			<a href='http://www.17sucai.com/'>首页</a>
+		</div>
+	</li>
+	<li>
+		<a href='http://www.17sucai.com/'>菜单导航</a>
+		<div class="second">
+			<a href='http://www.17sucai.com/'>菜单导航</a>
+			<a href='http://www.17sucai.com/'>菜单导航</a>
+			<a href='http://www.17sucai.com/'>菜单导航</a>
+			<a href='http://www.17sucai.com/'>菜单导航</a>
+		</div>
+	</li>
+	<li>
+		<a href='http://www.17sucai.com/'>时间日期</a>
+		<div class="second">
+			<a href='http://www.17sucai.com/'>时间日期</a>
+			<a href='http://www.17sucai.com/'>时间日期</a>
+			<a href='http://www.17sucai.com/'>时间日期</a>
+			<a href='http://www.17sucai.com/'>时间日期</a>
+		</div>
+	</li>
+	<li>
+		<a href='http://www.17sucai.com/'>焦点图</a>
+		<div class="second">
+			<a href='http://www.17sucai.com/'>焦点图</a>
+			<a href='http://www.17sucai.com/'>焦点图</a>
+			<a href='http://www.17sucai.com/'>焦点图</a>
+			<a href='http://www.17sucai.com/'>焦点图</a>
+		</div>
+	</li>
+	<li>
+		<a href='http://www.17sucai.com'>tab标签</a>
+		<div class="second">
+			<a href='http://www.17sucai.com'>tab标签</a>
+			<a href='http://www.17sucai.com'>tab标签</a>
+			<a href='http://www.17sucai.com'>tab标签</a>
+			<a href='http://www.17sucai.com'>tab标签</a>
+		</div>
+	</li>
+	<li>
+		<a href='http://www.17sucai.com/'>jquery特效</a>
+		<div class="second">
+			<a href='http://www.17sucai.com/'>jquery特效</a>
+			<a href='http://www.17sucai.com/'>jquery特效</a>
+			<a href='http://www.17sucai.com/'>jquery特效</a>
+			<a href='http://www.17sucai.com/'>jquery特效</a>
+		</div>
+	</li>
+	<li>
+		<a href='http://www.17sucai.com/'>在线客服</a>
+		<div class="second">
+			<a href='http://www.17sucai.com/'>在线客服</a>
+			<a href='http://www.17sucai.com/'>在线客服</a>
+			<a href='http://www.17sucai.com/'>在线客服</a>
+			<a href='http://www.17sucai.com/'>在线客服</a>
+		</div>
+	</li>
+	<li>
+		<a href='http://www.17sucai.com/'>广告代码</a>
+		<div class="second">
+			<a href='http://www.17sucai.com/'>广告代码</a>
+			<a href='http://www.17sucai.com/'>广告代码</a>
+			<a href='http://www.17sucai.com/'>广告代码</a>
+			<a href='http://www.17sucai.com/'>广告代码</a>
+		</div>
+	</li>
+	<li>
+		<a href='http://www.17sucai.com/'>相册代码</a>
+		<div class="second">
+			<a href='http://www.17sucai.com/'>相册代码</a>
+			<a href='http://www.17sucai.com/'>相册代码</a>
+			<a href='http://www.17sucai.com/'>相册代码</a>
+			<a href='http://www.17sucai.com/'>相册代码</a>
+		</div>
+	</li>
+</div>
+<script type="text/javascript" src="experiment3/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	var nav = 0; // 默认值为0，二级菜单向下滑动显示；值为1，则二级菜单向上滑动显示
+	if(nav ==0){
+		$('.nav li').hover(function(){
+			$('.second',this).css('top','30px').show();
+		},function(){
+			$('.second',this).hide();
+		});
+	}else if(nav ==1){
+		$('.nav li').hover(function(){
+			$('.second',this).css('bottom','30px').show();
+		},function(){
+			$('.second',this).hide();
+		});
+	}
+});
+</script>
+
+
+	</body>
+</html>

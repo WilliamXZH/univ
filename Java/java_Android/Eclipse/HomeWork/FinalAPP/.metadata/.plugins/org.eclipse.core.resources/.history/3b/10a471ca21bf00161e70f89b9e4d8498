@@ -1,0 +1,26 @@
+package com.i4evercai.bannerdemo;
+
+import java.util.ArrayList;
+
+import android.app.Application;
+
+public class Myapplication extends Application{
+	private int times;
+	private ArrayList<OrderItem> orderList=new ArrayList<OrderItem>();
+	public int getTimes() {
+		return times;
+	}
+	public void setTimes(int times) {
+		this.times = times;
+	}
+	public ArrayList<OrderItem> getOrderList() {
+		return orderList;
+	}
+    public void onCreate()
+    {
+        super.onCreate();
+        times=2;
+    }
+	
+	
+}

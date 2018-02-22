@@ -1,0 +1,36 @@
+package math.number.analysis.euler;
+
+public class Result {
+	
+	double independentVariable;
+	double dependentVariable;
+	double accurateResult;
+	double dValue;
+	
+	
+	
+	public double getIndependentVariable() {
+		return independentVariable;
+	}
+	public void setIndependentVariable(double independentVariable) {
+		this.independentVariable = independentVariable;
+	}
+	public double getDependentVariable() {
+		return dependentVariable;
+	}
+	public void setDependentVariable(double dependentVariable) {
+		this.dependentVariable = dependentVariable;
+	}
+	public double getAccurateResult() {
+		return accurateResult;
+	}
+	public void setAccurateResult(double accurateResult) {
+		this.accurateResult = accurateResult;
+	}
+	public double getdValue() {
+		return dValue;
+	}
+	public void setdValue(double dValue) {
+		this.dValue = dValue;
+	}
+}

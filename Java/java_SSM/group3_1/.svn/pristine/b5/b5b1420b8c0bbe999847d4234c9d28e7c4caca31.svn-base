@@ -1,0 +1,182 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+a,a:visited{
+	color: #7C7C7C;
+	text-decoration: none;
+}
+/*日期提示*/
+a .alt{
+	float: left;
+	width: auto;
+	color: #00BFFF;
+    border:1px solid #00BFFF;	
+}
+/*车次查询总格局*/
+
+#demandTrainNumber {
+	width: 911px;
+	height: auto;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+
+/*车次查询头部性息*/
+
+#demandTrainNumberHead {
+	width: 911px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/*车次路径格局*/
+
+#demandTrainNumberPath {
+	font-size: 14px;
+	height: 30px;
+	width: auto;
+	margin-left: 0px;
+}
+
+
+/*车次查询路径*/
+
+#demandTrainNumberPath ul li {
+	margin-top: 40px;
+	float: left;
+	margin: 0 3px;
+	list-style: none;
+	outline: none;
+}
+
+.path:hover {
+	cursor: pointer;
+	color: red;
+}
+
+.path:link {
+	text-decoration: none;
+}
+
+
+/*提示信息格式*/
+
+
+
+
+/*输入查询车次的日期/车次号部分*/
+
+#enterPart {
+	width: 911px;
+	height: 320px;
+	background:url(../../images/车次查询/dfgbcvnghuj.jpg) no-repeat ;
+	
+
+}
+
+#enterPart div {
+	float: left;
+}
+
+#contentLeft {
+	border: 1px solid #DCA89A;
+	width: 255.5px;
+	margin: 0 100px;
+	margin-top: 63.5px;
+	margin-left: 80px;
+	height: 180px;
+	border-radius: 10px;
+	/*background-color: #EBF6FF;*/
+	background-color: rgba(255,255,255,.8);
+}
+.name{
+	color: black;
+	opacity: 1;
+}
+#contentRight{
+	margin-top: 63.5px;
+	width: 455.5px;
+	height: 202px;
+	opacity: 1;
+}
+
+/*日期格式*/
+
+#enterDate {
+	padding-left: 26px;
+	padding-top: 36px;
+	width: 350px;
+}
+
+
+/*查询车次图片样式*/
+
+#pathImg {
+	margin-top: 30px;
+	margin-left: 10px;
+	width: 400px;
+	height: 145px;
+}
+
+#trainNumberImg {
+	width: 323px;
+	height: 137px;
+}
+
+
+/*车次格式*/
+
+#enterTrainNumber {
+	padding-left: 10px;
+	margin-top: 22px;
+	width: 350px;
+}
+
+
+/*车次号输入框格式*/
+/*日期输入格式*/
+
+#enterDate input,#enterTrainNumber input {
+	height: 17px;
+	width: 151px;
+}
+
+
+/*查询按钮样式*/
+
+#demandTrainNumberButton {
+	width: 100px;
+	height: 30px;
+	margin-left: 75px;
+	margin-top: 22PX;
+	margin-bottom: 36PX;
+	border-radius: 10px;
+	outline: none;
+	background-color: #FAB84A;
+	opacity: 0.9;
+}
+#demandTrainNumberButton:hover{
+	opacity: 1;
+}
+
+/*表格样式*/
+
+#outTable {
+	width: 911px;
+	height: auto;
+	margin-top: 10px;
+	
+}
+
+#outTable tr td {
+	text-align: center;
+	display: none;
+}
+
+#outTable tr th {
+	background-color: #CCCCCC;
+}

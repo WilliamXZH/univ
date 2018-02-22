@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>	Virtual Fish Tank</title>
+		<script type="text/javascript">
+			<!--Hide the script from odl browers
+				var fishStyle;
+				function StartSwimming(){
+					fishStyle=document.getElementById("fish").style;
+					fishStyle.left=document.body.offsetWidth+"px";
+					window.setInterval("Swim()",75);
+				}
+				function Swim(){
+					var left=parsetInt(fishStyle.left)-5;
+					fishStyle.left=left+"px";
+					if(left<-118)
+						fishStyle.left=document.body.offsetWidth+"px";
+				}
+			//Stop hiding script-->
+		</script>
+	</head>
+	<body style="background-image:url(water.jpg)" onload="StartSwimming()">
+		<h1 style="text-align:center">Virtual Fish Tank</h1>
+		<p style="text-align:center">
+			Welcome to the virtual fish tank,where you never have to worry about remembering to feed the fish.
+			<img src="fish.gif" alt="Fish" id="fish" style="position:absolute;top:70px" />
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<vu:instructors 	xmlns:vu="http://www.vu.com/empDTD"
+			xmlns:gu="http://www.gu.au/empDTD"
+			xmlns:uky="http://www.uky.edu/empDTD" >
+
+	<uky:faculty	uky:title="assistant professor"
+			uky:name="John Smith"
+			uky:department="Computer Science"/>
+
+        <gu:academicStaff  gu:title="lecturer"
+				   gu:name="Mate Jones"
+				   gu:school="Information Technology"/>
+</vu:instructors> 

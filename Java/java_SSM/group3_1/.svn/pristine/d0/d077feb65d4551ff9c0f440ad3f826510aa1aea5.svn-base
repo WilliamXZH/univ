@@ -1,0 +1,73 @@
+.change_new_pssword{
+	width: 500px;
+	height: 500px;
+	/*border: 1px solid red;*/
+	margin-left: 170px;
+	margin-top: 40px;
+}
+.change_new_pssword label{
+	font-size: 19px;
+	font:"仿宋";
+	font-weight: 200;
+} 
+.pass_style{
+	border: 1px solid #D9D9D9;
+	/*color: #E1E1E1;*/
+	width: 300px;
+	height: 42px;
+	border-radius: 5px;
+	margin-top: 45px;
+	padding-left: 15px;
+
+}
+.pass_style2{
+	border: 1px solid #D9D9D9;
+	width: 300px;
+	height: 42px;
+	border-radius: 5px;
+	margin-top: 45px;
+	padding-left: 15px;
+
+}
+.check_number{
+	border: 1px solid #D9D9D9;
+	width: 170px;
+	height: 42px;
+	border-radius: 5px;
+	margin-top: 45px;
+	padding-left: 15px;
+
+}
+.image_sty{
+	padding-left: 10px;
+}
+.new_pass_submit{
+	
+	margin-left: 150px;
+	margin-top: 50px;	
+	background: black;
+	height: 35px;
+	width: 100px;
+    border: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+.new_pass_submit:hover{
+	 background:#fcdd44;
+}
+.get_checkNumber{
+	
+	margin-left: 10px;
+	margin-top: 45px;	
+	background: black;
+	height: 35px;
+	width: 100px;
+    border: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+.get_checkNumber:hover{
+	 background:#fcdd44;
+}

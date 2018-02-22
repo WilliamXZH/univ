@@ -1,0 +1,49 @@
+<html>
+	<body>
+		<script >
+			var myString ="56.02 degrees centigrade";
+			var myInt;
+			var myFloat;
+
+			document.write("\""+myString+"\" is "+parseInt(myString)+" as an integer"+"<br>");
+			myInt=parseInt(myString);
+			document.write("\""+myString+"\" when converted to an integer equals "+myInt+"<br>");
+			myFloat=parseFloat(myString);
+			document.write("\""+myString+"\" when coverted to a floating point number equals "+myFloat);
+			var myArray;
+			myArray=new Array();
+			var myArray=new Array(6);
+			var myArray=new Array("Paul",345,"Hohn",112,"Bob",99,"Pete");
+			document.write("myArray[0]="+myArray[0]+"<br>");
+			document.write("myArray[1]="+myArray[1]+"<br>");
+			document.write("myArray[2]="+myArray[2]+"<br>");
+			document.write("myArray[3]="+myArray[3]+"<br>");
+			document.write("myArray[4]="+myArray[4]+"<br>");
+			document.write("myArray[5]="+myArray[5]+"<br>");
+			myArray[1]="Mike";
+			document.write("myArray[1]="+myArray[1]+"<br>");
+
+			var data=new Array("Name:","Age:","Address:");
+			var personnel=new Array();
+			personnel[0]=new Array();
+			personnel[0][0]="Name0";
+			personnel[0][1]="Age0";
+			personnel[0][2]="Address0";
+			personnel[1]=new Array();
+			personnel[1][0]="Name1";
+			personnel[1][1]="Age1";
+			personnel[1][2]="Address1";
+			personnel[2]=new Array();
+			personnel[2][0]="Name2";
+			personnel[2][1]="Age2";
+			personnel[2][2]="Address2";
+			for(var i=0;i<3;i++)
+			{
+				document.write("<br>"+"personnel"+i+"<br>");
+				for(var j=0;j<3;j++){
+					document.write(data[j]+":"+personnel[i][j]+"<br>");
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+.fontcolor {
+	
+    margin-left:10px ;
+	width: 200px;
+	height: 30px;
+	font-size: 25px;
+	font: "微软雅黑";
+	color: orangered;
+    display: inline-block;
+}
+.fontcolor1 {
+	
+    margin-left:10px ;
+	width: 200px;
+	height: 30px;
+	font-size: 19px;
+	font: "微软雅黑";
+	color: orangered;
+    display: inline-block;
+}
+.title_sty1 {
+	margin-top: 10px;
+	font-size: 20px;
+	color: #000000;
+}
+
+.title_sty {
+	margin-left: 10px;
+	margin-top: 10px;
+	font-size: 20px;
+	color: #000000;
+}
+
+.title_sty2 {
+	margin-top: 10px;
+	margin-left: 60px;
+	font-size: 20px;
+	color: #000000;
+}
+.mybutton1{
+	border: none;
+	color: white;
+	background:#017EBA ;
+	font-family: white;
+	text-align: center;
+	height: 30px;
+	width: 100px;
+	border-radius: 10px;
+	
+}
+.mybutton2{
+	margin-left: 30px;
+	border: none;
+	color: white;
+	background:#017EBA ;
+	font-family: white;
+	text-align: center;
+	height: 30px;
+	width: 100px;
+	border-radius: 10px;
+
+}

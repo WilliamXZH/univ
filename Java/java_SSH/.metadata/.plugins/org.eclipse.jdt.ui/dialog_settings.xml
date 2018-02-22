@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="F:\program_tools\SSH\struts-2.5.8-all\struts-2.5.8\lib" key="org.eclipse.jdt.ui.lastextjar"/>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="9" key="index"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
+	</section>
+	<section name="NewPackageWizardPage">
+		<item value="false" key="create_package_info_java"/>
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+</section>

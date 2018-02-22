@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerLiZhiTop"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#aaa" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/viewPagerLiZhiTop"
+        android:layout_alignParentLeft="true"
+        android:gravity="right" >
+
+        <ImageView
+            android:id="@+id/ivTop1"
+            style="@style/main_top_style"
+            android:contentDescription="@string/dujia" />
+
+        <ImageView
+            android:id="@+id/ivTop2"
+            style="@style/main_top_style"
+            android:contentDescription="@string/dujia"
+            android:saveEnabled="false" />
+
+        <ImageView
+            android:id="@+id/ivTop3"
+            style="@style/main_top_style"
+            android:contentDescription="@string/dujia"
+            android:saveEnabled="false" />
+
+        <ImageView
+            android:id="@+id/ivTop4"
+            style="@style/main_top_style"
+            android:contentDescription="@string/dujia"
+            android:saveEnabled="false" />
+
+        <ImageView
+            android:id="@+id/ivTop5"
+            style="@style/main_top_style"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/dujia"
+            android:saveEnabled="false" />
+    </LinearLayout>
+
+</RelativeLayout>

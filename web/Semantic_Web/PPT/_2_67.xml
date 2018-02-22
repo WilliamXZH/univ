@@ -1,0 +1,10 @@
+<complexType name="restrictedLecturerType">
+	<restriction base="lecturerType">
+		<sequence>
+				<element name="firstname" type="string"
+					minOccurs="1" maxOccurs="2"/>
+			</sequence>
+			<attribute name="title" type="string" 				
+				use="required"/>
+		</restriction>
+</complexType> 

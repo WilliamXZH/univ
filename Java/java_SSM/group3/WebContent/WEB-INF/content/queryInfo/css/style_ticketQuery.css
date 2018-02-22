@@ -1,0 +1,1073 @@
+. {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Oxygen-Regular';
+	src: url(../fonts/Oxygen-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+	src: url(../fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+html,
+body {
+	background: #fff;
+	font-size: 100%;
+	font-family: 'Oxygen-Regular';
+}
+
+body a {
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: 'Montserrat-Regular';
+}
+
+
+/*----*/
+
+.w3layouts-login {
+	margin-top: 8px;
+	position: absolute;
+	top: 30px;
+	right: 50px;
+}
+
+.w3layouts-login a {
+	color: aquamarine;
+	position: relative;
+	right: 150px;
+	top: 5px;
+}
+
+.w3_login_module {
+	position: relative;
+	right: 0px;
+}
+
+
+/*--header--*/
+
+.w3layouts-main-content {
+	padding: 80px 0;
+}
+
+.logo h1 {
+	font-size: 2em;
+	text-align: center;
+	margin: 0em 0 0;
+}
+
+.logo h1 a {
+	text-decoration: none;
+	color: #fff905;
+}
+
+.right-icons li {
+	display: inline-block;
+}
+
+.w3layouts-login a {
+	display: block;
+	letter-spacing: 2px;
+	font-size: 13px;
+	color: #23C5BD;
+	text-decoration: none;
+	margin: 0 0.3em;
+}
+
+a.play-icon.popup-with-zoom-anim {
+	color: #000000;
+	font-size: 1em;
+}
+
+i.glyphicon.glyphicon-menu-hamburger {
+	font-size: 1em;
+	color: #fff;
+}
+
+#logOut{
+	position:absolute;
+	top:5px;
+	right:70px;
+	width:50px;
+	
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.tm-header {
+	background: #000000;
+	height: 80px;
+	position: relative;
+	top: 2px;
+	z-index: 100;
+}
+
+.tm-site-name-container {
+	padding-top: 20px;
+	width: 400px;
+	position: absolute;
+	left: 200px;
+	top: 10px;
+}
+
+.tm-site-name-container a {
+	text-decoration: none;
+	position: absolute;
+	right: 240px;
+}
+
+.tm-site-name {
+	color: #FCDD44;
+	font-size: 27px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.tm-site-name:hover,
+.tm-site-name:focus {
+	color: #FF720B;
+}
+
+.mobile-menu-icon {
+	display: none;
+}
+
+.tm-nav {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	left: 450px;
+	top: 0px;
+}
+
+.tm-nav li {
+	list-style: none;
+	float: left;
+}
+
+.tm-nav li a {
+	color: #838383;
+	display: block;
+	text-decoration: none;
+	padding: 45px 34px 15px 34px;
+	text-transform: uppercase;
+	transition: all 0.3s ease;
+}
+
+.tm-nav li a.active,
+.tm-nav li a:focus,
+.tm-nav li a:hover {
+	background: #FCDD44;
+	color: #000;
+}
+
+
+/*--//header--*/
+
+
+/* login/register */
+
+.form-module {
+	position: relative;
+	background: #ffffff;
+	max-width: 400px;
+	width: 100%;
+	border-top: 5px solid #FF8D1B;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+	margin: 1em auto;
+}
+
+.form-module .toggle {
+	cursor: pointer;
+	position: absolute;
+	top: -0;
+	right: -0;
+	background: #FF8D1B;
+	width: 30px;
+	height: 30px;
+	margin: -5px 0 0;
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.form-module .toggle .tooltip {
+	position: absolute;
+	top: 5px;
+	right: -75px;
+	display: block;
+	background: rgba(0, 0, 0, 0.6);
+	width: auto;
+	padding: 5px;
+	font-size: 12px;
+	line-height: 1;
+	text-transform: uppercase;
+	opacity: 1;
+	font-family: 'Ubuntu', sans-serif !important;
+}
+
+.form-module .toggle .tooltip:before {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: -5px;
+	display: block;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid rgba(0, 0, 0, 0.6);
+}
+
+.form-module .form {
+	display: none;
+	padding: 30px;
+}
+
+.form-module .form:nth-child(2) {
+	display: block;
+}
+
+.form-module h3 {
+	margin: 0 0 1.5em;
+	color: #212121;
+	font-size: 1.2em;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.form-module input[type="text"],
+.form-module input[type="password"],
+.form-module input[type="email"] {
+	outline: none;
+	display: block;
+	width: 100%;
+	border: 1px solid #d9d9d9;
+	margin: 0 0 20px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	font-weight: 400;
+	-webkit-transition: 0.3s ease;
+	transition: 0.3s ease;
+	font-size: 14px;
+}
+
+.form-module input[type="text"]:focus,
+.form-module input[type="password"]:focus,
+.form-module input[type="email"]:focus {
+	border: 1px solid #C7D0F5;
+	color: #333333;
+}
+
+.form-module input[type="submit"],.form-module input[type="button"] {
+	background: #FF8D1B;
+	width: 100%;
+	border: 0;
+	padding: 10px 15px;
+	color: #ffffff;
+	-webkit-transition: 0.3s ease;
+	transition: 0.3s ease;
+	font-size: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	outline: none;
+}
+
+.form-module input[type="submit"],.form-module input[type="button"]:hover {
+	background: #FF8D1B;
+}
+
+.form-module .cta {
+	background: #343434;
+	width: 100%;
+	padding: 15px 40px;
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+}
+
+.form-module .cta a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.modal-header {
+	text-align: center;
+	font-size: 2em;
+	color: #212121;
+}
+
+.modal-content {
+	z-index: 9999;
+}
+
+.choice_sth {
+	display: block;
+	width: 340px;
+	height: 42px;
+	border: 1px solid #D9D9D9;
+	color: #7575A0;
+	margin-bottom: 6px;
+}
+
+#check_sth div {
+	float: left;
+}
+
+#check_number {
+	display: block;
+	width: 210px;
+	height: 42px;
+	padding-right: 20px;
+	color: #7575A0;
+	margin-bottom: 6px;
+}
+
+#I_agree {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#check_button {
+	display: block;
+	width: 30px;
+	height: 42px;
+	margin-right: 10px;
+	border: 1px solid #D9D9D9;
+	color: #7575A0;
+	margin-bottom: 6px;
+}
+
+.form-module input,
+.form-module select {
+	display: inline-block;
+	transition: background-color 1s ease;
+	border-radius: 5px;
+}
+
+/*--前端验证--*/
+.info {
+	width: 150px;
+	height: 30px;
+	color: red;
+	font-size: 10px;
+}
+
+#UsernameInfo1 {
+	position: absolute;
+	top: 83px;
+	left: 210px;
+}
+
+#PasswordInfo1 {
+	position: absolute;
+	top: 145px;
+	left: 210px;
+}
+
+#UsernameInfo {
+	position: absolute;
+	top: 83px;
+	left: 210px;
+}
+
+#nameInfo {
+	position: absolute;
+	top: 152px;
+	left: 210px;
+}
+
+#PasswordInfo {
+	position: absolute;
+	top: 207px;
+	left: 210px;
+}
+
+#PasswordagainInfo {
+	position: absolute;
+	top: 277px;
+	left: 210px;
+}
+
+#EmailInfo {
+	position: absolute;
+	top: 338px;
+	left: 210px;
+}
+
+#PhoneInfo {
+	position: absolute;
+	top: 400px;
+	left: 210px;
+}
+
+#identiferInfo {
+	position: absolute;
+	top: 511px;
+	left: 210px;
+}
+/*--//前端验证--*/
+
+/*-- //login --*/
+
+
+/*--body--*/
+
+#presentPath {
+	display: block;
+	height: 28px;
+	width: 60%;
+	margin-left: 18%;
+	margin-bottom: 10px;
+	position: relative;
+	top: 60px;
+}
+
+#condition {
+	display: block;
+	height: 75px;
+	width: 60%;
+	border: 1px solid;
+	border-color: black;
+	background-color: EEF1F8;
+	position: relative;
+	top: 70px;
+	left: 20%;
+	padding-left: 10px;
+	padding-top: 12.5px;
+}
+
+#keyCondition div,#queryButton {
+	position: relative;
+	top: 10px;
+}
+
+#keyCondition input{
+	width: 120px;
+	margin-right:40px ;
+}
+
+#filtration {
+	display: block;
+	height: 80px;
+	width: 60%;
+	border: 1px solid;
+	border-color: black;
+	background-color: EEF1F8;
+	position: relative;
+	top: 82px;
+	left: 20%;
+	padding-left: 10px;
+	padding-top: 13px;
+}
+
+#filtration input {
+	margin-left: 15px;
+	margin-right: 1px;
+}
+
+#condition div {
+	float: left;
+}
+
+#ifBack {
+	margin-right: 20px;
+}
+
+#queryButton {
+	display: block;
+	position: relative;
+	top: 5px;
+	left: 30px;
+}
+
+#ticketQuery {
+	color: white;
+	background-color: #017EBA;
+	height: 35px;
+	border-radius: 5px;
+}
+
+#train_checkall,
+#seat_checkall {
+	width: 40px;
+	height: 20px;
+	position: relative;
+	bottom: 1px;
+}
+
+#seatftTable {
+	position: relative;
+	top: 10px;
+}
+
+
+/*--table--*/
+
+#btn1 {
+	position: absolute;
+	left: 30%;
+}
+
+#btn2 {
+	position: absolute;
+	left: 40%;
+}
+
+.search_box {
+	position: relative;
+	margin-top: 150px;
+	left: 20%;
+	width: 60%;
+}
+
+.table th {
+	color: white;
+}
+
+.my_table_first {
+	/* height: 500px; */
+	height:auto;
+	border: 1px solid black;
+	margin-top: 20px;
+}
+
+.my_table_second {
+	/*float: left;*/
+	/* height: 500px; */
+	border: 1px solid black;
+	margin-top: 20px;
+}
+
+.train_arrive {
+	font: "微软雅黑";
+	font-size: 14px;
+	color: black;
+	font-weight: 300;
+}
+
+.td_style {
+	font: "微软雅黑";
+	font-size: 14px;
+	color: black;
+	font-weight: 300;
+}
+
+.train_time {
+	list-style: none;
+}
+
+.train_number {
+	font: "微软雅黑";
+	font-size: 16px;
+	color: black;
+}
+
+.train_time span {
+	padding-left: 10px;
+	font: "微软雅黑";
+	font-size: 16px;
+	color: black;
+	font-weight: 300;
+}
+
+.ticket_price {
+	padding-left: 5px;
+	font: "微软雅黑";
+	font-size: 16px;
+	color: gray;
+}
+
+.ticket_number {
+	text-align: center;
+	width: 30px;
+	color: #FF8D1B;
+}
+
+.ticket_price {
+	width: 70px;
+	color: #FF8D1B;
+}
+
+.choice_ticket {
+	display: block;
+	height: 18px;
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+.gogogo {
+	position: absolute;
+	top: 370px;
+	left: 200px;
+	margin-left: 275px;
+	background: #017EBA;
+	height: 35px;
+	width: 100px;
+	border: 0;
+	padding: 5px 8px;
+	border-radius: 4px;
+	color: #ffffff;
+}
+
+.comecome {
+	position: absolute;
+	margin-left: 195px;
+	top: 370px;
+	left: 200px;
+	background: lightgray;
+	height: 35px;
+	width: 100px;
+	border: 0;
+	padding: 5px 8px;
+	border-radius: 4px;
+	color: black;
+}
+
+
+.ImSure {
+	margin-left: 520px;
+	margin-top: 50px;
+	background: #017EBA;
+	height: 35px;
+	width: 100px;
+	border: 0;
+	padding: 5px 8px;
+	border-radius: 4px;
+	color: #ffffff;
+}
+
+.ImSure:hover {
+	background: #D84C29;
+}
+
+
+/*--table--*/
+
+
+/** Calender **/
+
+#DPTtime #DSTtime input {
+	cursor: pointer;
+	width: 83%;
+	background: #fbfcfc url(../images/clander.png) no-repeat 72px 10px;
+}
+
+#ui-datepicker-div {
+	background: #333 !important;
+	width: 265px;
+}
+
+.ui-datepicker-header {
+	background: #017cb6;
+	height: 38px;
+	position: relative;
+}
+
+.ui-datepicker-title {
+	text-align: center;
+	position: absolute;
+	top: 9px;
+	left: 73px;
+}
+
+.ui-datepicker-title span {
+	font: 14px 'gotham_roundedmedium', Times New Roman, Times, serif;
+	color: #fff;
+}
+
+.ui-datepicker-prev span {
+	cursor: pointer;
+	position: absolute;
+	top: 38%;
+	left: 17px;
+	font-size: 0px;
+	width: 9px;
+	height: 13px;
+	display: inline-block;
+	background: url(../images/calender-left-arrow.png) no-repeat;
+}
+
+.ui-datepicker-next span {
+	cursor: pointer;
+	position: absolute;
+	top: 38%;
+	right: 17px;
+	font-size: 0px;
+	width: 9px;
+	height: 13px;
+	display: inline-block;
+	background: url(../images/calender-right-arrow.png) no-repeat;
+}
+
+.ui-datepicker-calendar {
+	width: 265px;
+}
+
+.ui-datepicker-calendar thead {
+	background: #fbfafa;
+}
+
+.ui-datepicker-calendar thead tr th span {
+	font: 10px 'proxima_nova_rgregular', Times New Roman, Times, serif;
+	color: #646464;
+	text-transform: uppercase;
+}
+
+.ui-datepicker-calendar tbody {
+	background: #ffffff;
+}
+
+.ui-datepicker-calendar tbody tr td {
+	text-align: center;
+	height: 30px;
+	width: 30px;
+	border: 1px solid #eeeeee;
+	border-top: 0px;
+	line-height: 30px;
+}
+
+.ui-datepicker-calendar tbody tr td:hover {
+	background: #e9e6e6;
+}
+
+.ui-datepicker-calendar tbody tr .ui-datepicker-today {
+	background: #e9e6e6;
+}
+
+.ui-datepicker-calendar tbody tr td a {
+	font: 12px 'gotham_roundedmedium', Times New Roman, Times, serif;
+	color: #5a5c5c;
+}
+
+
+/**End Calender **/
+
+hr {
+	border-top: 1px solid #111010;
+}
+
+.tm-section-header {
+	margin-bottom: 70px;
+	overflow: hidden;
+}
+
+.tm-section-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: 300;
+}
+
+.tm-home-box-2 {
+	background-color: white;
+	max-width: 254px;
+}
+
+.tm-date {
+	color: #c3c3c3;
+	padding: 10px 25px;
+	text-transform: uppercase;
+}
+
+.tm-home-box-2-container {
+	border-top: 1px solid #DDD;
+	overflow: hidden;
+}
+
+.tm-home-box-2-link {
+	display: inline-block;
+	height: 100%;
+	color: black;
+	transition: all 0.3s ease;
+	text-align: center;
+}
+
+.tm-home-box-2-link:hover,
+.tm-home-box-2-link:focus {
+	color: #FCDD44;
+}
+
+.border-left {
+	border-left: 1px solid #DDD;
+}
+
+.border-right {
+	border-right: 1px solid #DDD;
+}
+
+.tm-home-box-2-icon {
+	padding: 20px;
+	width: 60px;
+	height: 60px;
+	font-size: 1.4em;
+}
+
+.tm-home-box-2-description {
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	width: 125px;
+	padding-bottom: 18px;
+}
+
+.tm-home-box-2-description.box-3 {
+	width: 175px;
+}
+
+.home-description {
+	margin: 50px auto;
+	padding: 0 30px;
+	text-align: center;
+}
+
+.tm-home-box-3 {
+	margin-bottom: 50px;
+	max-width: 555px;
+	overflow: hidden;
+}
+
+.tm-home-box-3-img-container {
+	float: left;
+}
+
+.tm-home-box-3-info {
+	height: 225px;
+	max-width: 305px;
+	float: right;
+	border: 1px solid #CCC;
+	border-left: none;
+}
+
+.tm-home-box-3-description {
+	padding: 40px 30px 44px;
+}
+
+.section-padding-bottom {
+	padding-bottom: 60px;
+}
+
+
+
+.cuttingLine h1,
+.cuttingLine1 h1 {
+	font-size: 50px;
+}
+
+.cuttingLine1 {
+	position: relative;
+	top: 150px;
+}
+
+
+/*--//body--*/
+
+
+/*--footer--*/
+
+#footerContainer {
+	margin-top: 200px;
+	width: 100%;
+}
+
+.footer {
+	background-color: #FFFFFF;
+	padding: 50px 0px;
+}
+
+.footerh {
+	color: black;
+	font-family: "Ubuntu", sans-serif;
+}
+
+.footer-social {
+	list-style: none;
+	float: left;
+	padding-left: 0px;
+}
+
+.footer-social li {
+	display: inline-block;
+}
+
+.footer-social li a i {
+	color: #fff;
+	font-size: 24px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #78D0EE;
+	border-radius: 3px;
+	transition: all 0.8s ease-in 0s;
+}
+
+.quicklinks {
+	position: relative;
+	left: 90px;
+}
+
+.quickcontact {
+	position: relative;
+	left: 90px;
+}
+
+.follow {
+	position: relative;
+	left: 110px;
+}
+
+.quicklinks ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.quicklinks ul li {
+	margin-bottom: 10px;
+}
+
+.quicklinks ul li i {
+	color: #fff;
+}
+
+.quicklinks ul li a {
+	color: #78D0EE;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.quickcontact ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.quickcontact ul li {
+	color: #78D0EE;
+	margin-bottom: 10px;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.quickcontact ul li i {
+	color: black;
+	width: 20px;
+}
+
+.quickcontact ul li {}
+
+footer {
+	background-color: #242424;
+}
+
+footer p {
+	text-align: center;
+	color: #fff;
+	font-family: "Source Sans Pro", sans-serif;
+	padding: 15px 0px !important;
+	margin-bottom: 0px !important;
+}
+
+footer p a {
+	color: #78d0ee;
+}
+
+@media (min-width: 200px) and (max-width: 767px) {
+	.navb {
+		background-color: #78D0EE;
+		width: 100%;
+	}
+	.navb a {
+		padding: 15px !important;
+	}
+	.banner {
+		background: transparent url("images/bg.jpg") no-repeat scroll 0% 0% / 100% 100%;
+		padding: 20px 0px;
+	}
+	.timing {
+		text-align: center !important;
+		border-right: none;
+	}
+	.timing h6 {
+		color: #84784C;
+	}
+	.servicebox {
+		margin-bottom: 20px;
+	}
+	.panel-group {
+		padding-left: 0px;
+		margin-top: 20px;
+	}
+	.follow {
+		text-align: center;
+	}
+	.footer-social {
+		float: none;
+	}
+	.quicklinks {
+		text-align: center;
+	}
+	.quickcontact {
+		text-align: center;
+	}
+}
+
+
+/*--toTop--*/
+
+#toTopButton {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 40px;
+	left: 51%;
+	margin-left: 500px;
+	overflow: hidden;
+	width: 50px;
+	height: 49px;
+	border: none;
+	text-indent: -999px;
+	z-index: 20;
+	background: url(../images/totop.png) no-repeat left 0;
+	transition: 0s ease;
+	-o-transition: 0s ease;
+	-webkit-transition: 0s ease;
+}
+
+#toTopButton:hover {
+	outline: none;
+	cursor: pointer;
+	background-position: right 0;
+}
+
+
+/*--//toTop--*/
+
+
+/*--//footer--*/

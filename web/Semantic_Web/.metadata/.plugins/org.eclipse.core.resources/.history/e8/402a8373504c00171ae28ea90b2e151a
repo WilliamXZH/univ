@@ -1,0 +1,9 @@
+package pers.william.util;
+
+import java.util.List;
+
+public interface UserUtil {
+	
+	public Double getSimilarity(List<Double> user1List,List<Double> user2List);
+
+}

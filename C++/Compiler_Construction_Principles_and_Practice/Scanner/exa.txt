@@ -1,0 +1,13 @@
+program abc
+begin:
+    var x:=0;
+    var y:=1;
+    for(var i:=100;i>0;i:=i-1) repeat
+        if(i/5==0) then
+            x:=x+1;
+            y:=y*i;
+        else then
+            x:=x+2;
+        end if;
+    end repeat;
+end;

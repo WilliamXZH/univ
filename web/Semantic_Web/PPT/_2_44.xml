@@ -1,0 +1,14 @@
+<family>
+		<person id="bob" mother="mary" father="peter">
+			<name>Bob Marley</name>
+		</person>
+		<person id="bridget" mother="mary">
+			<name>Bridget Jones</name>
+		</person>
+		<person id="mary" children="bob bridget">
+			<name>Mary Poppins</name>
+		</person>
+		<person id="peter" children="bob">
+			<name>Peter Marley</name>
+		</person>
+</family>

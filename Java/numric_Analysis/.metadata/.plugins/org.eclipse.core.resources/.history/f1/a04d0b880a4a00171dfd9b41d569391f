@@ -1,0 +1,66 @@
+package math.number.analysis.euler;
+
+/**
+ * y'&nbsp;=&nbsp;4x/y-xy,&nbsp;0&lt;x&lt;=2<br/>
+ * y(0)&nbsp;=&nbsp;0<br/>
+ * <br/>
+ * y(n+1)&nbsp;=&nbsp;y(n)+h(4x/y-xy)</br>
+ * y(0)&nbsp;=&nbsp0
+ */
+public class Euler {
+
+	private double h;
+	private double upperBound;
+	private double lowwerBound;
+	private double originalOfY;
+	
+	public Euler(double original, double lowwer, double upper){
+		super();
+		this.upperBound = upper;
+		this.lowwerBound = lowwer;
+		this.originalOfY = original;
+	}
+	public double getH() {
+		return h;
+	}
+
+
+	public void setH(double h) {
+		this.h = h;
+	}
+
+
+	public double getUpperBound() {
+		return upperBound;
+	}
+
+
+	public void setUpperBound(double upperBound) {
+		this.upperBound = upperBound;
+	}
+
+
+	public double getLowwerBound() {
+		return lowwerBound;
+	}
+
+
+	public void setLowwerBound(double lowwerBound) {
+		this.lowwerBound = lowwerBound;
+	}
+
+
+	public double getOriginalOfY() {
+		return originalOfY;
+	}
+
+
+	public void setOriginalOfY(double originalOfY) {
+		this.originalOfY = originalOfY;
+	}
+
+
+	public void euler(){
+		
+	}
+}

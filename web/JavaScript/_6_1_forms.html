@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<script language="JavaScript" type="text/javascript">
+			var numberOfClicks=0;
+			function window_onload()
+			{
+				var numberForms=document.forms.length;
+				var formIndex;
+				for(formIndex=0;formIndex<numberForms;formIndex++)
+				{
+					alert(document.forms[formIndex].name);
+				}
+			}
+			function myButton_onclick()
+			{
+				numberOfClicks++;
+				window.document.form1.myButton.value='Button clicked '+numberOfClicks+' times';
+			}
+			function myButton1_onmouseup()
+			{
+				document.form1.myButton1.value="Mouse Gose Up";
+			}
+			function myButton1_onmousedown()
+			{
+				document.form1.myButton1.value="Mouse Goes Down"
+			}
+		</script>
+	</head>
+	<body language="JavaScript" type="text/javascript" onload="window_onload()">
+		<form name="form1">
+			<input type='button' name="myButton" value="Button clicked 0 times" onclick="myButton_onclick()">
+			<input type="button" name="myButton1" value="Mouse Goes Up" onmouseup="myButton1_onmouseup()" onmousedown="myButton1_onmousedown()">
+		<p>This is inside form1</p>
+		</form>
+		<form name="form2">
+			<input type="submit" value="Submit" name="submit1">
+			<input type="reset" value="Reset" name="reset1">
+			<input type="text" name="myTextBox" size=10 maxlength=15 value="Hello World">
+		<p>This is inside form2</p>
+		</form>
+		<form name="form3">
+			<input type="text" name=textReadonly value="Look but don't change" onfocus="window.document.form3.textReadonly.blur()" READONLY=true>
+		<p>This is inside form3</p>
+		</form>
+	</body>
+</html>

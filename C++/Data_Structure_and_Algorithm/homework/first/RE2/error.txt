@@ -1,0 +1,5 @@
+error1:void build_wordlist (string* word_list, int capacity, string filename)函数的形参列表应使用引用
+	word_list应使用传递指针类型的引用，capacity使用引用，否则无法改变main函数里的值
+errpr2:string new_word_list = *(new string[2 * capacity]);改为string *new_word_list = (new string[2 * capacity]);
+error3:new_word_list= word_list[index];等号左侧未加下标，不能正确赋值
+error4:*word_list = new_word_list;改word_list = new_word_list;为

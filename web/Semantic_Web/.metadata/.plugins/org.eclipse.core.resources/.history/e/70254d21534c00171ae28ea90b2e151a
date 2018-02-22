@@ -1,0 +1,12 @@
+package pers.william.similarity;
+
+/**
+ * Pearson Correlation Coefficient
+ * 
+ * @author william
+ * 
+ *
+ */
+public class PCCSimilarity {
+	
+}

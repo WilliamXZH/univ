@@ -1,0 +1,35 @@
+# NEUOJ Test Script Ver1.0
+compose:
+    cache:
+        image: redis
+    database:
+        image: mariadb
+        privileged: true
+        environment:
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_DATABASE=neuoj_test
+            - MYSQL_USER=neuoj
+            - MYSQL_PASSWORD=neuoj
+        volumes:
+build:
+    image: void001/neuoj-test
+    environment:
+    commands:
+        - pwd
+        - ls -al
+        - cp .env.example .env
+        - echo "========================== Installing NEUOJ ======================"
+        - php composer.phar install -vvv
+        - echo "************************* Install NEUOJ Composer Dependencies Done ********************************"
+          #- php artisan migrate
+        - php artisan key:generate
+        - ./vendor/bin/phpunit
+
+notify:
+    webhook:
+        debug: true
+        method: POST
+        urls:
+            - https://hook.bearychat.com/=bw6aV/incoming/3b8fca455d53c80d331c4efe7971d20e
+        content_type: application/json
+        template: '{ "text": "@group\n 萌萌哒NEUOJ的第#{{ build.number }}次编译的结果报告~~~ \n结果: __{{ build.status }}__\n Commit: {{ build.message }}\n [详情可以点击这里]({{ system.link_url }})\n --\n DroneCI Bot by 萌萌的修罗酱~~", "markdown": true, "channel": "NEUOJ_accelercode", "attachments": [{ "title":"Build Status", "text": "{{ build.status }}", "images":[{"url": "http://202.118.31.226:3322/api/badges/Lbyang/NEUOJ/status.svg"}] }]  }'

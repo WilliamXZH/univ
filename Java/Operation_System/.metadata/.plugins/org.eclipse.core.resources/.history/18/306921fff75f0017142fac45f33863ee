@@ -1,0 +1,58 @@
+package pers.william.main;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+import pers.william.mode.FCFS;
+
+public class MainThread {
+	
+	private static Integer FCFS = 1;
+	private static Integer SFF = 2;
+
+	//private static Integer port = 9999;
+	
+	//private Integer nThread;
+	private Integer mode;
+	//private String host;
+	private ServerSocket serverSocket = null;
+	private ThreadPoolExecutor threadPoolExecutor = null;
+	
+	private static String tmplate = "./webserver PORT NTHREADS MODE ";
+	
+	
+	public MainThread(Integer port, Integer mode,Integer nThread,String host ) throws IOException{
+		
+		serverSocket = new ServerSocket(port);
+		threadPoolExecutor = new ThreadPoolExecutor(nThread, 3*nThread, 3, 
+				TimeUnit.SECONDS,new ArrayBlockingQueue<Runnable>(10) );
+	}
+	
+	public static void main(String [] args) throws IOException{
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println(tmplate);
+//		host = scanner.next();
+//		port = scanner.nextInt();
+//		nThread = scanner.nextInt();
+//		mode = scanner.next().toLowerCase();
+		
+		MainThread mainThread 
+		
+		
+		while(true){
+			Socket socket = mainThread.serverSocket.accept();
+			mainThread.threadPoolExecutor.execute(new MyThread(socket));
+			
+			 System.out.println("线程池中线程数目："+mainThread.threadPoolExecutor.getPoolSize()+"，队列中等待执行的任务数目："+
+		             mainThread.threadPoolExecutor.getQueue().size()
+		             +"，已执行玩别的任务数目："+mainThread.threadPoolExecutor.getCompletedTaskCount());
+			
+		}
+	}
+}

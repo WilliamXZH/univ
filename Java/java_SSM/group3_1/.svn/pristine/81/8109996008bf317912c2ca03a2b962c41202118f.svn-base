@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group3.mapper.OrderMapper">
+	<select id="selectOrder" parameterType="java.lang.String" resultMap="orderResult">
+		<!-- select * from tb_order 
+		where (to_char(ID)=#{condition} or MEMBER_NAME=#{condition} or to_char(TRAIN_ID)=#{condition}) 
+		and to_char(TIME,'yyyy-mm-dd')>#{start}
+		AND to_char(TIME,'yyyy-mm-dd')&lt;#{end} -->
+		select o.pay_status,o.id AS id,o.member_name AS member_name,t.SERIAL_NUM AS train_id,
+			c.SERIAL_NUM AS carriage_num,s.NUM AS seat_num,
+			st.name AS depature_name,sta.name AS destination_name,
+			tt.TYPE as ticket_type,o.cost AS cost,
+			TO_CHAR(o.TIME, 'YYYY-MM-DD') AS order_time,TO_CHAR(o.DEPART_TIME, 'YYYY-MM-DD') AS depart_time,
+			o.PAY_METHOD AS pay_method
+		from TB_ORDER o,station st,station sta,seat s,carriage c,train t,TICKET_TYPE tt
+		where o.depature_id = st.id 
+			and o.DESTINATION_ID = sta.id 
+			and o.seat_id = s.id 
+			and o.train_id = t.id 
+			and s.CARRIAGE_ID = c.ID 
+			and c.TICKET_TYPE_ID = tt.ID
+			and (to_char(o.ID)=#{condition} or o.member_name=#{condition} or to_char(t.SERIAL_NUM)=#{condition}) 
+			and to_char(o.TIME,'yyyy-mm-dd')>#{start}
+			and to_char(o.TIME,'yyyy-mm-dd')&lt;#{end}
+	</select>
+	
+	<select id="selectOrder2" parameterType="java.lang.String" resultMap="orderResult">
+		select o.pay_status,o.id AS id,o.member_name AS member_name,t.SERIAL_NUM AS train_id,
+			c.SERIAL_NUM AS carriage_num,s.NUM AS seat_num,
+			st.name AS depature_name,sta.name AS destination_name,
+			tt.TYPE as ticket_type,o.cost AS cost,
+			TO_CHAR(o.TIME, 'YYYY-MM-DD') AS order_time,TO_CHAR(o.DEPART_TIME, 'YYYY-MM-DD') AS depart_time,
+			o.PAY_METHOD AS pay_method
+		from TB_ORDER o,station st,station sta,seat s,carriage c,train t,TICKET_TYPE tt
+		where o.depature_id = st.id 
+			and o.DESTINATION_ID = sta.id 
+			and o.seat_id = s.id 
+			and o.train_id = t.id 
+			and s.CARRIAGE_ID = c.ID 
+			and c.TICKET_TYPE_ID = tt.ID 
+			and to_char(o.TIME,'yyyy-mm-dd')>#{start}
+			and to_char(o.TIME,'yyyy-mm-dd')&lt;#{end}
+	</select>
+	
+	<select id="selectOrder3" parameterType="java.lang.String" resultMap="orderResult">
+		select o.pay_status,o.id AS id,o.member_name AS member_name,t.SERIAL_NUM AS train_id,
+			c.SERIAL_NUM AS carriage_num,s.NUM AS seat_num,
+			st.name AS depature_name,sta.name AS destination_name,
+			tt.TYPE as ticket_type,o.cost AS cost,
+			TO_CHAR(o.TIME, 'YYYY-MM-DD') AS order_time,TO_CHAR(o.DEPART_TIME, 'YYYY-MM-DD') AS depart_time,
+			o.PAY_METHOD AS pay_method
+		from TB_ORDER o,station st,station sta,seat s,carriage c,train t,TICKET_TYPE tt
+		where o.depature_id = st.id 
+			and o.DESTINATION_ID = sta.id 
+			and o.seat_id = s.id 
+			and o.train_id = t.id 
+			and s.CARRIAGE_ID = c.ID 
+			and c.TICKET_TYPE_ID = tt.ID
+			and (to_char(o.ID)=#{condition} or o.member_name=#{condition} or to_char(t.SERIAL_NUM)=#{condition}) 
+			and to_char(o.DEPART_TIME,'yyyy-mm-dd')>#{start}
+			and to_char(o.DEPART_TIME,'yyyy-mm-dd')&lt;#{end}
+	</select>
+	
+	<select id="selectOrder4" parameterType="java.lang.String" resultMap="orderResult">
+		select o.pay_status,o.id AS id,o.member_name AS member_name,t.SERIAL_NUM AS train_id,
+			c.SERIAL_NUM AS carriage_num,s.NUM AS seat_num,
+			st.name AS depature_name,sta.name AS destination_name,
+			tt.TYPE as ticket_type,o.cost AS cost,
+			TO_CHAR(o.TIME, 'YYYY-MM-DD') AS order_time,TO_CHAR(o.DEPART_TIME, 'YYYY-MM-DD') AS depart_time,
+			o.PAY_METHOD AS pay_method
+		from TB_ORDER o,station st,station sta,seat s,carriage c,train t,TICKET_TYPE tt
+		where o.depature_id = st.id 
+			and o.DESTINATION_ID = sta.id 
+			and o.seat_id = s.id 
+			and o.train_id = t.id 
+			and s.CARRIAGE_ID = c.ID 
+			and c.TICKET_TYPE_ID = tt.ID
+			and to_char(o.DEPART_TIME,'yyyy-mm-dd')>#{start}
+			and to_char(o.DEPART_TIME,'yyyy-mm-dd')&lt;#{end}
+	</select>
+	
+	<resultMap id="orderResult" type="com.group3.vo.OrderInfo">
+		<result property="payStatus" column="pay_status" />
+		<result property="orderId" column="id" />
+		<result property="userName" column="member_name" />
+		<result property="trainName" column="train_id" />
+		<result property="carriage" column="carriage_num" />
+		<result property="seat" column="seat_num" />
+		<result property="depature" column="depature_name" />
+		<result property="destination" column="destination_name" />
+		<result property="ticketType" column="ticket_type" />
+		<result property="cost" column="cost" />
+		<result property="orderTime" column="order_time" />
+		<result property="departTime" column="depart_time" />
+		<result property="payMethod" column="pay_method" />
+	</resultMap>
+	
+	<insert id="addOrder" parameterType="com.group3.po.Order">
+		insert into TB_ORDER(USER_ID,MEMBER_NAME,SEAT_ID,DEPATURE_ID,DESTINATION_ID,PAY_STATUS,COST,TIME,OFD_STATUS,TRAIN_ID,DEPART_TIME,IF_DELIVER,SEAT_IDS)
+		values (#{userId},#{memberName},#{seatId},#{depatureId},#{destinationId},
+			0,#{cost},sysdate,0,
+			#{trainId},to_date(#{departTime},'yy-mm-dd hh:mi'),0,#{seatIds})
+	</insert>
+</mapper>

@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body bgcolor="222222">
+		<!--EBAY HTML CODE STARTS HERE-->
+		<script type="text/javascript">
+			<!-- Hide the script from old browsers
+			var slide_wait=3;//in seconds
+			var slide_text=["Side view of skates,some scuffs but overall good shape.","Front view,toes are solid and intact.","Other siade view,normal wear and plenty of life left.","Rear view,practically brand new condition."];
+			var cur_slide=1;
+			var timer=0;
+			//Preload the images
+			for(var i=0;i<slide_text.length;i++){
+				var image=new  Image();
+				image.src="img/pic"+i+".jpeg";
+			}
+			//Start the initial timer
+			timer=setTimeout("nextImage();",slide_wait*1000);
+			//set the background image
+			document.body.background="http://www.michaelmorrison.com/ebay/missionback.jpg";
+			function nextImage(){
+				//Clear the timer and set a new one
+				if(timer!=0)
+					clearTimeout(timer);
+				timer=setTimeout("nextImage();",slide_wait*1000);
+				//Advanced to the next slide image
+				if(++cur_slide>slide_text.length)
+					cur_slide=0;
+				var img_element=document.getElementById('slide');
+				img_element.setAttribute("src",
+					"img/pic"+cur_slide+".jpeg");
+				img_element.setAttribute("alt",slide_text[cur_slide-1]);
+				//Update the slide description
+				document.getElementById('caption').innerHTML=slide_text[cur_slide-1];
+			}
+			//Stop hiding the script-->
+		</script>
+		<h2 style="text-align:center;color:white">Mission Amp Fly Men's Ice Hockey Skates - Size 12</h2>
+		<div style="color:white">
+			This size 12 pair of Mission Amp Fly men's ice hockey skates is used but in very food condition.These suckers have plenty of life in them,not to mention a few goals and assists.Following are details of the skate features,along with a few pictures.Thanks for bidding!
+			<ul>
+				<li>Carbon outsole stiffer,lighter and thinner</li>
+				<li>Split Throat&#153; pattern design for improved flexibility and minimized creasing</li>
+				<li>Indy Foam&#174;ankle chambers with multiple foam layers provide superior Material - Clarino&#153; moisture wicking lining</li>
+				<li>Sensory&#153; footbed</li>
+				<li>Stiffness Rating - 7.3 Surlin&#153;</li>
+				<li>Leather quarters</li>
+				<li>Improved Formula&#153; Bladeholder with DriveShaft technology. Single allen key bolt system</li>
+			</ul>
+		</div>
+		<div style="text-align:center;color:white">
+			<img id="slide" src="img/pic1.jpeg"
+			alt="Mission Amp Fly Ice Hockey Skates" style="border:5px solid black" onclick="nextImage();"><br />
+			<div id="caption" style="text-align:center;font-size:16pt;font-weight:bold">Side view of skates,some scuffs but overall good shape.</div>
+		</div>
+		<p style="color:white">
+			To learn more about me, just click <a href="http://members.ebay.com/aboutme/stalefishlabs/"><img src="http://pics.ebay.com/aw/pics/aboutme-small.gif" alt="About Me" style="border-style:none" /></a>
+		</p>
+		<!--EBAY HTML CODE ENDS HERE -->
+	</body>
+</html>

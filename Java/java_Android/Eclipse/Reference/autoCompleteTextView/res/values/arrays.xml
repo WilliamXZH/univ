@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="ringList">
+        <item>BirdWispher</item>
+        <item>Cuckoo</item>
+        <item>Ethereal</item>
+        <item>Marimba</item>
+    </string-array>
+</resources>

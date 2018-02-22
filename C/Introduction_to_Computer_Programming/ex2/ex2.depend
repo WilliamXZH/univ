@@ -1,0 +1,103 @@
+# depslib dependency file v1.0
+1074068216 source:f:\编程代码\c\ex2\main.cpp
+	<winsock2.h>
+	<ws2tcpip.h>
+	<signal.h>
+	<cstdio>
+	<string>
+	<fcntl.h>
+	<errno.h>
+	<iostream>
+	<sstream>
+	"Listing.h"
+	"Group.h"
+	"processrequest.h"
+	"main.h"
+
+1074061144 f:\编程代码\c\ex2\listing.h
+	<iostream>
+	<vector>
+	<iterator>
+	<algorithm>
+	<functional>
+	"Advertisement.h"
+
+1074042674 f:\编程代码\c\ex2\advertisement.h
+	<queue>
+	<iostream>
+	<string>
+	"Date.h"
+
+1073977410 f:\编程代码\c\ex2\date.h
+	<iostream>
+
+1073962690 f:\编程代码\c\ex2\group.h
+	<iostream>
+	<vector>
+	<iterator>
+	<algorithm>
+	<functional>
+	"Client.h"
+
+1074042560 f:\编程代码\c\ex2\client.h
+	<string>
+	<vector>
+	"Date.h"
+
+1074042744 f:\编程代码\c\ex2\processrequest.h
+	<sstream>
+	"buildpage.h"
+
+1074067626 f:\编程代码\c\ex2\buildpage.h
+	<sstream>
+	"Listing.h"
+
+1074069532 f:\编程代码\c\ex2\main.h
+	"Listing.h"
+	"Group.h"
+
+1074067840 source:f:\编程代码\c\ex2\processrequest.cpp
+	<sstream>
+	<set>
+	<string>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<fcntl.h>
+	<errno.h>
+	"processrequest.h"
+	"main.h"
+	"Advertisement.h"
+	"Listing.h"
+	"Client.h"
+
+1074067742 source:f:\编程代码\c\ex2\buildpage.cpp
+	<sstream>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<signal.h>
+	<stdio.h>
+	<ctime>
+	"main.h"
+	"buildpage.h"
+	"Client.h"
+	"Advertisement.h"
+	"Listing.h"
+	"Group.h"
+
+1442668485 source:f:\编程代码\c\ex2\client.cpp
+	"Client.h"
+	<string.h>
+	<iostream>
+
+1442631922 source:f:\编程代码\c\ex2\advertisement.cpp
+	"Date.h"
+	<iostream>
+	<string.h>
+	"Advertisement.h"
+
+1442668541 source:f:\编程代码\c\ex2\date.cpp
+	"Date.h"
+	<iostream>
+	<string.h>
+	<stdlib.h>
+

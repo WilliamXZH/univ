@@ -1,0 +1,70 @@
+<TableLayout android:id="@+id/tableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:stretchColumns="0,3" >
+    <!-- 第一行 -->
+    <TableRow 
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView />
+        <TextView android:text="@string/user_name"
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            />     
+        <EditText android:id="@+id/editText1"
+            android:inputType="text"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="200dp"
+            />
+        <TextView />      
+    </TableRow>
+    <!-- 第二行  -->
+    <TableLayout android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView />
+        <TextView android:text="@string/password"
+            android:id="@+id/textView2"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <EditText 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:id="@+id/editText2"
+            android:inputType="textPassword"
+            />
+        <TextView />                
+    </TableLayout>
+    <!-- 第3行 -->
+    <TableLayout android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView />
+        <Button android:text="@string/login"
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <Button android:text="@string/logout"
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        
+        <TextView />
+    </TableLayout>
+    
+
+</TableLayout> 

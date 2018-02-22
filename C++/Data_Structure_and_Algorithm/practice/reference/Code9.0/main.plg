@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: main - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Admin\AppData\Local\Temp\RSPA044.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/main.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp"
+]
+Creating command line "cl.exe @C:\Users\Admin\AppData\Local\Temp\RSPA044.tmp" 
+Creating temporary file "C:\Users\Admin\AppData\Local\Temp\RSPA045.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/main.pdb" /debug /machine:I386 /out:"Debug/main.exe" /pdbtype:sept 
+".\Debug\main.obj"
+".\Debug\Graph.obj"
+]
+Creating command line "link.exe @C:\Users\Admin\AppData\Local\Temp\RSPA045.tmp"
+<h3>Output Window</h3>
+Compiling...
+Graph.cpp
+f:\code\c++\data_structure_and_algorithm\practice\reference\code9.0\slist.h(88) : warning C4101: 'j' : unreferenced local variable
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(139) : error C2374: 'i' : redefinition; multiple initialization
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(117) : see declaration of 'i'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(212) : error C2374: 'j' : redefinition; multiple initialization
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(186) : see declaration of 'j'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(215) : error C2374: 'i' : redefinition; multiple initialization
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(117) : see declaration of 'i'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(258) : error C2374: 'i' : redefinition; multiple initialization
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(117) : see declaration of 'i'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(272) : error C2374: 'i' : redefinition; multiple initialization
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(117) : see declaration of 'i'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(451) : error C2371: 's' : redefinition; different basic types
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(345) : see declaration of 's'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(451) : error C2784: 'bool __cdecl std::operator <(const class std::basic_string<_E,_Tr,_A> &,const _E *)' : could not deduce template argument for 'const class std::basic_string<_E,_Tr,_A> &' from 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(451) : error C2784: 'bool __cdecl std::operator <(const _E *,const class std::basic_string<_E,_Tr,_A> &)' : could not deduce template argument for 'const  *' from 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(451) : error C2784: 'bool __cdecl std::operator <(const class std::basic_string<_E,_Tr,_A> &,const class std::basic_string<_E,_Tr,_A> &)' : could not deduce template argument for 'const class std::basic_string<_E,_Tr,_A> &' from 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(451) : error C2784: 'bool __cdecl std::operator <(const class std::reverse_iterator<_RI,_Ty,_Rt,_Pt,_D> &,const class std::reverse_iterator<_RI,_Ty,_Rt,_Pt,_D> &)' : could not deduce template argument for 'const class std::reverse_iterator<_RI,_Ty,_Rt,_Pt,_D> &' from 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(451) : error C2784: 'bool __cdecl std::operator <(const struct std::pair<_T1,_T2> &,const struct std::pair<_T1,_T2> &)' : could not deduce template argument for 'const struct std::pair<_T1,_T2> &' from 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(451) : error C2676: binary '<' : 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >' does not define this operator or a conversion to a type acceptable to the predefined operator
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(451) : error C2676: binary '++' : 'class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >' does not define this operator or a conversion to a type acceptable to the predefined operator
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(655) : error C2374: 'i' : redefinition; multiple initialization
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(639) : see declaration of 'i'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(784) : error C2374: 'i' : redefinition; multiple initialization
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(776) : see declaration of 'i'
+F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(787) : error C2374: 'i' : redefinition; multiple initialization
+        F:\code\C++\Data_Structure_and_Algorithm\practice\reference\Code9.0\Graph.cpp(776) : see declaration of 'i'
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+main.exe - 16 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

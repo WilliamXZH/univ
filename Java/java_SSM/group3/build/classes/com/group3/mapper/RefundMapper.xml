@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.group3.mapper.RefundMapper">
+	<delete id="removeBookByBookNum">
+		DELETE FROM TB_ORDER WHERE ID=#{booknum}
+	</delete>
+	<update id="changeMyStatus">
+		update (select * from seat where ROUTE_ID in (select route.id from route where instr(
+(select substr(ENTIRE_ROUTE,instr(ENTIRE_ROUTE,'/'||#{1}||'/'),instr(ENTIRE_ROUTE,'/'||#{2}||'/')-instr(ENTIRE_ROUTE,'/'||#{1}||'/')+3) 
+from train where train.id = #{3}),'/'||route.DEPARTURE_ID||'//'||route.DESTINATION_ID||'/')>0 ) 
+and seat.CARRIAGE_ID in (select carriage.id from carriage where carriage.TRAIN_ID=#{3}) and instr(#{0},'/'||seat.id||'/')>0) set status=1
+	</update>
+	<select id="showMyOrder" resultMap="showMyOrder2">
+		
+    select * from tb_order,(select distinct seat.num from seat,tb_order where instr(tb_order.seat_ids,'/'||seat.id||'/')>0 and tb_order.id=#{booknum2}) where tb_order.id=#{booknum2}
+	</select>
+	<resultMap id="showMyOrder2" type="com.group3.vo.OrderVO">
+		<id property="id" column="id" />
+		<result property="userId" column="USER_ID" />
+		<result property="memberName" column="member_Name" />
+		<result property="seatNum" column="num" />
+		<result property="depatureId" column="depature_Id" />
+		<result property="destinationId" column="destination_Id" />
+		<result property="payStatus" column="pay_Status" />
+		<result property="cost" column="cost" />
+		<result property="time" column="time" />
+		<result property="ofdStatus" column="ofd_Status" />
+		<result property="payMethod" column="pay_Method" />
+		<result property="trainId" column="train_Id" />
+		<result property="departTime" column="depart_Time" />
+		<result property="seat_Ids" column="seat_Ids" />
+
+	</resultMap>
+</mapper>

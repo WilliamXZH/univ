@@ -1,0 +1,42 @@
+package pers.william.server;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class ClientThread extends Thread {
+    private static Socket s;
+    private static BufferedReader reader;
+    private static BufferedWriter writer;
+	public Socket getSocket(){
+		return this.s;
+	}
+	public void setSocket(Socket s){
+		this.s=s;
+	} 
+    ClientThread(Socket s){
+    	this.s=s;
+    }
+    public void run(){
+    	Scanner scan=new Scanner(System.in);
+        try {
+            writer=new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
+			reader= new BufferedReader(new InputStreamReader(s.getInputStream(), "utf-8"));
+            while(true){			
+        		String sent=reader.readLine();
+        		System.out.println(sent);
+        		String str=scan.next();
+        		writer.write(str);
+        		writer.flush();
+        		//s.getOutputStream().write(Integer.parseInt(str));  		        		
+    		}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}    
+    	scan.close();
+    }
+}

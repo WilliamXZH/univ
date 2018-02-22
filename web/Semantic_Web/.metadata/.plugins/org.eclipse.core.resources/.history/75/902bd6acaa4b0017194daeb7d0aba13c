@@ -1,0 +1,18 @@
+package net.librec.similarity;
+
+import java.util.List;
+
+public class BSSimilarity extends AbstractRecommenderSimilarity{
+
+	@Override
+	protected double getSimilarity(List<? extends Number> thisList, List<? extends Number> thatList) {
+        if (thisList == null || thatList == null || thisList.size() < 1 || thatList.size() < 1 || thisList.size() != thatList.size()) {
+            return Double.NaN;
+        }
+		
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+}

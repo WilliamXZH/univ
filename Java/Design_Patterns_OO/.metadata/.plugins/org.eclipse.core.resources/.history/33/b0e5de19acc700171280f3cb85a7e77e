@@ -1,0 +1,12 @@
+package ref.dahua.op.pre;
+
+public class Secretary {
+
+	private List<StockObserver> observers = new List<StackObserver>();
+	private String action;
+	
+	public void attach(StockObserver observer){
+		
+	}
+	
+}

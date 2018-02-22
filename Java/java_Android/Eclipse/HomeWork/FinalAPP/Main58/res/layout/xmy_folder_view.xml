@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relsecene"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#2C3463"
+    android:gravity="center"
+    android:visibility="gone"
+    >
+
+    <TextView
+        android:id="@+id/txttitle"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:text="fe"
+        android:textColor="#646FAF"
+        android:textSize="18sp" />
+  
+</RelativeLayout>

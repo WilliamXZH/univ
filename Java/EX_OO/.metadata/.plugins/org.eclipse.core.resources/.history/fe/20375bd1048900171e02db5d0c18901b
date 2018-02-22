@@ -1,0 +1,7 @@
+package com.neu.view;
+
+import javax.swing.JPanel;
+
+public class PersonInformationPanel extends JPanel {
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="Advertisement.h" open="1" top="0" tabpos="1">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Categories.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="170" topLine="3" />
+	</File>
+	<File name="Categories.h" open="1" top="0" tabpos="4">
+		<Cursor position="541" topLine="15" />
+	</File>
+	<File name="Category.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="911" topLine="15" />
+	</File>
+	<File name="Category.h" open="1" top="0" tabpos="6">
+		<Cursor position="1177" topLine="40" />
+	</File>
+	<File name="processrequest.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

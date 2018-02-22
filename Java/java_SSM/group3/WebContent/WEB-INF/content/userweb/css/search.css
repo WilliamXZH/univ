@@ -1,0 +1,121 @@
+.search_sth{
+	
+	width: 1000px;
+	height: 100px;
+	border: 1px solid red;
+	margin-top: 20px;
+	margin-left: 130px;
+}
+.query_criteria{
+	width: 1000px;
+	height: 100px;
+	border: 1px solid red;
+	margin-top: 20px;
+	margin-left: 130px;
+}
+.search_box{
+	width: 1000px;
+	height: 500px;
+	/*border: 1px solid blue;*/
+	margin-top: 20px;
+	margin-left: 130px
+}
+.my_table_first{
+	/*float: left;*/
+	width: 1000px;
+	height: 500px;
+	border: 1px solid black;
+	margin-top: 20px;
+	
+}
+.my_table_second{
+	
+	/*float: left;*/
+	width: 1000px;
+	height: 500px;
+	border: 1px solid black;
+margin-top: 20px;
+	
+}
+.train_arrive{
+	font: "微软雅黑";
+	font-size: 14px;
+	color: black;
+	font-weight: 300;
+}
+.td_style{
+	font: "微软雅黑";
+	font-size: 14px;
+	color: black;
+	font-weight: 300;
+}
+.train_time{
+	list-style: none;
+}
+.train_number{
+	font: "微软雅黑";
+	font-size: 16px;
+	color: black;
+	
+}
+.train_time span{
+	padding-left: 10px;
+	font: "微软雅黑";
+	font-size: 16px;
+	color: black;
+	font-weight: 300;
+}
+.ticket_price{
+	padding-left: 5px;
+	font: "微软雅黑";
+	font-size: 16px;
+	color: gray;
+}
+.ticket_number{
+	text-align: center;
+	width: 30px;
+	color: #FF8D1B;
+}
+.ticket_price{
+	width: 70px;
+	color: #FF8D1B;
+}
+.choice_ticket{
+	display: block;
+	height: 18px;
+	margin-top: 5px;
+	margin-left: 20px;
+	/*margin-right: 300px;*/
+}
+
+.gogogo{
+	
+	margin-left: 150px;
+	margin-top: 50px;	
+	background: black;
+	height: 35px;
+	width: 100px;
+    border: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+.gogogo:hover{
+	 background:#fcdd44;
+}
+.ImSure{
+	
+	margin-left: 450px;
+	margin-top: 50px;	
+	background: black;
+	height: 35px;
+	width: 100px;
+    border: 0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+}
+.ImSure:hover{
+	 background:#fcdd44;
+}
+

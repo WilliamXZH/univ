@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+     	android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:orientation="horizontal"
+    	android:layout_alignParentBottom="true"
+    	android:background="#dbdee2">
+    <TextView
+        android:id="@+id/newsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center"
+        android:layout_weight="2"
+        android:drawableTop="@drawable/news2"
+        android:text="新闻中心" 
+        android:clickable="true"
+       />
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:layout_weight="2"
+        android:background="#dbdee2"
+        android:drawableTop="@drawable/question1"
+        android:text="问题中心" 
+        android:clickable="true"
+       />
+     <TextView
+        android:id="@+id/serviceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:layout_weight="2"
+        android:background="#dbdee2"
+        android:text="服务中心" 
+        android:drawableTop="@drawable/service1"
+        android:clickable="true"
+        />
+     <TextView
+         android:id="@+id/starTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="#dbdee2"
+        android:gravity="bottom|center"
+        android:text="会员中心" 
+        android:drawableTop="@drawable/star1"
+        android:clickable="true"/>
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<!ELEMENT order(item)>
+<!ATTLIST order
+	orderNo		ID	#REQUIRED
+	customer	CDATA	#REQUIRED
+	date		CDATA	#REQUIRED>
+<!ELEMENT item EMPTY>
+<!ATTLIST item
+	itemNo		ID	#REQUIRED
+	quantity	CDATA	#REQUIRED
+	comments	CDATA	#REQUIRED>

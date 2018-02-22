@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;}
+
+#pageGroup{display: block;height: 25px;width:270px;;margin:0 auto;text-align:center;position: relative;top: 10px;}
+#pageGroup div{height: 100%;float:left;/*display: inline-block;*/}
+
+#pageList{width:auto;margin:0 auto;float:left}
+#pageList-ul{float: left;}
+#pageList-ul *{float: left;width:20px;height: 25px;border:1px solid #000000;margin:auto 5px;list-style:none;border-radius: 3px;text-align:center;line-height: 25px;}
+#pageList-ul *:hover{background-color: #017EBA;cursor: pointer;}
+.curPage{background-color: #017EBA;}
+.otherPage{background-color: #FFFFFF;}
+
+.page_button{width:50px;background-color: #ffffff;border:1px solid #000000;border-radius: 5px;text-align: center;line-height: 25px;}
+/*#postPage{width:50px;background-color: #0088cc;border-radius: 5px;}*/
+.page_button:hover{background-color: #017EBA;cursor: pointer;}

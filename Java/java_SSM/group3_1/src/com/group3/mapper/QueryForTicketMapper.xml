@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.group3.mapper.QueryForTicketMapper">
+	
+	<select id="queryTicketsByCondition" parameterType="com.group3.po.TicketQueryCondition"
+	resultMap="trainQueryInfo">
+		<bind name="con" value="'%/' + departure + '/%/' +destination +'/%'"/>
+		select id,serial_num,entire_route,to_char(bd_date,'yy-mm-dd hh:mm') bd_date from train where entire_route like #{con} 
+		and to_char(bd_date,'yyyy-mm-dd')=#{date} and (select count(*) from carriage,ticket_type where carriage.ticket_type_id=ticket_type.id and 
+instr(#{ticketTypes},'-'||ticket_type.id||'-')>0 )>0 and 
+instr(#{trainTypes},substr(serial_num,1,1))>0
+		
+
+	</select>
+	
+	<!-- 		select id,serial_num,entire_route,to_char(bd_date,'yy-mm-dd hh:mm') bd_date from train where entire_route like '%/1/%/4/%' 
+		and to_char(bd_date,'yyyy-mm-dd')='2017-07-25' and (select count(*) from carriage,ticket_type where carriage.ticket_type_id=ticket_type.id and 
+instr('商务座一等座二等座高级软卧软卧动卧硬卧软座硬座无座',ticket_type.type)>0 )>0 and 
+instr('DGZTPCLN',substr(serial_num,1,1))>0; -->
+
+	<select id="getLocalRouteByTrainId" resultType="java.lang.String">
+		    select substr((select train.entire_route str from train where train.id=#{trainId}),
+    instr((select train.entire_route str from train where train.id=#{trainId}),'/'||#{departure}||'/'),
+    instr((select train.entire_route str from train where train.id=#{trainId}),'/'||#{destination}||'/')-instr((select train.entire_route str from train where train.id=8),'/'||#{departure}||'/')) 
+    from dual
+	</select>
+	
+	<resultMap id="trainQueryInfo" type="com.group3.vo.TrainVO">
+		<id property="id" column="id" />
+		<result property="serialNum" column="serial_num" />
+		<result property="entireRoute" column="entire_route" />
+		<result property="bdDate" column="bd_date" />
+		
+<!-- 		<association property="localRoute" javaType="java.lang.String"
+		column="{trainId=id,departure='#{departure}',destination='#{destination}'}"
+		select="com.group3.mapper.QueryForTicketMapper.getLocalRouteByTrainId"/> -->
+		
+		<collection property="stations" javaType="java.util.ArrayList"
+		column="id" ofType="com.group3.vo.StationVO" 
+		select="com.group3.mapper.StationMapper.selectStationByEntireRoute" 
+		fetchType="lazy" />
+		
+<!-- 		<collection property="tickets" javaType="java.util.ArrayList"
+		column="{id=id}" ofType="com.group3.vo.TicketVO" 
+		select="com.group3.mapper.TicketMapper.selectTicketsByTrainId" 
+		fetchType="lazy" /> -->
+	</resultMap>
+
+</mapper>

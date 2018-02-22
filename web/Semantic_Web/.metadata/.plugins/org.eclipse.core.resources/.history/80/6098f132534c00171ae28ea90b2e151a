@@ -1,0 +1,17 @@
+package pers.william.similarity;
+
+import java.util.List;
+
+/**
+ * Pearson Correlation Coefficient
+ * 
+ * @author william
+ * 
+ *
+ */
+public class PCCSimilarity {
+	
+	public static double getSimilarity(List<Double> list1,List<Double> list2){
+		
+	}
+}

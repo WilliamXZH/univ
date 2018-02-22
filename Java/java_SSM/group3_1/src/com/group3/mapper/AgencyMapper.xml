@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.group3.mapper.AgencyMapper">
+	<select id="agencySelect" resultMap="agencyResult">
+		select * from agency where instr(ADDRESS,#{0})>0
+	</select>
+	<resultMap id="agencyResult" type="com.group3.po.Agency">
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="contactInf" column="CONTACT_INF" />
+		<result property="address" column="ADDRESS" />
+		<result property="workTime" column="WORK_TIME" />
+		<result property="detailAddress" column="DETAIL_ADDRESS" />
+	</resultMap>
+</mapper>

@@ -1,0 +1,10 @@
+package pers.william.model;
+
+import java.util.List;
+
+public class User {
+	
+	private Integer userid;
+	private List<Item> ratings;
+	
+}

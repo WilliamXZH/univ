@@ -1,0 +1,11 @@
+<!ELEMENT redpocket (sender, receiver+, body)>
+<!ATTLIST redpocket  
+	type 	(¡°randomly¡± | ¡°equally¡±)		¡°equally¡±
+	expire 	CDATA	#FIXED ¡°24 hours¡±>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT receiver (#PCDATA)>
+<!ELEMENT body EMPTY>
+<!ATTLIST body
+	money	CDATA	#REQUIRED
+	shares	CDATA	#IMPLIED
+	wish		CDATA	¡°Best Wishes¡±>

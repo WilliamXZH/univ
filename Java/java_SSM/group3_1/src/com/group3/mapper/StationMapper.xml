@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.group3.mapper.StationMapper">
+	<select id="selectStationByName" resultType="com.group3.po.Station">
+		select * from station where name=#{name}
+	</select>
+	
+	<select id="selectStationById" resultType="com.group3.po.Station">
+		select * from station where id=#{id}
+	</select>
+	
+<!-- 	<select id="selectStationByEntireRoute" resultMap="stationVO">
+		select * from station where instr(#{entireRoute,jdbcType=VARCHAR},'/'||id||'/')>0
+	</select>	 -->
+	<select id="selectStationByEntireRoute" resultMap="stationVO">
+		select * from station,time 
+		where instr((select entire_route from train where id=#{trainId}),'/'||id||'/')>0
+		and train_id=#{trainId} and id=station_id ORDER BY time.ARV_TIME
+	</select>
+	
+	<resultMap type="com.group3.vo.StationVO" id="stationVO">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		<result property="trainId" column="train_id" />
+		<result property="stationId" column="station_id" />
+		<result property="arvTime" column="arv_time" />
+		<result property="lvTime" column="lv_time" />
+	</resultMap>
+</mapper>
+
+

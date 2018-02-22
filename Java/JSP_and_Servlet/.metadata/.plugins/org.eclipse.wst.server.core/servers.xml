@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v8.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.0 Server at localhost" modulesReloadableByDefault="true" name="Tomcat v8.0 Server at localhost" runtime-id="Apache Tomcat v8.0" serveModulesWithoutPublish="false" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="false" timestamp="27">
+    <list key="modules" value0="JSP_and_Servlet_study::org.eclipse.jst.jee.server:JSP_and_Servlet_study::jst.web::3.1" value1="JSP_Test::org.eclipse.jst.jee.server:JSP_Test::jst.web::3.1" value2="JSP_Study::org.eclipse.jst.jee.server:JSP_Study::jst.web::3.1" value3="Assistant_Web::org.eclipse.jst.jee.server:Assistant_Web::jst.web::3.1" value4="BigProject::org.eclipse.jst.jee.server:BigProject::jst.web::3.1"/>
+  </server>
+</servers>

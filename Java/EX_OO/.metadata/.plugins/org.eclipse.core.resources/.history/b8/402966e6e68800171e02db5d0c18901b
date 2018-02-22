@@ -1,0 +1,22 @@
+package com.neu.model;
+
+public class IndividualStatus{
+
+	public static int WORKER = 0;
+	public static int FARMER = 1;
+	public static int SUDENT = 2;
+	public static int CADRE = 3;
+	public static int NATIONAL_CIVILIAN = 4;
+	public static int ACTIVE_ARMY = 5;
+	public static int UMEMPLOYED = 6;
+	public static int OTHERS = 7;
+	public static int strToInt(String param) {
+		return 7;
+	}
+	public static String intToStr(Integer value) {
+		return null;
+	}
+	
+	
+	
+}

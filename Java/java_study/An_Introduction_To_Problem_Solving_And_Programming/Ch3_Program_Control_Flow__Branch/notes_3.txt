@@ -1,0 +1,271 @@
+第3章 程序控制流：分支
+
+Java以及其他绝大多数编程语言都是用两种类型的语句规范控制流：
+分支语句从两个或多个可能动作中选择一个动作执行；
+循环语句则反复地重复一个动作，直到满足某个停止条件为止。
+这两种类型的语句构成了程序的控制结构(control structure)。
+由于分支语句在多个动作中进行选择或者说抉择，因此称它们为决策结构。
+
+本章内容
+在学习完本章之后，你将可以：
+*在程序中使用Java分支语句if-else和switch。
+*比较基本类型的值
+*比较诸如字符串之类的对象
+*使用基本数据类型boolean
+*在程序中使用简单的枚举
+*在图形程序中使用颜色。
+*使用类JOptionPane创建有关是-或-否问题的对话框
+
+预备知识
+在阅读本章内容之前，你需要熟悉第2章的内容
+
+3.1 if-esle语句
+
+3.1.1 基本if-esle语句
+布尔表达式(boolean express)
+
+编程技巧 缩进
+这是一个应该认真遵从的格式约定。尽管编译器会忽略缩进，
+但不一致性地使用这一约定，会把阅读代码的人弄晕，并且也很可能让你自己出错。
+
+用大括号把一系列语句括起来而构成的语句称为复合语句(compound statement).
+
+扼要重述 if-else语句
+语法(基本形式)
+if( Boolean_Expression )
+	statement_1;
+else
+	statement_2;
+可以没有else部分
+
+3.1.2 布尔表达式
+Java比较运算符
+名称      Java符号
+等于      ==
+不等于    !=
+大于      >
+大于等于  >=
+小于      <
+小于等于  <=
+
+疑难杂症 使用=代替==测试相等
+
+疑难杂症 使用==或!=比较浮点值
+不应该使用==比较两个浮点值，
+两个浮点值足够靠近就认为它们相等
+
+扼要重述 将&&用于表示"与"运算
+
+扼要重述 将||用于表示"或"
+
+扼要重述 运算符!用于表示"非"
+
+3.1.3 比较字符串
+
+StringEqualityDemo.java
+
+疑难杂症 在字符串中使用==
+当运算符==作用于两个字符串(或其他任何两个对象)时，
+表示的是测试它们是否保存在相同的内存位置上。
+
+扼要重述 方法equals和equalsIgnoreCase
+
+方法compareTo测试两个字符串，确定它们的字典顺序。
+在字典顺序中，字母和其他字符按照他们的Unicode编码次序排序。
+s1.compareTo(s2)
+将比较两个字符串的字典顺序，并且
+*如果s1在s2前面，返回负数；
+*如果两个字符串相等，返回零；
+*如果s1在s2后面，返回整数
+
+在字典顺序中，所有大写字母都出现在小写字母前面。
+
+编程技巧 字母顺序
+要知道两个字母组成的字符串是否按字母排序，在使用方法compareTo比较两个字符串之前，
+必须确保所有字母都为统一的大写或小写。可以使用String的toUpperCase或
+toLowerCase方法完成这个任务。如果遗漏了这个步骤，
+那么使用compareTo方法按字典顺序比较(并不是按字母顺序比较)
+
+3.1.4 嵌套if-else语句
+
+编程技巧 匹配else与if
+在if-else语句中，每一个else都要与其前面最靠近的if配对。
+使用与语句意义一致的缩进可以清晰表达你的意图。但请谨记，
+编译器忽略缩进。当存在疑问时，使用大括号可以让语句的意义明确化，
+
+3.1.5 多分支if-else语句
+
+扼要重述 多分支if-else语句
+语法
+if (Boolean_Exception_1)
+	Action_1;
+else if (Boolean_Exception_2)
+	Action_2;
+.
+.
+.
+else if (Boolean_Exception_n)
+	Action_n;
+else
+	Default_Action;
+
+程序清单3.3 使用多分支if-else语句转换字母等级
+Grader.java
+
+案例研究 身体质量指数
+身体质量指数(BMI)是一种基于人们的身高与体重，评估与体重相关问题风险的一种方法。
+它由数学家Adolphe Quetelet于19世纪设计，有时候也称为Quetelet指数。
+BMI按下述公式计算：
+	BMI=体重/身高^2
+在这个公式中，体重以千克为单位。与BMI值相对应的健康风险为：
+*<18.5:体重过轻
+*>=1805并且<25:正常体重
+*>=25并且<30:体重超重
+*>=30:肥胖
+程序清单3.4 身体质量指数计算程序
+BMI.java
+
+3.1.6 条件运算符(选读)
+?:合起来称为条件运算符(condition operator),
+或称为三元运算符(ternary operaotr)
+
+3.1.7 exit方法
+扼要重述 exit方法
+调用exit方法可结束程序的执行。调用exit方法的正常形式为
+System.eixt(0);
+
+3.2 boolean类型
+
+3.2.1 布尔变量
+FAQ 当b是布尔变量时，为什么可以编写if(b)来代替if(b==true)?
+布尔变量b就是一个布尔表达式。表达式b==true也是一个布尔表达式。
+如果b为true，那么这两个表达式都是true。如果b为false，
+那么这两个表达式都是false。因此，可以互换地使用这两个表达式。
+
+3.2.2 优先级规则
+
+最高优先级
+第一级:一元运算符+,-,++,--,!
+第二级:二元运算符*,/,%
+第三级:二元运算符+,-
+第四级:布尔运算符<,>,<=,>=
+第五级:布尔运算符==,!=
+第六级:布尔运算符&
+第七级:布尔运算符|
+第八级:布尔运算符&&
+第九级:布尔运算符||
+最低优先级
+
+短路计算(short-circuit evaluation)
+懒惰计算(lazy evaluation)
+
+完整计算(complete evaluation)
+
+有时短路计算可以避免运行时错误。
+
+谨记 短路计算
+对于形式为Exper_A||Exper_B的布尔表达式，如果Exper_a为true，
+无须计算Exper_B,Java就可以得出整个表达式为true的结论。类似的，
+对于形式为Exper_A&&Exper_B的布尔表达式，如果Exper_A为false，
+无须计算Exper_B,Java就可以得出整个表达式为false的结论。
+
+3.2.3 布尔值的输入和输出
+
+常量true或false必须使用全小写拼写格式，但输入方法nextBoolean更宽容一些。
+
+
+3.3 switch语句
+MultipleBirths.java
+
+在Java开发工具箱(JDK)版本7之前，控制表达式的计算结果必须为一个整数类型的值，
+比如int类型，或者为char类型的值。从JDK版本7开始，允许使用String类型的控制表达式。
+
+疑难杂症 省略break语句
+如果你测试一个包含switch语句的程序，当你期待它仅仅执行一种情况时他执行了两种情况，
+你很可能是忘记了在需要的地方上放上break语句。
+
+疑难杂症 省略default情况
+如果在switch语句的情况中赋值给变量，省略default子句将引发语法错误。编译器或许认为
+变量在switch执行后存在未定义的值。要避免这种错误，可以提供一个default子句，
+或者在switch语句执行前初始化该变量。
+
+3.3.1 枚举
+
+枚举数据类型(enumerated data type)
+枚举(enumeration)
+
+例：
+enum MovieRating{E,A,B}
+
+如果需要在switch语句的其他地方使用引用枚举值之一，就必须在其前面放上枚举类型的名称。
+
+3.4 图形补充材料
+
+3.4.1 指定绘图颜色
+YellowFace.java
+
+用于setColor方法的预定义颜色
+Color.BLACK         Color.MAGENTA
+Color.BLUE          Color.ORANGE
+Color.CYAN          Color.PINK
+Color.DARK_GRAY     Color.RED
+Color.GRAY          Color.WHITE
+Color.GREEN         Color.YELLOW
+Color.LIGHT_GRAY
+
+扼要重述 setColor方法
+当使用类Graphics的对象绘图时，可以通过调用setColor方法设置绘图的颜色。
+随后再次调用setColor来修改颜色，这样，单张图画上就可以绘制出多种颜色。
+示例：
+canvas.setColor(Color.RED);
+
+3.4.2 表达“是”或“否”提示的对话框
+int answer = 
+    JOptionPane.showConfirmDialog(null, "End program?", 
+    "Click Yes or No:", JOptionPane.YES_NO_OPTION);
+第一个参数指定对话框出现在屏幕的什么位置上，(详细见第6章)
+第二个参数是一个字符串，通常是提问
+第三个参数是一个字符串，显示在对话框的标题栏中。
+最后一个参数知名我们想要包含一个“是”和“否”按钮的对话框
+
+扼要重述 。。。
+javax.swing包中的类JOptionPane定义了方法showConfirmDialog,
+可以使用这个方法创建一个询问“是”或“否”提示的对话框，并得到用户的响应。
+语法
+Integer_Response = JOptionPane.showConfirmDialog(null,
+    Question_String, Title_String, Option);
+所显示的对话框标题为Title_String，包含了文本Question_String和由Option指定的选项。
+当Option为JOptionPane.YES_NO_OPTION时，显示分别标记为“是”和“否”的两个按钮。
+如果用户单击“是”按钮，该方法返回int常量YES_OPTION,如果用户单击“否”按钮，
+该方法返回NO_OPTION.
+
+
+3.5 本章小结
+*分支语句经选择之后执行数个动作之一。if-else语句和switch语句都是分支语句。
+*布尔表达式将变量和比较运算符(比如<)结合起来，生成或为true或为false的值。
+*if-else语句测试布尔表达式的值，并依据改值为true还是false从两个动作中选择其一执行。
+*可以省略else部分，得到一个布尔表达式为true时执行某个动作，布
+尔表达式为false时什么也不做的if语句
+*复合语句是一串Java语句，所有语句都括在一对大括号中
+*可以嵌套if-else语句。if部分和else部分可以其中一个包含或两个都包含另一个if-else语句作为其动作。
+使用大括号构成复合语句来明晰你的意图。没有大括号的话，请记住，
+每一个else都与其前面最接近，尚未配对的if进行匹配。
+*嵌套if-else语句的一种特殊形式可构成一种多分支结构。在这个形式中，
+通常把下一个if部分紧跟在else后面，即是if，else if，else if，else。
+尽管最后一个else并非强制必须的，包括它是一个不错的想法。
+*布尔表达式可以把逻辑运算符&&，||以及!结合起来，构成一个更大的表达式。
+Java在这些情况中可以使用短路计算。
+*调用exit方法可结束程序的执行。必须调用exit方法来结束使用JOptionPane的程序，
+但对普通程序来说，通常不调用这个方法。
+*布尔表达式的值可以保存在类型为boolean的变量中。该变量本身就是一个布尔表达式，
+因此它可以用于控制if-else语句。也就是说，布尔变量可以被使用在允许使用布尔表达式的任何地方。
+*switch语句提供了另一种多分支决策结构。他测试整数，字符或字符串表达式的值，
+并依据改值执行相应case的语句。提供default子句通常十个不错的想法。
+*可以定义枚举类型来提供一种其值类似于具名常量的数据类型。
+*通过使用Graphics方法setColor和类Color中定义为具名常量的颜色值，
+可以给小应用程序绘图增添上颜色。
+*JOptionPane可以用于询问“是”或“否”提问的对话框。
+
+
+
+

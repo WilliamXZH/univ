@@ -1,0 +1,11 @@
+package zhaopin.campus.test;
+
+public class BoolTest {
+	public static void main(String[] args) {
+		boolean bs[] = new boolean[10];
+		for(int i=0;i<bs.length;i++){
+			System.out.println(bs[i]);
+		}
+		
+	}
+}

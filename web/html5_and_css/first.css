@@ -1,0 +1,43 @@
+body{
+	font-size:12pt;
+	font-family:Book Antiqua;
+	color:maroon;
+	line-height:16pt;
+	margin-left:10pt;
+	margin-right:10pt;
+	background:url(parchment.gif);
+}
+p{
+	margin-left:24pt;
+	margin-right:24pt;
+}
+h1{
+	font:24pt Prose Antique,Lucida Handwriting;
+	font-weight:bold;
+	line-height:30pt;
+}
+h2{
+	font:18pt Prose Antique,Lucida Handwriting;
+	font-weight:bold;
+	line-height:22pt;
+}
+a{
+	text-decoration:none;
+}
+a:link{
+	color:red;
+}
+a:visited{
+	color:red;
+}
+a:active{
+	color:black;
+}
+div.byline{
+	font-style:italic;
+}
+div.footnote{
+	font-size:9pt;
+	line-height:12pt;
+	text-align:center;
+}

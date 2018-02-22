@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.i4evercai.bannerdemo.ShowQuestion" >
+	<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:text="------问题----------"
+                    android:layout_width="match_parent"
+                    android:id="@+id/textView1"
+                    android:textSize="24sp"
+                    android:layout_height="30dp"
+                    android:textStyle="normal|bold" />
+
+                <TextView
+                    android:text="详细回答正文"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/textView2"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:text="详细回答正文"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/textView3"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView4"
+                    android:background="@drawable/show" />
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

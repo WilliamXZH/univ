@@ -1,0 +1,144 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/*查询点查询总格局*/
+
+#railwayTicketAgency {
+	width: 911px;
+	height: auto;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+
+/*查询点查询头部性息*/
+
+#railwayTicketAgencyHead {
+	width: 911px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/*查询点路径格局*/
+
+#railwayTicketAgencyPath {
+	font-size: 14px;
+	height: 30px;
+	width: auto;
+	margin-left: 0px;
+}
+
+
+/*查询点查询路径*/
+
+#railwayTicketAgencyPath ul li {
+	margin-top: 40px;
+	float: left;
+	margin: 0 3px;
+	list-style: none;
+	outline: none;
+}
+
+.path:hover {
+	cursor: pointer;
+	color: red;
+}
+
+.path:link {
+	text-decoration: none;
+}
+
+
+/*输入查询查询点的日期/查询点号部分*/
+
+#enterPart {
+	width: 911px;
+	height: 250px;
+	color: white;
+	background: url(../../images/车次查询/back.jpg) no-repeat;
+}
+
+/*三级联动查询*/
+#preciseQuery{
+	padding-top: 77.5px;
+	padding-left: 60px;
+}
+#preciseQuery select,input{
+	height: 26px;
+	width: 120px;
+	margin-left: 30px;
+	background: white;
+	outline: none;
+	opacity: 0.8;
+}
+
+/*快速查询*/
+#fastQuery{
+	padding-top: 30px;
+	padding-left: 43px;
+}
+#fastQuery1{
+	width: 200px;
+	height: 24px;
+}
+/*放大镜格式*/
+
+#fangdajing {
+	width:30px;
+	height: 24px;
+	background: url(../../images/icon/pe_icon.png);
+	background-position: -368px 3px;
+	background-color: inherit;
+	position: relative;
+	right: 60px;
+	top: 6px;
+	border: none;
+	cursor: pointer;
+}
+
+
+/*表格样式*/
+
+#outTable {
+	width: 911px;
+	height: auto;
+	margin-top: 10px;
+}
+
+#outTable tr td {
+	text-align: center;
+}
+
+#outTable tr th {
+	background-color: gainsboro;
+}
+
+
+/*在每个tdLocation后面设置地图格式*/
+
+.tdLocaltion input{
+	width: 16px;
+	height: 16px;
+	float: right;
+	margin-right: 10px;
+	border: none;
+	background: url(../../images/icon/pe_icon.png);
+	background-position: -368px -39.6px;
+	cursor: pointer;
+	opacity: 0.8;
+}
+.tdLocaltion input:{
+	text-decoration: underline;
+	opacity: 1;
+}
+/*.tdLocaltion:visited{
+	color: palevioletred;
+	text-decoration: underline;
+}
+*/
+

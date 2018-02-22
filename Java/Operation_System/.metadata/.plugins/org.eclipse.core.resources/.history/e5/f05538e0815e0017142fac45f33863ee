@@ -1,0 +1,26 @@
+package pers.william.test;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+import org.junit.Test;
+
+public class Test1 {
+	
+	private String host;
+	private Integer port;
+
+	@Test
+	public void test1(){
+		try {
+			Socket socket = new Socket(host,port);
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

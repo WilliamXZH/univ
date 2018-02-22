@@ -1,0 +1,47 @@
+package com.group3.service.impl;
+
+import java.util.Properties;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.group3.util.PropertiesUtil;
+
+
+@Service
+public class PropertiesServiceImpl implements com.group3.service.PropertiesService {
+
+	@Resource
+	PropertiesUtil propertiesUtil;
+	
+	@Override
+	public Float getTicketTypeQuot(Integer ticketTypeId) {
+		Properties properties = propertiesUtil.getProperties("/quotiety.properties");
+		
+		String []tickets={"business_seat_quot","first_class_quot",
+				"second_class_quot","high_grade_soft_berth_quot",
+				"oridinary_soft_berth_quot","pneumatic_horizontal_quot",
+				"hard_sleeper_quot","soft_seat_quot",
+				"hard_seat_quot","none_seat_quot"};
+		if(ticketTypeId<0||ticketTypeId>=tickets.length){
+			return (float) 1.0;
+		}else{
+			return Float.parseFloat(properties.getProperty(tickets[ticketTypeId-1]));
+		}
+		
+	}
+
+	@Override
+	public Float getTicketTypeQuot(String ticketType) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Float getUserTypeQuot(String userType) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

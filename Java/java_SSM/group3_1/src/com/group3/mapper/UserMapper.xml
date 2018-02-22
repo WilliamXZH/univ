@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.group3.mapper.UserMapper">
+	<select id="userLogin" resultMap="userResult">
+		select * from tb_user where (id=#{id} or mail=#{mail} or tel_num=#{telNum}) and password=#{password}
+	</select>
+	<select id="selectUserInfo" resultMap="userResult">
+		select * from TB_USER where ID=#{id}
+	</select>
+	<select id="selectUserByMailAndIdtfNum" parameterType="com.group3.po.User" resultMap="userResult">
+		select * from tb_user where mail=#{mail} and idtf_type=#{idtfType} and idtf_num=#{idtfNum}
+	</select>
+	<select id="selectUserByCelAndIdtfNum" parameterType="com.group3.po.User" resultMap="userResult">
+		select * from tb_user where tel_num=#{telNum} and idtf_type=#{idtfType} and idtf_num=#{idtfNum}
+	</select>
+	<select id="testUserByCel" parameterType="java.lang.String" resultMap="userResult">
+		select * from tb_user where tel_num=#{telNum}
+	</select>
+	<select id="testUserByMail" parameterType="java.lang.String" resultMap="userResult">
+		select * from tb_user where tel_num=#{mail}
+	</select>
+	
+	<insert id="userRegister">
+		insert into tb_user(ID,PASSWORD,USER_NAME,MAIL,TEL_NUM,IDTF_TYPE,IDTF_NUM,USER_TYPE,ADDRESS,GENDER)
+		VALUES (#{id},#{password},#{userName},#{mail},#{telNum},#{idtfType},#{idtfNum},#{userType},#{address},#{gender})
+	</insert>
+	
+	<update id="retrievePassword" parameterType="com.group3.po.User">
+		update tb_user set password=#{password} 
+		<where>
+			<choose>
+				<when test="mail!=null">
+					mail = #{mail}
+				</when>
+				<when test="telNum!=null">
+					tel_num=#{telNum}
+				</when>
+				<otherwise>
+					1=0
+				</otherwise>
+			</choose>
+			and idtf_type=#{idtfType} and idtf_num=#{idtfNum}
+		</where>
+	</update>
+	
+	<resultMap id="userResult" type="com.group3.po.User">
+		<id property="id" column="ID" />
+		<result property="password" column="PASSWORD" />
+		<result property="userName" column="USER_NAME" />
+		<result property="mail" column="MAIL" />
+		<result property="telNum" column="TEL_NUM" />
+		<result property="idtfType" column="IDTF_TYPE" />
+		<result property="idtfNum" column="IDTF_NUM" />
+		<result property="userType" column="USER_TYPE" />
+		<result property="address" column="ADDRESS" />
+		<result property="gender" column="GENDER" />
+	</resultMap>
+	<update id="updatePassword">
+		update tb_user set password=#{password} where id = #{id}
+	</update>
+	<update id="updateTelNum">
+		update tb_user set TEL_NUM=#{telNum} where id = #{id}
+	</update>
+	<update id="updateMail">
+		update tb_user set MAIL=#{mail} where id = #{id}
+	</update>
+	<update id="updateUserType">
+		update tb_user set USER_TYPE=#{userType} where id = #{id}
+	</update>
+	<update id="updateAddress">
+		update tb_user set ADDRESS=#{address} where id = #{id}
+	</update>
+</mapper>
+

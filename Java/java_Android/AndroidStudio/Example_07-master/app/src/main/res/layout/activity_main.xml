@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888"/>
+
+    <com.lzy.widget.AlphaIndicator
+        android:id="@+id/alpha"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <com.lzy.widget.AlphaView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textStyle="bold"
+            app:av_tabIconNormal="@drawable/newscenter"
+            app:av_tabIconSelected="@drawable/newscenter_press"
+            app:av_tabText="新闻"
+            app:av_tabTextSize="15sp"
+            app:av_textColorNormal="#000"
+            app:av_textColorSelected="#eb0200"/>
+
+        <com.lzy.widget.AlphaView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textStyle="bold"
+            app:av_tabIconNormal="@drawable/home"
+            app:av_tabIconSelected="@drawable/home_press"
+            app:av_tabText="美食"
+            app:av_tabTextSize="15sp"
+            app:av_textColorNormal="#000"
+            app:av_textColorSelected="#eb0200"/>
+
+        <com.lzy.widget.AlphaView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textStyle="bold"
+            app:av_tabIconNormal="@drawable/setting"
+            app:av_tabIconSelected="@drawable/setting_press"
+            app:av_tabText="设置"
+            app:av_tabTextSize="15sp"
+            app:av_textColorNormal="#000"
+            app:av_textColorSelected="#eb0200"/>
+    </com.lzy.widget.AlphaIndicator>
+
+
+</LinearLayout>

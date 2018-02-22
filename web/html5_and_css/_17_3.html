@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Tall Tales Banner Ad</title>
+		<script type="text/javascript">
+			<!--
+				var bannerNum=1;
+				function rotateBanner(){
+					if(++bannerNum>3)
+						bannerNum=1;
+					document.getElementById("ttbanner").src="banner"+bannerNum+".gif";
+					window.setTimeout('rotateBanner();',3000);
+				}
+			//-->
+		</script>
+	</head>
+	<body onload="window.setTimeout('rotateBanner();',3000);">
+		<h1 style="text-align:center">Game Lovers Anonymous</h1>
+		<p>
+			<a href="http://www.talltalesgame.com/">
+			<img src="banner1.gif" alt="Tall Tales" id="ttbanner" style="border:none;float:right" /></a>
+			Welcome to Game Lovers Anonymous.We love to paly games,and invite you to support us by visiting our sponsors as you enjoy our site.
+		</p>
+	</body>
+</html>

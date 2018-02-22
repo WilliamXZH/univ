@@ -1,0 +1,13 @@
+package com.neu.util;
+
+import java.util.List;
+
+import com.neu.model.po.PersonPO;
+
+public class fileUtil {
+
+	public List<PersonPO> readDataFile(){
+		return null;
+	}
+	
+}

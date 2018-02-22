@@ -1,0 +1,16 @@
+<html>
+	<body>
+		<script>
+			function linkSomePage_onclick()
+			{
+				alert('You Clicked?');
+				return true;
+			}
+		</script>
+		<a href="somepage.html" name="linkSomePage" onclick="linkSomePage_onclick()">
+		Click me</a>
+		<script>
+			window.document.links[0].onclick=linkSomePage_onclick;
+		</script>
+	</body>
+</html>

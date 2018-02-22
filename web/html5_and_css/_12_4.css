@@ -1,0 +1,98 @@
+h1{
+	font:36pt Courier;
+}
+h1.silly{
+	font:36pt Comic Sans;
+}
+h1.serious{
+	font:36pt Arial;
+}
+div.footnote{
+	font-size:9pt;
+	line-height:12pt;
+	text-align:center;
+}
+a:link{
+	color:#19619A;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover{
+	background-color:gold;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:active{
+}
+a:visited{
+}
+/*This is a CSS comment.*/
+/*Make all body text maroon-colored 12-point Book Antique with
+16-point vertical spacing between lines of text and 10-point margins.
+Use parchment.gif as the background.*/
+body{
+	font-size:12pt;
+	font-family:Book Antique;
+	color:maroon;
+	line-height:16pt;
+	margin-left:10pt;
+	margin-right:10pt;
+	background:url(parchment.gif);
+}
+p{
+	margin-left:14pt;
+	margin-right:24pt;
+}
+/*Make headings Prose Antique bold with 
+genrous line spacing.If user doesn't have Prose 
+Antique,use Lucida Handwriting.*/
+h1{
+	font:24pt Prose Antique,Lucida Handwriting;
+	font-weight:bold;
+	line-height:30pt;
+}
+h2{
+	font:18pt Prose Antique,Lucida Handwriting;
+	font-weight:bold;
+	line-height:22pt;
+}
+/*Don't underline links,and make all links red.
+Make links falsh black when activated.*/
+a{
+	text-decoration:none;
+}
+a:link{
+	color:red;
+}
+a:visited{
+	color:red;
+}
+a:active{
+	color:black;
+}
+/*Format footnotes as 9-point Book Antique ,and center them.*/
+div.footnote{
+	font-size:9pt;
+	line-height:12pt;
+	text-align:center;
+}
+p.bold{
+	font-weight:bold;
+}
+.bold{
+	font-weight:bold;
+}
+a.emphasis:link,a.emphasis:visited,a.emphasis:active{
+	color:#19619A;
+	font-weight:bold;
+	text-decoration:none;
+}
+a.emphasis:hover{
+	background-color:gold;
+	font-weight:bold;
+	text-decoration:none;
+}
+h1,h2{
+	text-align:center;
+	font-style:italic;
+}

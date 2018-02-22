@@ -1,0 +1,4 @@
+<complexType name="nameAddress">
+		<attribute name="name" type="string" 		             use="optional"/>
+		<attribute name="address" 			        type="string" use="required"/>
+</complexType>

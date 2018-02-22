@@ -1,0 +1,19 @@
+package pers.william.similarity;
+
+import java.util.List;
+
+/**
+ * Tanimoto/Jaccard Coefficient
+ * @author william
+ *
+ */
+public class TCSimilarity {
+
+	public static double getSimilarity(List<Double> list1, List<Double> list2){
+		
+		int length = list1.size();
+		
+		
+		return 0;
+	}
+}

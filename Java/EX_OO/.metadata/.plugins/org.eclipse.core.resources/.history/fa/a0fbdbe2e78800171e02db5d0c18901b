@@ -1,0 +1,12 @@
+package com.neu.model;
+
+public class CivilianMark {
+
+	public static int NON_CIVILIAN = 0;
+	public static int NATIONAL_CIVILIAN = 1;
+	public static int CATA_CIVILIAN = 2;
+	public static int REFER_CIVILIAN = 3;
+	
+	p
+	
+}

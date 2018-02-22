@@ -1,0 +1,29 @@
+package pers.william.po;
+
+public class Request {
+
+	private String request;
+
+	public Request() {
+		super();
+	}
+
+	public Request(String request) {
+		super();
+		this.request = request;
+	}
+
+	public String getRequest() {
+		return request;
+	}
+
+	public void setRequest(String request) {
+		this.request = request;
+	}
+
+	@Override
+	public String toString() {
+		return "Request [request=" + request + "]";
+	}
+	
+}

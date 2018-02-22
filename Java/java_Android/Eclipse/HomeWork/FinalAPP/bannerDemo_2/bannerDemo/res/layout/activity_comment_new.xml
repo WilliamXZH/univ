@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.i4evercai.bannerdemo.CommentNew" >
+			
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="-------新闻标题----------"
+                android:layout_width="match_parent"
+                android:id="@+id/textView1"
+                android:textSize="24sp"
+                android:layout_height="30dp"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:text="正文"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/textView2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:text="正文"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/textView3"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:background="@drawable/show" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:weightSum="1">
+
+                <EditText
+                    android:layout_width="257dp"
+                    android:layout_height="49dp"
+                    android:inputType="text"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:hint="点击此处输入评论"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:textSize="14sp"
+                    android:selectAllOnFocus="true"
+                    android:layout_weight="0.77" />
+
+                <Button
+                    android:text="发送"
+                    android:layout_width="67dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button" />
+            </LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:id="@+id/talk" />
+
+		
+            </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<html>
+	<body>
+		<script>
+			var age=prompt("Enter age:","");
+			var isOverSixty=parseInt(age)>60;
+				document.write("Older than 60: "+isOverSixty+"<br>");
+			
+			var degFahren=Number(prompt("Enter the degrees Fahrenheit",32));
+			var degCent;
+			degCent=5/9*(degFahren-32);
+			document.write(degFahren+"\xB0 Fahrenheit is "+degCent+"\xB0 centigrade<br>");
+			if(degCent<0)
+			{
+				document.write("That's below the freezing point of water");
+			}
+			if(degCent==100)
+				document.write("That's the boiling point of water");
+
+			var secretNumber=prompt("Pick a number between 1 and 5:","");
+			secretNumber=parseInt(secretNumber);
+			switch(secretNumber)
+			{
+				case 1:
+				case 2:
+					document.write("Too low!<br>");
+					break;
+				case 3:
+					document.write("You guessed the secret number!<br>");
+					break;
+				case 4:
+				case 5:
+					document.write("Too high!<br>");
+					break;
+				default:
+					document.write("You did not enter a number between 1 and 5.<br>");
+					break;
+			}
+			document.write("<br>Execution continues here<br>");
+		</script>
+	</body>
+</html>

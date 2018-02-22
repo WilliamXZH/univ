@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="pers.william.util.BaseOperation"/>
+<fullyQualifiedTypeName name="pers.william.model.Item"/>
+<fullyQualifiedTypeName name="pers.william.model.User"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="net.librec.similarity.AbstractRecommenderSimilarity"/>
+<fullyQualifiedTypeName name="pers.william.util.BaseOper"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.sql.Array"/>
+<fullyQualifiedTypeName name="pers.william.model.Matrix"/>
+<fullyQualifiedTypeName name="pers.william.io.ReadFile"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

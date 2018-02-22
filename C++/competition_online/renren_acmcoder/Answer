@@ -1,0 +1,133 @@
+波形图：
+简单模拟题
+参考代码：
+#include <bits/stdc++.h>
+#define maxn 100009
+using namespace std;
+char s[maxn];
+int main(){
+	int tt;
+	scanf("%d",&tt);
+	while(tt--){
+		scanf("%s",s);
+		int n=strlen(s);
+		if(s[0]=='+'||s[0]=='-'){
+			for(int i=0;i<n;i++){
+				if(s[i]=='+')
+					printf("/\\");
+				else
+					printf("__");
+			}
+		}
+		else{
+			for(int i=0;i<n;i+=2){
+				if(s[i]=='_')
+					printf("-");
+				else
+					printf("+");
+			}
+		}
+		puts("");
+	}
+	return 0;
+}
+
+红包的收益：
+模拟题，按照题意算出每个人的收支
+参考代码：
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define mem(cur) mem[Location(cur)]
+#define mem_j mem(cur).list[j]
+int n;
+struct node{
+    char name[15];
+    int total;
+    int pn;
+    int r;
+    int s;
+    char list[20][15];
+}mem[20];
+char cur[15];
+int Location(char* name){
+    int i;
+    for (i=1; i<=n; i++) {
+        if (!strcmp(name, mem[i].name)) {
+            return i;
+        }
+    }
+    return 0;
+}
+int main(){
+//    freopen("gift1.in", "r", stdin);
+//    freopen("gift1.out", "w", stdout);
+    int i,j;
+    scanf("%d",&n);
+    const int np=n;
+    memset(mem, 0, sizeof(mem));
+    for (i=1; i<=np; i++) {
+        scanf("%s",mem[i].name);
+    }
+    for (i=1; i<=np; i++) {
+        scanf("%s",cur);
+        scanf("%d%d",&mem(cur).total,&mem(cur).pn);
+        for (j=1; j<=mem(cur).pn; j++) {
+            scanf("%s",mem_j);
+            mem[Location(mem_j)].r+=mem(cur).total/mem(cur).pn;
+            mem(cur).s+=mem(cur).total/mem(cur).pn;
+        }
+    }
+    for (i=1; i<=np; i++) {
+        printf("%s %d\n",mem[i].name,mem[i].r-mem[i].s);
+    }
+    return 0;
+}
+
+神奇的规律：
+找规律，使用简单的数论知识即可
+参考代码：
+#include <iostream>
+#include <cstring>
+#include <string>
+#include <cmath>
+#include <set>
+#include <map>
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+#include <queue>
+#include <cassert>
+#include <climits>
+
+#pragma warning( disable : 4996)
+
+using namespace std;
+
+const int maxn = 1111;
+
+
+
+int main() {
+	//freopen("rule_10.in", "r", stdin);
+	//freopen("rule_10.out", "w", stdout);
+	long long b;
+	while (cin >> b) {
+		int x, y;
+		for (int i = 2; i < b; i++) {
+			if (b % i == 1) {
+				x = i;
+				break;
+			}
+		}
+		long long b1 = b + 1;
+		long long b2 = b * b - 1;
+		for (int i = 2; i <= b1; i++) {
+			if (b1 % i == 0 && b2 % i == 0) {
+				y = i;
+				break;
+			}
+		}
+		cout << x << ' ' << y << endl;
+	}
+}

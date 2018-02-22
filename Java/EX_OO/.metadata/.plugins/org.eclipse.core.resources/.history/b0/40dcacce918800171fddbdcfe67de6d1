@@ -1,0 +1,9 @@
+package com.neu.view;
+
+public class MedicalInsuranceCenterGUI {
+	
+	public static void main(String [] args){
+		
+	}
+	
+}

@@ -1,0 +1,13 @@
+<project default = "wsimport">
+    <target name = "wsimport">
+        <exec executable = "wsimport">
+            <arg line = "-keep -s ./src -p org.gnuhpc.wsClient
+                -d ./bin http://localhost:8080/wsServerExample?wsdl" />
+            <!-- 具体执行的命令的参数 -->
+            <!-- -cp 为类路径 -->
+            <!-- -keep后产生的java文件 -->
+            <!-- -s 产生的源文件放在哪 -->
+            <!-- -d 产生的输出文件放在哪 -->
+        </exec>
+    </target>
+</project>

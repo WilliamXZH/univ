@@ -1,0 +1,41 @@
+package pers.william.server;
+
+import java.io.IOException;
+import java.net.BindException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.SocketException;
+
+public class TemServer {
+	
+	private int port = 12345;
+    public static void main(String[] args) throws IOException {
+    	System.out.println("Start server!");
+        new TemServer().startServer();
+    }
+
+    private void startServer() {
+    	ServerSocket server;
+		try{
+			server=new ServerSocket(port);
+			while(true){
+				try{
+					Socket s=server.accept();
+					ClientThread client=new ClientThread(s);
+					System.out.println("connect info:"+s.toString());
+					client.start();
+				}catch(SocketException e){
+					e.printStackTrace();
+				}
+			}
+		}catch(BindException e){
+			port+=10;
+			e.printStackTrace();
+		}catch(IOException e){
+			e.printStackTrace();
+		} 	
+    }
+
+   
+
+}

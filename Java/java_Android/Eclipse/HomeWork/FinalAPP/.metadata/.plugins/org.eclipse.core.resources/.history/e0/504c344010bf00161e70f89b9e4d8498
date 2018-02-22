@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.i4evercai.bannerdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />  
+    <application
+        android:name=".Myapplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".QuestionActivity"
+            android:label="@string/title_activity_question" >
+        </activity>
+        <activity
+            android:name=".Question"
+            android:label="@string/title_activity_question" >
+        </activity>
+        <activity
+            android:name=".Service"
+            android:label="@string/title_activity_service" >
+        </activity>
+        <activity
+            android:name=".Vip_2"
+            android:label="@string/title_activity_vip" >
+        </activity>
+        <activity
+            android:name=".Introduce"
+            android:label="@string/title_activity_introduce" >
+        </activity>
+        <activity
+            android:name=".Order"
+            android:label="@string/title_activity_order" >
+        </activity>
+        <activity
+            android:name=".ShowQuestion"
+            android:label="@string/title_activity_show_question" >
+        </activity>
+        <activity
+            android:name=".CommentNew"
+            android:label="@string/title_activity_comment_new" >
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name=".ShowOrder_2"
+            android:label="@string/title_activity_show_order" >
+        </activity>
+    </application>
+
+</manifest>

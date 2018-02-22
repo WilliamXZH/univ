@@ -1,0 +1,8 @@
+package pers.william.model;
+
+public class Item {
+	
+	private Integer item;
+	private Double rating;
+	
+}

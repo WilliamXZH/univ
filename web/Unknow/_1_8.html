@@ -1,0 +1,32 @@
+<form action="server/server" method="post">
+<input type="hidden" name="data" value="july,2000">
+<label>name:
+<input type="text" name="text1" value="enter your name"><br>
+</label>
+<label>password:
+<input type="password" name="text1" value="blinky"><br>
+</label>
+<input type="checkbox" name="genre" value="drama" checked>drama
+<input type="checkbox" name="genre" value="comedy" checked>comedy
+<input type="checkbox" name="genre" value="romance">romance
+<input type="checkbox" name="genre" value="action">action<br>
+<input type="radio" name="price" value="lt4">under$4.00
+<input type="radio" name="price" value="4-6" checked>$4.00to6.00
+<input type="radio" name="price" value="6-8">$6.00to8.00
+<input type="radio" name="price" value="gt8">over$8.00<br>
+<textarea name="info" rows="10" cols="40">
+Please enter a list of all your top 5 favourate movies:
+1.
+2.
+3.
+4.
+5.</textarea></br></br>
+<select name="view" size="2">
+<option>theater
+<option>drive-in
+<option>video/DVD
+<option>television
+</select><br>
+<button name="senddata" type="submit" >submit data</button>
+<button name="cleardata" type="reset" >clear data</button>
+</form>

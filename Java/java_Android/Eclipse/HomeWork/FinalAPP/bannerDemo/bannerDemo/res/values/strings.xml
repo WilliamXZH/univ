@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">bannerDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_question">Question</string>
+    <string name="title_activity_service">Service</string>
+    <string name="title_activity_vip">Vip</string>
+    <string name="title_activity_introduce">Introduce</string>
+    <string name="title_activity_order">Order</string>
+    <string name="title_activity_show_question">ShowQuestion</string>
+    <string name="title_activity_comment_new">CommentNew</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_register">Register</string>
+    <string name="hello">Hello World, Date!</string>
+    <string name="strInputAccHint">输入帐号</string>
+    <string name="strAccInputLabel">帐号</string>
+    <string name="strPswInputLabel">密码</string>
+    <string name="opt_remember">记住密码</string>
+    <string name="login">登 录</string>
+    <string name="account_empty">用户名为空，请重新输入!</string>
+    <string name="pwd_empty">密码为空，请重新输入!</string>
+    <string name="name_already_exist">用户名已存在，请重新输入！</string>
+    <string name="register_fail">注册用户失败，请重新尝试！</string>
+    <string name="register_sucess">注册成功！</string>
+    <string name="title_activity_show_order">ShowOrder</string>
+
+</resources>

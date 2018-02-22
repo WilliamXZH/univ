@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1442631661 source:f:\编程代码\c\ex1\date.cpp
+	"Date.h"
+	<iostream>
+	<string.h>
+	<stdlib.h>
+
+1095137584 f:\编程代码\c\ex1\date.h
+	<iostream>
+
+1189868556 source:f:\编程代码\c\ex1\main.cpp
+	<iostream>
+
+1442631673 source:f:\编程代码\c\ex1\testdate.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<sstream>
+	"Date.h"
+
+1442631922 source:f:\编程代码\c\ex1\advertisement.cpp
+	"Date.h"
+	<iostream>
+	<string.h>
+	"Advertisement.h"
+
+1074042674 f:\编程代码\c\ex1\advertisement.h
+	<queue>
+	<iostream>
+	<string>
+	"Date.h"
+

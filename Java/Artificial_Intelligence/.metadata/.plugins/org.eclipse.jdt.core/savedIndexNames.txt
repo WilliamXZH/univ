@@ -1,0 +1,21 @@
+INDEX VERSION 1.129+F:\code\Java\Artificial_Intelligence\.metadata\.plugins\org.eclipse.jdt.core
+973305831.index
+1885835688.index
+36201023.index
+1609949693.index
+1916310095.index
+775687312.index
+3979990749.index
+1528177824.index
+425542079.index
+1449915840.index
+1929679929.index
+3263516741.index
+3756302362.index
+2308801465.index
+506943949.index
+2149955614.index
+1114435798.index
+1005283920.index
+4810048.index
+3843554762.index

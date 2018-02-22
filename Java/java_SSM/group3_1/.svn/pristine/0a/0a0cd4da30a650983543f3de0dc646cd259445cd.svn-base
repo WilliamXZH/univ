@@ -1,0 +1,113 @@
+package com.group3.controller;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.group3.po.Partner;
+import com.group3.po.User;
+import com.group3.service.PartnerService;
+import com.group3.vo.TicketVO;
+import com.group3.vo.TrainVO;
+
+import net.sf.json.JSONArray;
+
+
+
+@Controller
+public class TicketPurchaseController {
+	
+	@Resource
+	PartnerService partnerService;
+
+	@RequestMapping("/purchase/ticketPurchase")
+	public ModelAndView ticketPurchase(String info,HttpSession session){
+		ModelAndView modelAndView = new ModelAndView();
+		System.out.println("ticketPurchase!");
+		System.out.println(info);
+		
+		TrainVO tripTrain = null;
+		TrainVO backTrain = null;
+		TicketVO tripTicket = null;
+		TicketVO backTicket = null;
+		String []tab = info.split("#");
+		if(tab.length==0){
+			return modelAndView;
+		}else if(tab.length==2){
+			List<TrainVO> backs = (List<TrainVO>) session.getAttribute("backTrains");
+			Integer backTrainId = Integer.parseInt(tab[1].split(":")[0]);
+			Integer backTicketId = Integer.parseInt(tab[1].split(":")[1]);
+			
+			for (TrainVO trainVO : backs) {
+				if(trainVO.getId()==backTrainId){
+					backTrain = trainVO;
+					//session.setAttribute("backTrain", backTrain);
+					modelAndView.addObject("backTrain", backTrain);
+					break;
+				}
+			}
+			System.out.println(backTrain);
+			
+			
+			List<TicketVO> backTicketVOs = tripTrain.getTickets();
+			for (TicketVO ticketVO : backTicketVOs) {
+				if(ticketVO.getTicketTypeId()==backTicketId){
+					backTicket = ticketVO;
+					//session.setAttribute("backTicket", backTicket);
+					modelAndView.addObject("backTicket", backTicket);
+					break;
+				}
+			}
+			System.out.println(backTicket);
+		}
+		
+		List<TrainVO> trips = (List<TrainVO>) session.getAttribute("tripTrains");
+		System.out.println(tab[0]);
+		System.out.println(tab[0].split(":")[0]);
+		Integer tripTrainId = Integer.parseInt(tab[0].split(":")[0]);
+		Integer tripTicketId = Integer.parseInt(tab[0].split(":")[1]);
+		
+		for (TrainVO trainVO : trips) {
+			if(trainVO.getId()==tripTrainId){
+				tripTrain = trainVO;
+				//session.setAttribute("tripTrain", tripTrain);
+				modelAndView.addObject("tripTrain", tripTrain);
+				break;
+			}
+		}
+		System.out.println(tripTrain);
+		
+		
+		List<TicketVO> tripTicketVOs = tripTrain.getTickets();
+		for (TicketVO ticketVO : tripTicketVOs) {
+			if(ticketVO.getTicketTypeId()==tripTicketId){
+				tripTicket = ticketVO;
+				//session.setAttribute("tripTicket", tripTicket);
+				modelAndView.addObject("tripTicket", tripTicket);
+				break;
+			}
+		}
+		System.out.println(tripTicket);
+		
+		String mainUserId = (String)session.getAttribute("id");
+		List<Partner> partners = partnerService.getPartnerInfo(mainUserId);
+		
+		JSONArray jsonArray = JSONArray.fromObject(partners);
+		
+		modelAndView.addObject("partners",jsonArray);
+		//session.setAttribute("partners", jsonArray);
+		System.out.println(jsonArray);
+		
+		modelAndView.setViewName("/purchase/ticketPurchase");
+		modelAndView.addObject("info", info);
+		
+		return modelAndView;
+	}
+	
+	
+}

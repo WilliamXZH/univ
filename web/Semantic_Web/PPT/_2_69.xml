@@ -1,0 +1,11 @@
+<simpleType name="dayOfWeek">
+		<restriction base="string">
+			<enumeration value="Mon"/>
+			<enumeration value="Tue"/>
+			<enumeration value="Wed"/>
+			<enumeration value="Thu"/>
+			<enumeration value="Fri"/>
+			<enumeration value="Sat"/>
+			<enumeration value="Sun"/>
+		</restriction>
+</simpleType>

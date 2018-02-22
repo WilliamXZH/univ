@@ -1,0 +1,29 @@
+package pers.william.model;
+
+public class Item {
+	
+	private Integer item;
+	private Double rating;
+	public Integer getItem() {
+		return item;
+	}
+	public void setItem(Integer item) {
+		this.item = item;
+	}
+	public Double getRating() {
+		return rating;
+	}
+	public void setRating(Double rating) {
+		this.rating = rating;
+	}
+	public Item(){
+		super();
+	}
+	
+	public Item(Integer item, Double rating) {
+		super();
+		this.item = item;
+		this.rating = rating;
+	}
+	
+}

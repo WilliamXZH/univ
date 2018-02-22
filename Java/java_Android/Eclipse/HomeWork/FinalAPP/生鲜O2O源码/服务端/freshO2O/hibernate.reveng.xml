@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="subject" catalog="jiaowums" class="Subject">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="student" catalog="jiaowums" class="Student">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="mygroup" catalog="jiaowums" class="Mygroup">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="teacher" catalog="jiaowums" class="Teacher">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="teacher_class" catalog="jiaowums"
+		class="TeacherClass">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="teacher_group" catalog="jiaowums"
+		class="TeacherGroup">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="teacher_subject" catalog="jiaowums"
+		class="TeacherSubject">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="classrule" catalog="jiaowums" class="Classrule">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="teacher_manage_class" catalog="jiaowums"
+		class="TeacherManageClass">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="classnotice" catalog="jiaowums" class="Classnotice">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="classculture" catalog="jiaowums"
+		class="Classculture">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="classtable" catalog="jiaowums" class="Classtable">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="groupmember" catalog="jiaowums" class="Groupmember">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="groupmessage" catalog="jiaowums"
+		class="GroupMessage">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="learn_materials" catalog="jiaowums"
+		class="LearnMaterials">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="user" catalog="fresho2o"
+		class="com.freshO2O.po.User">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="goods" catalog="fresho2o" class="Goods">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="area" catalog="fresho2o"
+		class="com.freshO2O.po.Area">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="indent" catalog="fresho2o"
+		class="com.freshO2O.po.Indent">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="deduction" catalog="fresho2o"
+		class="com.freshO2O.po.Deduction">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+	<table name="receiveaddr" catalog="fresho2o"
+		class="com.freshO2O.po.Receiveaddr">
+		<primary-key>
+			<generator class="native"></generator>
+		</primary-key>
+	</table>
+<table name="cookbook" catalog="fresho2o"
+	class="com.freshO2O.po.CookBook">
+	<primary-key>
+		<generator class="native"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

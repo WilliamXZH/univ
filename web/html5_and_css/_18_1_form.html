@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Guest Book</title>
+	</head>
+	<body>
+		<h1>My Guest Book</h1>
+		<p>Please let me know waht you think of my web pages.Thanks!</p>
+		<form method="post" action="mailto:you@youremail.com" enctype="text/plain">
+			<p>What is your name?<input type="text" name="fullname" size="25" /><br />
+			What's uour first name?<input type="text" name="firstname" maxlength="30"
+			name="firstname" /><br />
+			What's your lst name?<input type="text" name="lastname" size="20" maxlength="30" name="lastname" /><br />
+			Waht's yout passwprd?<input name="password" type="password"><br />
+			Your e-mail address:<input type="text" name="e-address" size="25" />
+			</p>
+			<p>
+				Please check all that apply:<br />
+				<input type="checkbox" name="likeit" checked="chedked" />I really like your Web site.<br />
+				<input type="checkbox" name="best" />One of the best sites I've seen.<br />
+				<input type="checkbox" name="envy" />I sure wish my pages looked as good as yours.<br />
+				<input type="checkbox" name="love" />I think I'm in love with you.<br />
+				<input type="checkbox" name="idiot" />I have no taste I'm pretty dense,so your site didn't do mush for me.
+			</p>
+			<p>
+				Choose the one thing you love best about my web pages:<br />
+				<input type="radio" name="lovebest" value="me" checked="checked" />That gorgeous picture of you and your csts.<br />
+				<input type="radio" name="lovebest" value="cats" />All those moving poems about your cats.<br />
+				<input type="radio" name="lovebest" value="burbs" />The inspiring recap of your suburban childhood.<br />
+				<input type="radio" name="lovebest" value="treasures" />The detailed list of all yout Elvis memorabilia.
+			</p>
+			<p>
+				Imagine my site as a book,video ,or album.Select the number of copies you think it would sell:<br />
+				<select size="3" name="potential">
+					<option selected="selected">Million copy bestseller for sure!</option>
+					<option >100,1000+(would be Oprah's favorite)</option>
+					<option>Thousands (an under - appreciated classic)</option>
+					<option>Very few:not banal enough for today's public </option>
+				</select>
+			</p>
+			<p>
+				How do you think I could improve my site?
+				<select name="suggestion">
+					<option selected="selected">Couldn't be better</option>
+					<option>More about the cats</option>
+					<option>More Elvis stuff</option>
+					<option>More family pictures</option>
+				</select>
+			</p>
+			<p>
+				Feel free to type more praise,gift offers,etc.below:<br />
+				<textarea name="comments" rows="4" cols="55">I just want to thank you so much for touching my life.</textarea><br />
+				<input type="submit" value="Click Here to Submit" />
+				<input type="reset" value="Erase and Start Over" />
+				<input type="hidden" name="mail_to" value="me@mysite.com" />
+			</p>
+		</form>
+	</body>
+</html>

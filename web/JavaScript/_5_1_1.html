@@ -1,0 +1,39 @@
+<html>
+	<body>
+		<img name=img1 src="" border=0 width=200 height=150>
+		<script>
+			var myImage=new Array("usa.gif","canada.gif","jamaica.gif","mexico.gif");
+			var imgIndex=prompt("Enter a number from 0 to 3","");
+			document.images["img1"].src=myImages[imgIndex];
+			/*alert("Hello!");
+			window.alert("Hello!");
+			window.defaultStatus="Hello and Welcome";
+			history.back();
+			history.forward();
+			history.go(2);
+
+			window.location.replace("myPage.htm");
+			window.location.href("myPage.htm");
+			*/
+			switch(window.screen.colorDepth)
+			{
+				case 1:
+				case 4:
+					document.bgColor="white";
+					break;
+				case 8:
+				case 15:
+				case 16:
+					document.bgColor="blue";
+					break;
+				case 24:
+				case 32:
+					document.bgColor="skyblue";
+					break;
+				default:
+					document.bgColor="white";
+			}
+			document.write("Your screen supports "+window.screen.colorDepth+" bit color");
+		</script>
+	</body>
+</html>

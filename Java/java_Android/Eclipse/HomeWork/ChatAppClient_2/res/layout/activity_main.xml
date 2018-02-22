@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chatappclient.MainActivity" >
+
+	<LinearLayout 
+	    android:layout_width="200sp"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:layout_gravity="center"
+	    >
+
+	    <TextView
+	        android:layout_width="100sp"
+	        android:layout_height="match_parent"
+	        android:gravity="center"
+	        android:text="@string/name"
+	        android:width="100sp" />
+
+		<EditText
+		    android:id="@+id/from"
+		    android:layout_width="100sp"
+		    android:layout_height="match_parent"
+		    android:layout_gravity="center"
+		    android:hint="@string/name_hint" />
+
+	</LinearLayout>
+	<LinearLayout 
+	    android:layout_width="200sp"
+	    android:layout_height="400sp"
+	    android:orientation="horizontal"
+	    android:layout_gravity="center"
+	    >
+		<LinearLayout 
+		    android:layout_width="100sp"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    >
+		    <EditText 
+		        android:layout_width="100sp"
+		        android:layout_height="50sp"
+		        android:hint="@string/to_hint"
+		        android:id="@+id/to"
+		        />
+
+		    <EditText
+		        android:id="@+id/message"
+		        android:layout_width="100sp"
+		        android:layout_height="300sp"
+		        android:hint="@string/message_hint" />
+
+		    <Button
+		        android:layout_width="100sp"
+		        android:layout_height="50sp"
+		        android:onClick="sendMessage"
+		        android:text="@string/submit" />
+
+		</LinearLayout>
+		<LinearLayout 
+		    android:layout_width="100sp"
+		    android:layout_height="match_parent"
+		    >
+
+		    <TextView
+		        android:layout_width="100sp"
+		        android:layout_height="match_parent"
+		        android:id="@+id/receiver" />
+		</LinearLayout>    
+	</LinearLayout>
+</LinearLayout>

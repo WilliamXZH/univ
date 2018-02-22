@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.group3.mapper.TimeMapper">
+	<select id="selectArvAndLvTime" resultMap="timeResult">
+		select TRAIN_ID,STATION_ID,TO_CHAR(ARV_TIME,'YYYY-MM-DD HH24:MI:SS') arv_time,TO_CHAR(LV_TIME,'YYYY-MM-DD HH24:MI:SS') lv_time
+		from TIME
+		where TRAIN_ID=#{0} and STATION_ID=#{1}
+	</select>
+
+	<select id="getDifferByTrainAndStation" resultType="Integer">
+		select ceil(((select arv_time from time where train_id=#{0} and station_id=#{2})-
+		(select lv_time from time where train_id=#{0} and station_id=#{1}))*24*60)from dual
+	</select>
+
+	<resultMap type="com.group3.po.Time" id="timeResult">
+		<id property="trainId" column="train_id"></id>
+		<result property="stationId" column="station_id" />
+		<result property="arvTime" column="arv_time" />
+		<result property="lvTime" column="lv_time"/>
+	</resultMap>
+</mapper>

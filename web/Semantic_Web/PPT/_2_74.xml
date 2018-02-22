@@ -1,0 +1,23 @@
+<element name="redpocket" type="redpoketType"/>
+<complexType name="redpocketType">
+    <sequence>
+	<element name="sender" type="string" minOccurs="1" maxOccurs="1"/>
+           <element name="receiver" type="string" minOccur="1" maxOccurs="unbounded"/>
+	<element name="body" type="bodyType"/>
+    </sequence>
+    <attribute name="type" type="grabManner" use="default" value="equally"/>
+    <attribute name="expire" type="time" use="fixed" value="00:00:00"/>
+</complexType>
+<complexType name="bodyType">
+	<attribute name="money" type="integer" use="required"/>  
+	<attribute name="shares" type="integer" use="optional"/>
+	<attribute name="wish" type="string" use="default" value="Best Wishes"/>
+</complexType>
+
+<simpleType name="grabManner ">
+		<restriction base="string">
+			<enumeration value="randomly"/>
+			<enumeration value="equally"/>
+		</restriction>
+</simpleType>
+

@@ -1,0 +1,8 @@
+<element name="email" type="emailType"/>
+
+<complexType name="emailType">
+	<sequence>
+		<element name="head" type="headType"/>
+		<element name="body" type="bodyType"/>
+	</sequence>
+</complexType>

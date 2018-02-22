@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js" />
+		<script type="text/javascript">
+			"use strict"e
+			var seckill={
+				URL:{},
+				detail:{
+					init:function(param){
+						var killPhone = $cookie('killphone');
+						var startTime = param['startTime'];
+						var endTime = params['endTime'];
+						var scekillId = params['scekillId'];
+					}
+				}
+			}
+
+			$("#test").click(function(){
+				alert("test");
+				seckill.detail.init({
+					seckillId:'123',
+					startTime:'asd',
+					endTime:'fasd'
+				});
+				console.log(seckill);
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button" id="test" value="test" onclick="" />
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<script>
+			var names=new Array();
+
+			names[0]="Paul";
+			names[1]="Catherine";
+			names[11]="Steve";
+			document.write("The last name is "+names[names.length-1]);
+
+			var names=new Array("Paul","Catherine","Steven");
+			var ages=new Array(31,29,34);
+			var concatArray;
+			concatArray=name.concat(ages);
+
+			var names=new Array("Paul","Sarah","Louise","Adam","Bob");
+			var slicedArray=names.slice(1,3);
+
+			var myShopping=new Array("Eggs","Milk","Potatoes","Cereal","Banana");
+			var myShoppingList=myShopping.join("<br>");
+			document.write(myShoppingList);
+
+			var elementIndex;
+			names.sort();
+			document.write("Now the names again in order"+"<br>");
+			for(elementIndex=0;elementIndex<names.length;elementIndex++)
+			{
+				document.write(names[elementIndex]+"<br>");
+			}
+			myShopping.reverse();
+		</script>
+	</body>
+</html>

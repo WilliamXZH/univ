@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2pt"
+        android:hint=" 输入用户名 "
+        android:textSize="8pt" />
+
+    <EditText
+        android:id="@+id/sentence"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2pt"
+        android:hint=" 输入聊天内容 "
+        android:textSize="8pt" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2pt"
+        android:text="     发  送     "
+        android:textSize="8pt" />
+
+    <EditText
+        android:id="@+id/show"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="2pt"
+        android:gravity="top"
+        android:editable="false"
+        android:textSize="8pt" />
+
+</LinearLayout>

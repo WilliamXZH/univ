@@ -1,0 +1,36 @@
+C51 COMPILER V9.52.0.0   HELLOWORLD                                                        09/13/2016 10:20:06 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE HELLOWORLD
+OBJECT MODULE PLACED IN .\helloworld.OBJ
+COMPILER INVOKED BY: F:\program_tools\Keil\C51\BIN\C51.EXE .\helloworld.c DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include<stdio.h>
+   3          main(){
+   4   1              char data *p1,*p2;
+   5   1              xdata int a;
+   6   1              p1=0x20;
+   7   1              *p1=0x04;
+   8   1              p2=0x35;
+   9   1              *p2=0x05;
+  10   1              a=*p1*(*p2);
+  11   1              printf("The result is %x",a);
+  12   1              return(0);
+  13   1      } 
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     57    ----
+   CONSTANT SIZE    =     17    ----
+   XDATA SIZE       =   ----       2
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

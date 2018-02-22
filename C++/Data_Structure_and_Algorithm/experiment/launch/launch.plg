@@ -1,0 +1,26 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: launch - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Administrator\AppData\Local\Temp\RSP4B3A.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/launch.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\±à³Ì¹¤¾ß\Microsoft Visual Studio\MyProjects\launch\launch.cpp"
+]
+Creating command line "cl.exe @C:\Users\Administrator\AppData\Local\Temp\RSP4B3A.tmp" 
+<h3>Output Window</h3>
+Compiling...
+Skipping... (no relevant changes detected)
+launch.cpp
+
+
+
+<h3>Results</h3>
+launch.obj - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

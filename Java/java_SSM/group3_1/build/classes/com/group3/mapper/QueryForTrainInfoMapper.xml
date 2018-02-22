@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.group3.mapper.QueryForTrainInfoMapper">
+	<select id="queryForTrainInfo" resultMap="trainInfoMap">
+		select * from TRAIN where SERIAL_NUM=#{serialNum} AND to_char(BD_DATE,'yyyy-mm-dd')=#{bdDate}
+	</select>
+	<resultMap type="com.group3.po.Train" id="trainInfoMap"> 
+		<id property="id" column="ID"></id>
+		<result property="serialNum" column="SERIAL_NUM"></result>
+		<result property="entireRoute" column="ENTIRE_ROUTE"></result>
+		<result property="bdDate" column="BD_DATE"></result>
+	</resultMap>
+	<select id="queryAll" resultType="com.group3.po.Train">
+		select * from TRAIN
+	</select>
+</mapper>

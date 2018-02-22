@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+		function test(){
+			
+			var str='123 上海 无锡';
+			var array2 = str.split(" ");
+			
+			var array = new Array();
+			for(var i=0;i<array2.length;i++){
+				array[i]=new Object();
+				//array[i].name='{name:'+array2[i]+'}';
+				array[i].name=array2[i];
+				//alert(array[i].name);
+			}
+			alert(JSON.stringify(array));
+			
+//			alert(array[0]);
+//			var obj = new Object();
+//			obj.from=array[1];
+//			obj.to=array[2];
+//			obj.weight=array[0];
+//			alert(array);
+			//{from:'上海',to:'无锡',weight:'123'}
+			//[{name:'上海'},{name:'无锡'},{name:'123'}]
+			
+			/*var array1=['132','123','423','634'];
+			var array2=[
+					[{name: '上海'}, {name: '无锡'}],    
+					[{name: '上海'}, {name: '南京'}],
+					[{name: '上海'}, {name: '杭州'}],
+					[{name: '上海'}, {name: '武汉'}],
+					[{name: '上海'}, {name: '福州'}]
+				];
+			var series=new Array();
+			for(var liv_s=0;liv_s<array1.length;liv_s++){
+				series[liv_s]=new Array();
+				series[liv_s][0]=array1[liv_s];
+				series[liv_s][1]=array2[liv_s];
+				//alert(series[liv_s][1]);
+				for(var j=0;j<series[liv_s][1].length;j++){
+					alert(series[liv_s][1][j][0].name);
+				}
+			}*/
+		}
+			
+		</script>
+	</head>
+	<body>
+		<input value="test" type="button" onclick="test()" />
+	</body>
+</html>

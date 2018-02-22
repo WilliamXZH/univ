@@ -1,0 +1,3 @@
+<!ELEMENT lecturer(name,phone)>
+<!ELEMENT name(#PCDATA)>
+<!ELEMENT phone(#PCDATA)>

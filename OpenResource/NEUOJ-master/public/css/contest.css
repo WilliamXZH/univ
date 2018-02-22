@@ -1,0 +1,164 @@
+/*contest.list*/
+.contest_table{
+    width:700px;
+    margin:0 auto;
+    table-layout: fixed;
+}
+
+#contest_id{
+    width:12%;
+}
+#contest_name{
+    width: 20%;
+}
+#contest_name_el{
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+#contest_begin_time{
+    width: 18%;
+}
+#contest_type{
+    width: 8%;
+}
+#contest_status{
+     width: 10%;
+}
+#contest_ranklist{
+    width: 12%;
+}
+#contest_management{
+    width: 12%;
+}
+
+/*contest.index*/
+.contest_index_table{
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+#contest_index_status{
+    width:10%;
+}
+#contest_index_problem_id{
+    width:12%;
+}
+#contest_index_short_name{
+    width:13%;
+}
+#contest_index_problem_name{
+    width:20%;
+}
+#contest_index_problem_name_el{
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+#contest_index_ac{
+    width:20%;
+}
+#contest_index_rejudge{
+    width:10%;
+}
+#contest_index_rejudge_btn{
+    padding-top: 0px;
+    height: 22px;
+    margin:0 auto;
+}
+
+
+/*contest_dashboard*/
+#dashboard_contest_id{
+    width:8%;
+}
+#dashboard_contest_name{
+    width: 15%;
+}
+#dashboard_contest_name_ex{
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+#dashboard_contest_type{
+    width: 8%;
+}
+#dashboard_contest_status{
+    width: 8%;
+}
+#dashboard_contest_begin_time{
+    width: 15%;
+}
+#dashboard_contest_end_time{
+    width: 15%;
+}
+#dashboard_contest_operation{
+    width: 24%;
+}
+
+.dashboard_contest_table{
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+.tmp_hide{
+    display: none;
+}
+
+/*contest_ranklist*/
+.contest_ranklist_nav{
+    padding-bottom: 0px;
+}
+
+.contest_ranklist_table{
+    table-layout: fixed;
+    /*overflow: hidden;*/
+}
+
+
+#contest_ranklist_rank{
+    width: 4%;
+}
+#contest_ranklist_avatar{
+    width: 4%;
+}
+#contest_ranklist_nickname{
+    width: 8%;
+}
+#contest_ranklist_nickname_el{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#contest_ranklist_solve{
+    width: 3%;
+}
+#contest_ranklist_penalty{
+    width: 8%;
+}
+#contest_ranklist_problem{
+    width: 5%;
+}
+
+/*contest.register*/
+#contest_register_picture{
+    margin: 0 auto;
+    width: 30%;
+    /*background: red;*/
+    margin-top: 5%;
+    height: 200px;
+}
+#contest_register_picture .panel-body{
+     height: 100px;
+}
+#contest_register_picture_text {
+    margin-top: 5%;
+    width: 50%;
+    float: left;
+}
+#contest_register_picture img {
+    margin-top: 3.5%;
+    display: inline-block;
+    float: left;
+    margin-left: 5%;
+}
+.contest_register_btn{
+    width: 20%;
+    margin-left: 19%;
+}

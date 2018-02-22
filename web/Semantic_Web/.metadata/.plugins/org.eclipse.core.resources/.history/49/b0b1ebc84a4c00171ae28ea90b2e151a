@@ -1,0 +1,11 @@
+package pers.william.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SimilarityTest {
+	
+	public testSim(){
+		List<Integer> list1 = new ArrayList<>({5,3,4,4});
+	}
+}

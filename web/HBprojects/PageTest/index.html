@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>PageDispacher</title>
+		<script type="text/javascript" src="js/page.js"></script>
+		<link rel="stylesheet" href="css/page.css" />
+		<style type="text/css" >
+			table{border: 1px solid #foo;}
+			table td{border:1px solid red;}
+		</style>
+	</head>
+	<body>
+		<script>
+			var res =[
+				{name:"a",age:12,sex:"male"},
+				{name:"b",age:13,sex:"female"},
+				{name:"c",age:11,sex:"female"},
+				{name:"d",age:15,sex:"male"},
+				{name:"e",age:16,sex:"female"},
+				{name:"f",age:19,sex:"female"},
+				{name:"g",age:11,sex:"male"},
+				{name:"h",age:26,sex:"female"},
+				{name:"i",age:10,sex:"female"},
+				{name:"j",age:12,sex:"male"},
+				{name:"k",age:15,sex:"female"},
+				{name:"l",age:15,sex:"female"},
+				{name:"m",age:16,sex:"male"},
+				{name:"n",age:11,sex:"female"},
+				{name:"o",age:16,sex:"female"},
+				{name:"p",age:18,sex:"male"},
+				{name:"q",age:14,sex:"female"},
+				{name:"r",age:19,sex:"female"},
+				{name:"s",age:12,sex:"male"},
+				{name:"t",age:15,sex:"female"},
+				{name:"u",age:16,sex:"female"},
+				{name:"v",age:12,sex:"male"},
+				{name:"w",age:14,sex:"female"},
+				{name:"x",age:18,sex:"female"},
+				{name:"y",age:19,sex:"male"},
+				{name:"z",age:12,sex:"female"}
+			];
+			window.onload = function(){
+				//alert("test");
+				initPage(res);
+				//alert(res.slice(0,5));
+				//console.log(result);
+			}
+			function show(result){
+				console.log(result);
+				document.getElementById("res-content-show").innerHTML="";
+				var table = document.createElement("table");
+				var th = document.createElement("th");
+				
+				var tbody = document.createElement("tbody");
+				for(var i=0;i<result.length;i++){
+					var s_tr = document.createElement("tr");
+					var s_td_1 = document.createElement("td");
+					s_td_1.innerHTML=result[i].name;
+					var s_td_2 = document.createElement("td");
+					s_td_2.innerHTML=result[i].age;
+					var s_td_3 = document.createElement("td");
+					s_td_3.innerHTML=result[i].sex;
+					
+					s_tr.appendChild(s_td_1);
+					s_tr.appendChild(s_td_2);
+					s_tr.appendChild(s_td_3);
+					tbody.appendChild(s_tr);
+				}
+				table.appendChild(tbody);
+				document.getElementById("res-content-show").appendChild(table);
+			}
+		</script>
+		<div id="res-content-show" style="height:200px;width:100px;margin:0 auto;">
+			
+		</div>
+		<div id="pageGroup">
+			<div id="prePage" class="page_button">上一页</div>
+			<div id="pageList">
+				<ul id="pageList-ul"></ul>
+			</div>
+			<div id="postPage" class="page_button">下一页</div>
+		</div>
+	</body>
+</html>

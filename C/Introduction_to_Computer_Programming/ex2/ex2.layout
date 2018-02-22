@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="Advertisement.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="1676" topLine="9" />
+	</File>
+	<File name="Advertisement.h" open="0" top="0" tabpos="8">
+		<Cursor position="374" topLine="37" />
+	</File>
+	<File name="Client.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="725" topLine="22" />
+	</File>
+	<File name="Date.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="1050" topLine="49" />
+	</File>
+	<File name="Date.h" open="0" top="0" tabpos="3">
+		<Cursor position="639" topLine="23" />
+	</File>
+	<File name="Group.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="388" topLine="6" />
+	</File>
+	<File name="Group.h" open="0" top="0" tabpos="10">
+		<Cursor position="414" topLine="18" />
+	</File>
+	<File name="Listing.cpp" open="0" top="0" tabpos="12">
+		<Cursor position="602" topLine="16" />
+	</File>
+	<File name="Listing.h" open="0" top="0" tabpos="1">
+		<Cursor position="344" topLine="13" />
+	</File>
+	<File name="buildpage.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="6506" topLine="171" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1568" topLine="77" />
+	</File>
+	<File name="main.h" open="0" top="0" tabpos="0">
+		<Cursor position="205" topLine="0" />
+	</File>
+	<File name="processrequest.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="1111" topLine="46" />
+	</File>
+</CodeBlocks_layout_file>

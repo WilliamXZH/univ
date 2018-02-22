@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var i=0;
+  $("button").click(function(){
+    if(i%2==0){
+		$("p").hide(1000);
+		$("button").innerHTML="显示";
+	}
+    else{
+		$("p").show(1000);
+		$("button").inHTML="隐藏";
+	}
+	i++;
+  });
+});
+</script>
+</head>
+<body>
+<button type="button">隐藏</button>
+<p>这是一个段落。</p>
+<p>这是另一个段落。</p>
+</body>
+</html>

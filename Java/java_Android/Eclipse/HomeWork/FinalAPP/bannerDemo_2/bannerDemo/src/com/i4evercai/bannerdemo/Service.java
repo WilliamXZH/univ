@@ -1,0 +1,146 @@
+package com.i4evercai.bannerdemo;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class Service extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_service);
+		TextView newsview=(TextView)findViewById(R.id.newsTextView);
+		TextView questionview=(TextView)findViewById(R.id.questionTextView);
+		TextView serviceview=(TextView)findViewById(R.id.serviceTextView);
+		TextView starview=(TextView)findViewById(R.id.starTextView);
+		newsview.setOnClickListener(new OnClickListener(){
+			public void onClick(View v)
+			{
+				Intent intent=new Intent(Service.this,MainActivity.class);
+				startActivity(intent);
+				overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+				//Toast.makeText(MainActivity.this,"点击成功2",Toast.LENGTH_SHORT).show();
+			}
+		});
+		
+		questionview.setOnClickListener(new OnClickListener(){
+			public void onClick(View v)
+			{
+				Intent intent=new Intent(Service.this,Question.class);
+				//Toast.makeText(MainActivity.this,"点击成功3",Toast.LENGTH_SHORT).show();
+				startActivity(intent);
+				overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+			}
+		});	
+		starview.setOnClickListener(new OnClickListener(){
+			public void onClick(View v)
+			{
+				Intent intent=new Intent(Service.this,Vip.class);
+				startActivity(intent);
+				overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+				//Toast.makeText(MainActivity.this,"点击成功4",Toast.LENGTH_SHORT).show();
+			}
+		});
+		
+		
+		
+		ImageView annual=(ImageView)findViewById(R.id.serviceShow1);
+		ImageView license=(ImageView)findViewById(R.id.serviceShow2);
+		ImageView tax=(ImageView)findViewById(R.id.serviceShow3);
+		annual.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent(Service.this,Introduce.class);
+				String str="annual";
+				intent.putExtra("jump",str);
+				startActivity(intent);
+				// TODO 自动生成的方法存根
+				
+			}
+		});
+		license.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						Intent intent=new Intent(Service.this,Introduce.class);
+						String str="license";
+						intent.putExtra("jump",str);
+						startActivity(intent);
+						// TODO 自动生成的方法存根
+						
+					}
+				});
+		tax.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent(Service.this,Introduce.class);
+				String str="tax";
+				intent.putExtra("jump",str);
+				startActivity(intent);
+				// TODO 自动生成的方法存根
+				
+			}
+		});
+		
+		
+
+	
+		
+		LinearLayout linear=(LinearLayout)findViewById(R.id.linearLayout2);
+		linear.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO 自动生成的方法存根
+				CheckBox checkbox1=(CheckBox)findViewById(R.id.checkbox1);
+				CheckBox checkbox2=(CheckBox)findViewById(R.id.checkbox2);
+				CheckBox checkbox3=(CheckBox)findViewById(R.id.checkbox3);
+				//String checkstr="";
+				ArrayList<String> list=new ArrayList<String>();;
+				if(checkbox1.isChecked())
+				{
+					list.add((String) checkbox1.getText());
+				}
+				if(checkbox2.isChecked())
+				{
+					list.add((String) checkbox2.getText());
+				}
+				if(checkbox3.isChecked())
+				{
+					list.add((String) checkbox3.getText());
+				}
+				Intent intent=new Intent(Service.this,Order.class);
+				intent.putStringArrayListExtra("orderstr",list);
+				if(list.size()>0)
+				{
+					startActivity(intent);
+				}
+				else
+				{
+					Toast.makeText(Service.this,"对不起，你还没有选择服务类别",Toast.LENGTH_SHORT).show();
+				}
+				
+				
+			}
+		});
+		
+	}
+
+	
+}

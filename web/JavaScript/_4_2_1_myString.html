@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<script language="JavaScript" type="text/javascript">
+			
+			function checkCharType(charToCheck)
+			{
+				var returnValue="O";
+				var charCode=charToCheck.charCodeAt(0);
+
+				if(charCode>="A".charCodeAt(0)&&charCode<="Z".charCodeAt(0))
+				{
+					returnValue="U";
+				}
+				else if(charCode>="a".charCodeAt(0)&&charCode<="z".charCodeAt(0))
+				{
+					returnValue="L";
+				}
+				else if(charCode>="0".charCodeAt(0)&&charCode<="9".charCodeAt(0))
+				{
+					returnValue="N";
+				}
+				return returnValue;
+			}
+		</script>
+	</head>
+	<body>
+		<script>
+			var myString=prompt("Enter some text","Hello World!");
+			var theLastChar=myString.charAt(myString.length-1);
+			document.write("The last character is "+theLastChar+"<br>");
+			var theFirstCharCode=myString.charCodeAt(0);
+			document.write("The first character code is "+theFirstCharCode+"<br>");
+			switch(checkCharType(myString))
+			{
+				case "U":
+					document.write("First character was upper case");
+					break;
+				case "L":
+					document.write("First character was lower case");
+					break;
+				case "N":
+					document.write("First chacter was a number");
+				default:
+					document.write("First character was not a character or a number");
+			}
+			var myString="";
+			var charCode;
+			for(charCode=65;charCode<=90;charCode++)
+				myString=myString+String.fromCharCode(charCode);
+			document.write("<br>"+myString);
+			var myString="Hello Paul.How are you Paul";
+			var foundAtPosition;
+
+			foundAtPosition=myString.indexOf("Paul");
+			alert(foundAtPosition);
+			alert(myString.lastIndexOf("Paul"));
+
+			var myString="Welcome to Wrox books.";
+			myString =myString+"The Wrox website is www.wrox.com. ";
+			myString=myString+"Visit the Wrox website today.Thanks for buying Wrox";
+			var foundAtPosition=0;
+			var wroxCount=0;
+			while(foundAtPosition!=-1)
+			{
+				foundAtPosition=myString.indexOf("Wrox",foundAtPosition);
+				if(foundAtPosition!=-1)
+				{
+					wroxCount++;
+					foundAtPosition++;
+				}
+			}
+			document.write("<br>There are "+wroxCount+" occurrences of the word Wrox");
+
+			var myString="JavaScript";
+			var mySubString=myString.substring(0,4);
+			alert(mySubString);
+			mySubString=myString.substr(0,4);
+			alert(mySubString);
+
+			var filename=window.location.href;
+			filename=filename.substr(filename.lastIndexOf("/")+1);
+			document.write("<br>The file name of this page is "+filename);
+
+			var myString="I Don't Care About Case";
+			if(myString.toLowerCase()=="i don't care about case")
+				alert("Who cares about case?");
+		</script>
+	</body>
+</html>

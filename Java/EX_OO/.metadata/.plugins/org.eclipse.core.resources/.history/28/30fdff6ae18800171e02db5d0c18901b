@@ -1,0 +1,48 @@
+package com.neu.model;
+
+import java.util.Date;
+
+public class Person {
+
+	/*
+	 * 个人ID,证件类型,证件编号,姓名,性别,民族,出生日期,参加工作日期,离退休日期,离退休状态,户口性质,户口所在地,文化程度,政治面貌,个人身份
+	 * ,用工形式,专业技术职务,国家职业资格等级（工人技术等级）,婚姻状况,行政职务,备注,单位编码,医疗人员类别,健康状况,劳模标志,干部标志,
+	 * 公务员标志,在编标志,居民类别,灵活就业标志,农民工标志,雇主标志,军转人员标志,社保卡号（系统自动生成），定点医疗机构编码
+	 */
+	private Integer personId;
+	private Integer certificateType;
+	private String credentialNumber;
+	private String compellation;
+	private String gender;
+	private Integer nation;
+	private Date dateOfBirth;
+	private Date dateOfEnterTheService;
+	private Date dateOfRetire;
+	private Integer retireStatus;
+	private Integer hoursehold;
+	private String placeOfHoursehold;
+	private Integer degreeOfEducation;
+	private Integer politicalStatus;
+	private Integer individualStatus;
+	private Integer serviceMode;
+	private Integer professionalTechnicalPosition;
+	private Integer nationalProfessionQualificationDegree;
+	private Integer maritalStatus;
+	private Integer administrativePost;
+	private String remarks;
+	private Integer enterpriseType;
+	private Integer medicalPersonnelCategory;
+	private Integer healthCondition;
+	private Integer modelWorkMark;
+	private Integer cadreMark;
+	private Integer civilianMark;
+	private Integer regularMark;
+	private Integer residentClusters;//居民类型
+	private Integer flexibleEmployment;
+	private Integer migrantWrokerMark;//农民工标志
+	private Integer masterMark;
+	private Integer MilitaryPersonnelMark;
+	private String socialSecurityNumber;
+	private String medicalInstitutionCode;
+
+}

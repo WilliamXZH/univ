@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/back"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#eee"
+                android:checkedButton="@+id/rbHeadLine"
+                android:orientation="horizontal"
+                android:scrollbars="none" >
+
+                <RadioButton
+                    android:id="@+id/rbHeadLine"
+                    style="@style/radio_style"
+                    android:checked="true"
+                    android:text="@string/headline" />
+
+                <RadioButton
+                    android:id="@+id/rbJiangSu"
+                    style="@style/radio_style"
+                    android:text="@string/jiangsu" />
+
+                <RadioButton
+                    android:id="@+id/rbLiZhiPai"
+                    style="@style/radio_style"
+                    android:text="@string/lizhipai" />
+
+                <RadioButton
+                    android:id="@+id/rbExclusive"
+                    style="@style/radio_style"
+                    android:text="@string/dujia" />
+
+                <RadioButton
+                    android:id="@+id/rbSport"
+                    style="@style/radio_style"
+                    android:text="@string/sport" />
+
+                <RadioButton
+                    android:id="@+id/rbInternation"
+                    style="@style/radio_style"
+                    android:text="@string/internation" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/indicate"
+                android:layout_width="140dp"
+                android:layout_height="3dp"
+                android:background="#f00" >
+            </View>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerLiZhi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/horizontalScrollView1" >
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

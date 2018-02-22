@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default = "wsimport">
+    <target name = "wsimport">
+        <exec executable = "wsimport">
+            <arg line = "-keep -s ./src -p org.gnuhpc.wsClient
+                -d ./bin http://webservice.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl" />
+        </exec>
+    </target>
+</project>

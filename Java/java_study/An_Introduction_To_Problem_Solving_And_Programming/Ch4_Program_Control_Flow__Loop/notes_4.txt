@@ -1,0 +1,244 @@
+第4章 程序控制流：循环
+
+本章内容
+在学习了本章之后，你将可以：
+*涉及循环
+*在程序中使用Java语句while，do，for
+*对枚举使用for-each语句
+*在程序中使用断言检查
+*在图形程序中使用重复语句
+*在图形程序中使用drwaString方法显示文本
+预备知识
+本章中的示例使用了if-else语句，switch语句以及枚举，
+所有这些内容都在第3章中给予了介绍。
+
+4.1 Java循环语句
+
+重复一条语句或一组语句的一段程序就称为循环(loop)。
+循环中被重复执行的一条语句或一组语句称为循环体(body)。
+循环体重的每一次重复称为循环的一次迭代(iteration)。
+
+4.1.1 while语句
+
+Java中构造循环的一种方法是使用while语句(while statement),也称为while循环(while loop)。
+WhileDmoe.java
+
+扼要重述 while语句
+
+编程技巧 while循环可以执行零次迭代
+while循环的循环体可以被执行零次。当while循环执行时，控制布尔表达式立即被检查。
+如果该布尔表达式为false，那么循环体就不被执行，即一次也不执行。
+这种结果看起来有点奇怪。如果循环体从不执行，为什么要编写循环呢?答案是，
+你或许想编写一个循环，依据用户输入，其循环体执行零次或多次。
+或许该循环将你一天中所有的帐单加起来求和。如果某天你根本没有账单，那么你会希望循环体根本不被执行。
+在程序清单4.1中，如果输出3，执行零次while循环。
+
+4.1.2 do-while语句
+DoWhileDemo.java
+
+扼要重述 do-while语句
+语法：
+do
+    循环体
+while(布尔表达式);
+循环体既可以是一条简单语句，更可能是一条复合语句。
+复合语句由放在大括号{}中的一些列语句组成。循环语句总是至少执行一次。
+务必注意整条语句末尾的分号。
+
+编程示例 臭虫泛滥
+
+蟑螂种群程序算法
+1.得到房子的体积
+2.得到房子中蟑螂的初始数量
+3.计算房子中充满蟑螂所需的周数
+4.显示结果
+
+编程技巧 做笔记
+在编写第一个Java程序之前，花点时间设计你的程序。
+编写伪代码，绘制图案，构造一张所需变量及其意义的列表。
+也就是说，组织你的思路，并把他们写在纸上。
+你最终的Java程序极有可能会比你马上动手编码生成的程序具有更好的组织结构，
+结果也更正确。
+现在将算法中的步骤3使用下述步骤替代：
+3a.countWeeks = 0;
+3b.重复执行下属代码，直到房屋中充满蟑螂为止：
+{
+    newBugs = population * GROWTH_RATE;
+    newBugVolume = newBugs * ONE_BUG_VOLUME;
+    population = population + newBugs;
+    totalBugVolume = totalBugVolume + newBugVolume;
+    countWeeks = countWeeks + 1;
+}
+观察步骤3b，注意到，Java中并没有repeat until结构。
+可以把语句"重复执行下述代码，直到房屋中充满蟑螂为止"改说成
+"只要房屋中没有充满蟑螂就重复执行"，或者说成
+"当蟑螂体积小于房屋体积时重复执行"。这样，可以使用结构
+while(totalBugVolume < houseVolume)
+将这些片段组合起来，得到下述算法：
+蟑螂种群程序算法：
+1.读取houseVolume
+2.读取startPopulation
+3.population = startPopulation
+4.totalBugVolume = population * ONE_BUG_VOLUME
+5.countWeeks = 0;
+6.while (totalBugVolume < houseVolume)
+{
+    newBugs = population * GROWTH_RATE;
+    newBugVolume = newBugs * ONE_BUG_VOLUME;
+    popualtion = population + newBus
+               = totalBugVolume + newBugVolume;
+    countWeeks = countWeeks + 1;
+}
+7.显示startPopulation,houseVolume,countWeeks,population以及totalBugVolume
+这里的循环简单地更新蟑螂的数量，蟑螂的体积以及周计数器。
+由于增长速率和一个蟑螂的体积都是正数，知道population的值，
+从而在每次迭代中都将增加totalBugVolume的值。最终，
+totalBugVolume的值将会超过houseVolume的值，控制布尔表达式
+totalBugVolume < houseVolume
+将会变为false，从而结束while循环。
+变量countWeeks从零开始，每一次循环迭代后增加1。因此，当循环结束时，
+countWeeks的值就是蟑螂体积超过房屋体积所花费的周数。
+BugTrouble.java
+
+疑难杂症 无限循环
+一个常见程序缺陷是永不结束，永远重复执行其循环体的循环(是的，概念上的永远)。
+从不结束，重复执行其循环体的循环称为无限循环。正常情况下，
+while循环或do-while循环循环体中的某条语句将修改为一个或多个变量，
+从而使控制布尔表达式变为false。然而，如果变量没有以正确方式修改，
+那么就可能出现无限循环。
+
+编程示例 嵌套循环
+ExamAverager.java
+
+4.1.3 for语句
+
+ForDemo.java
+
+扼要重述 for语句
+语法
+for(初始化动作;布尔表达式;更新动作)
+    循环体
+循环体既可以是一条简单语句，但更可能是一条复合语句。复合语句由放在大括号中的一系列语句组成。
+请注意，小括号中的三个数据项由两个而不是三个分号分隔。
+示例
+for (next = 0; next <= 10; next = next + 2)
+{
+    sum = sum +next;
+    System.out.println("sum now is " + sum);
+}
+
+疑难杂症 循环语句中的额外分号
+末尾的分号意味着for语句的循环体是空语句。
+
+4.1.4 在for语句内部声明变量
+
+程序中变量具有意义的部分称为变量的作用域(scope)。
+
+4.1.5 在for语句中使用逗号(选读)
+都好运算符(comma operator)
+
+编程技巧 选择循环语句
+while可以实现任意类型的循环，
+很多程序员使用for语句，使其代码的逻辑更加清晰。
+
+4.2 使用循环编程
+
+通常，一个循环包含三个要素：必须在任何循环执行之前执行的初始化语句，
+循环体以及结束循环的机制。
+
+4.2.1 循环体
+
+4.2.2 初始化语句
+
+4.2.3 控制循环迭代次数
+
+再循环开始之前一直循环迭代次数的循环称为技术控制循环(count-controlled loop).
+
+有时预先并不知道循环的迭代次数，结束循环的一种简单方法是询问用户此时是否是结束循环的时间，
+这种技巧成为迭代前询问。
+
+对于冗长的输入列表，有时可以使用哨兵值来指示输入的结束。哨兵值必须不同于所有可能的数据值。
+
+三个技巧：使用计数器，询问用户，检测哨兵值
+
+案例研究 使用布尔值来结束循环
+BooleanDemo.java
+
+编程示例 疯狂消费
+SpendingSpree.java
+
+
+4.2.4 循环中的break语句和continue语句(选读)
+
+编程技巧 再循环中避免使用break和continue语句
+由于break和continue语句引入的复杂性，应该避免再循环中使用这些语句。
+任何循环都可以不适用break和continue语句来编写。
+
+4.2.5 循环错误
+
+两种最常见循环错误的类型为：
+*非故意的无限循环
+*大小差一错误(off-one error)
+
+编程技巧 要重新测试
+无论什么时候，挡在程序中找到一个错误并且“修复它”之后，总是要重新测试程序。
+另一个错误或许正在等待你，或者你的“修复”可能引入了一个新的错误。
+重新测试修改后程序的过程称为回归测试。
+
+4.2.6 跟踪变量
+
+编程技巧 跟踪变量时使用DEBUG标志
+有时，在调试程序过程中，会希望暂时跳过所添加的，跟踪某些变量的值的语句。
+通过定义布尔常量DEBUG，可以方便地完成这个任务，如下所示：
+public static final boolean DEBUG = true;
+...
+if (DEBUG)
+{
+    <显示某些变量值的语句>
+}
+在这个示例中中，if语句体中的语句将执行。如果希望以后跳过它们，
+可以将DEBUG的值修改为false。
+
+4.2.7 断言检查
+断言(Assertion)是一条陈述，它表明了有关程序状态的某些东西。
+assert Boolean_Expression;
+java -enableassertion YourProgram
+
+扼要重述 断言检查
+语法
+assert_Boolean_Expression
+可以把断言检查放在代码的任何位置。如果断言检查被打开并且Boolean_Expression为false，
+程序将显示一条适宜的出错信息并结束运行。如果没有打开断言检查，
+那么断言检查，那么断言检查被处理为注释。
+示例
+assert n>=limit
+
+4.3 图形补充材料
+编程示例 一个多面孔的小应用程序
+
+4.3.1 drawString方法
+
+扼要重述 drawSting方法
+语法
+canvas.drawString(String, x, y);
+方法drawString将参量String给定的文本写入在小应用程序中点(x,y)的位置。
+示例：
+canvas.drawString("Hello", 10, 20);
+
+4.4 本章小结
+*循环是一种编程构造，他重复动作一定的次数。所重复的部分称为循环的循环体。
+循环体的没一次重复称为依次循环迭代。
+*Java具有三种类型的循环语句：while语句，do-while语句和for语句
+*while语句和do-while语句都在布尔表达式为true时重复执行循环体。
+do-while语句至少执行一次循环体，而while语句或许根本不执行其循环体。
+*for语句的逻辑与while循环的逻辑相同。其初始化，测试以及更新步骤在一起给出，
+而不是分散在循环中的各处。for语句经常用于由计数器控制的循环。
+*for-each语句是for语句的一种变体，它迭代数据集合(比如枚举)中的所有元素。
+*结束输入循环得一种方法是在数据末尾放上一个哨兵值，并让循环检查该哨兵值。
+*boolean类型的变量可以用于控制循环语句
+*最常见的循环错误是非有意的无限循环以及大小差一错误
+*跟踪变量意味着在程序的所选位置显示其值。
+可以通过专门的调试实用程序或者通过插入临时的输出语句来完成跟踪。
+*断言是一条方法中如果正确执行的话其结果应该为true的陈述————在方法某个位置的陈述。
+Java提供断言检查来测试断言是否真的为true
+*可以使用方法drawString在小应用程序会图中显示文本。

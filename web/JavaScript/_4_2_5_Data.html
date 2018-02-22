@@ -1,0 +1,78 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script language="JavaScript" type="text/javascript">
+			var theDate1=new Date();
+			var theDate2=new Date(949278000000);
+			var theDate3=new Date("31 January 2010");
+			var theDate4=new Date(2010,0,31,15,35,20,20);
+			//var theMonth=myDateObject.getMonth();
+
+			var months=new Array("January","Febary","March","April","May","June","July","August","September","October","Novermber","December");
+			var dateNow=new Date();
+			var yearNow=dateNow.getFullYear();
+			var monthNow=months[dateNow.getMonth()];
+			var dayNow=dateNow.getDate();
+			var daySuffix;
+			switch(dayNow)
+			{
+				case 1:
+				case 21:
+				case 31:
+					daySuffix="st";
+					break;
+				case 2:
+				case 22:
+					daySuffix="nd";
+					break;
+				case 3:
+				case 23:
+					daySuffix="rd";
+					break;
+				default:
+					daySuffix="th";
+					break;
+			}
+			document.write("It is the "+dayNow+daySuffix+" day ");
+			document.write("in the month of "+monthNow);
+			document.write(" in the year "+yearNow);
+			//myDateObject.setFullYear(2009);
+			//myDateObject.setDate(27);
+			//myDateObject.setMonth(1);
+			var nowDate=new Date();
+			var currentDay=nowDate.getDate();
+			nowDate.setDate(currentDay+28);
+
+			var greeting;
+			var nowDate=new Date();
+			var nowHour=nowDate.getHours();
+			var nowMinute=nowDate.getMinutes();
+			var nowSecond=nowDate.getSeconds();
+			if(nowMinute<10)
+			{
+				nowMinute="0"+nowMinute;
+			}
+			if(nowSecond<10)
+			{
+				nowSecond="0"+nowSecond;
+			}
+			if(nowHour<12)
+			{
+				greeting="Good Morning";
+			}
+			else if(nowHour<17)
+			{
+				greeting="Good Afternoon";
+			}
+			else
+			{
+				greeting="Good Evening";
+			}
+			document.write("<h4>"+greeting+" and welcome to my websit</h4>");
+			document.write("According to your clock the time is ");
+			document.write(nowHour+":"+nowMinute+":"+nowSecond);
+			document.write("<br>"+new Date());
+		</script>
+	</body>
+</html>

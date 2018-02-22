@@ -1,0 +1,39 @@
+<--![css语法]-->
+display:block;
+display:list-item;
+display:inline;
+display:none;
+width,height:in,cm,px,pt,mm;
+border-width:
+border-color:blue;
+border-style:solid;单实线;double;双实线;dashed;虚线;dotted:点线;
+				groove;沟线;ridge;脊线;inset;内陷边框;outset;外凸边框;
+				none;无边框;
+border-left:
+border-right:
+border-top:
+border-bottom:
+border:10px double red
+background-color:#999999;
+color:rgb(0,0,255);
+text-align:center;
+text-indent:12px;
+font-family:Arial ,sans-serif
+font-size:36pt
+font-style:italic
+font-weight:medium
+font:
+font-weight:bold;
+font-style:italic;
+line-height:
+color:
+text-decoration:none;
+text-align:
+text-indent:
+margin:
+background:
+background-color:
+background-image:
+float:left,right;
+clear:none,left,right,both;
+overflow:visible,hidden,scroll

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<script>
+			var jsonlist = [{
+				"name": "张三",
+				"type": "身份证",
+				"identify": 123456
+			}, {
+				"name": "李四",
+				"type": "军人证",
+				"identify": 654321
+			}];
+			//var length;
+			function abc(currentBox) {
+				var index = $("#check").find(currentBox).index();
+				console.log($(currentBox).attr("checked"));
+				if($(currentBox).attr("checked") == "checked") {
+					var name = currentBox.value;
+					var content = $($("#listContent_i").html());
+					content.attr("id", "content" + index);
+					for(var i in jsonlist) {
+						if(jsonlist[i].name == name) {
+							content.find(".name").val(jsonlist[i].name);
+							content.find(".idType").val(jsonlist[i].type);
+							content.find(".identify").val(jsonlist[i].identify);
+						}
+					}
+					$("#listContent").append(content);
+				} else {
+					$("#content" + index).remove();
+				}
+			}
+
+			function hah() {
+				$("#popover").css("display", "block");
+			}
+
+			
+
+			function verification() {
+				var content = $($("#listContent_i").html());
+				var flag = 0;
+				$("#listContent .identify").each(function(index, content) {
+					if($(content).val() == $("#popover .identify").val()) {
+						flag = 1;
+						return;
+					}
+				})
+				if(flag == 1) {
+					alert("此乘客已存在");
+					return;
+				} else {
+					content.find(".name").val($("#popover .name").val());
+					content.find(".idType").val($("#popover .idType").val());
+					content.find(".identify").val($("#popover .identify").val());
+					$("#listContent_i").append(content);
+				}
+				/*$("#popover").css("display","none");*/
+			}
+		</script>
+		<div id="check">
+			<input type="checkbox" id="partner1" value="张三" onclick="abc(this)" />张三
+			<input type="checkbox" id="partner2" value="李四" onclick="abc(this)" />李四
+			<br />
+		</div>
+
+		<div id="content">
+			<table id="list">
+				<tbody id="listContent"></tbody>
+				<tbody id="listContent_i" hidden="hidden">
+					<tr class="content">
+						<td>姓名：<input type="text" class="name" value="" /></td>
+						<td>
+							证件类型：
+							<select class="idType">
+								<option value="身份证">身份证</option>
+								<option value="军人证">军人证</option>
+							</select>
+						</td>
+						<td>身份证号：<input type="text" class="identify" value="" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<input type="button" id="addUser" value="增加乘客" onclick="hah()" />
+		
+		
+		
+		
+		
+		<div id="popover" style="border: 1px solid black; width:250px;" hidden="hidden">
+			姓名：<input type="text" class="name" value="" /><br /> 证件类型：
+			<select class="idType">
+				<option value="身份证">身份证</option>
+				<option value="军人证">军人证</option>
+			</select><br /> 身份证号：
+			<input type="text" class="identify" value="" /><br />
+			<input type="button" value="确认" onclick="verification()" />
+			<input type="button" value="退出" onclick="hah1()" />
+		</div>
+	</body>
+
+</html>

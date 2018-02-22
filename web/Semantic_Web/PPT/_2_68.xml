@@ -1,0 +1,6 @@
+<simpleType name="dayOfMonth">
+		<restriction base="integer">
+			<minInclusive value="1"/>
+			<maxInclusive value="31"/>
+		</restriction>
+</simpleType>

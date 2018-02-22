@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="F:\code\Java\JSP_and_Servlet"/>
+			<item value="E:\漠澜之家\History\program\web开发\JSP与serverlet\小组实验\BigProject"/>
+			<item value="E:\漠澜之家\JSP与serverlet\小组实验\last_version\Admin"/>
+			<item value="E:\漠澜之家\JSP与serverlet\小组实验\last_version\BigProject"/>
+			<item value="E:\漠澜之家\JSP与serverlet\小组实验\Final\Admin"/>
+			<item value="E:\漠澜之家\JSP与serverlet\小组实验\Final\BigProject"/>
+			<item value="C:\Users\Administrator\Desktop\新建 WinRAR 压缩文件"/>
+			<item value="E:\漠澜之家\JSP与serverlet\小组实验\BigProject"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="379" key="DIALOG_X_ORIGIN"/>
+		<item value="160" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
