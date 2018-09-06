@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 6 resources" deleteContents="false" description="Delete 6 resources" element1="/ChatAppClient" element2="/ChatAppClient_2" element3="/ChatServerForApp" element4="/ChatServerForApp_2" element5="/freshO2O" element6="/freshO2OClient" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="6" stamp="1481113668763"/>
-</session>

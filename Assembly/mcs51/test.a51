@@ -1,3 +1,0 @@
-	INC	A
-	END
-

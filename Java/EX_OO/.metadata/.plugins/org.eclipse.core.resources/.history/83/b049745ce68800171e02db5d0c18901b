@@ -1,5 +1,0 @@
-package com.neu.model;
-
-public interface Attribute {
-
-}

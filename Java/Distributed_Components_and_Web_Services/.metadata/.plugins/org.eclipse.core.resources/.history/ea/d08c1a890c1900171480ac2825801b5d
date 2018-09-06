@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project default = "wsimport">
-    <target name = "wsimport">
-        <exec executable = "wsimport">
-            <arg line = "-keep -s ./src -p cn.com.webxml
-                -d ./bin http://fy.webxml.com.cn/webservices/EnglishChinese.asmx" />
-        </exec>
-    </target>
-</project>

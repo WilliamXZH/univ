@@ -1,8 +1,0 @@
-package com.neu.model;
-
-public interface Attribute {
-
-	public int strToInt(String param);
-	public String intToStr(Integer value); 
-	
-}

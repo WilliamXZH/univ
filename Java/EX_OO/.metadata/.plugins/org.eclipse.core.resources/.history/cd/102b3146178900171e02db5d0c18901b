@@ -1,9 +1,0 @@
-package com.neu.util;
-
-public class fileUtil {
-
-	public List<PersonPO> readDataFile(){
-		
-	}
-	
-}

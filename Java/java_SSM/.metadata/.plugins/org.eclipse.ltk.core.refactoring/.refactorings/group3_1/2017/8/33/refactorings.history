@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;jquery-1.7.1.min.js&apos; to &apos;WebContent&apos;&#x0D;&#x0A;- Original project: &apos;group3&apos;&#x0D;&#x0A;- Destination element: &apos;WebContent&apos;&#x0D;&#x0A;- Original element: &apos;jquery-1.7.1.min.js&apos;" description="Copy file" element1="WebContent/WEB-INF/content/main/js/jquery-1.7.1.min.js" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1502694517488" target="/SomTest/WebContent" units="0" version="1.0"/>
-</session>

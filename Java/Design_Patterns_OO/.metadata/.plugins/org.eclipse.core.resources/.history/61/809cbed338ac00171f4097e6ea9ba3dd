@@ -1,5 +1,0 @@
-package ref.dahua.prototype.std;
-
-public abstract class Prototype {
-
-}

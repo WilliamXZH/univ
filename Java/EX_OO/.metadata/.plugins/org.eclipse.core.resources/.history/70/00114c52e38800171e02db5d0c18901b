@@ -1,7 +1,0 @@
-package com.neu.model;
-
-public class EnterpriseType {
-
-	public static int GOVERNMENT_OFFICE = 0;
-	
-}

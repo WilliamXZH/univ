@@ -1,7 +1,0 @@
-#Tomcat publish data
-#Sun Dec 11 16:14:35 CST 2016
-org.eclipse.jst.jee.server\:JSP_and_Servlet_study=F\:\\program_tools\\apache-tomcat-8.0.33\\wtpwebapps\\JSP_and_Servlet_study
-org.eclipse.jst.jee.server\:Assistant_Web=F\:\\program_tools\\apache-tomcat-8.0.33\\wtpwebapps\\Assistant_Web
-org.eclipse.jst.jee.server\:BigProject=F\:\\program_tools\\apache-tomcat-8.0.33\\wtpwebapps\\BigProject
-org.eclipse.jst.jee.server\:JSP_Test=F\:\\program_tools\\apache-tomcat-8.0.33\\wtpwebapps\\JSP_Test
-org.eclipse.jst.jee.server\:JSP_Study=F\:\\program_tools\\apache-tomcat-8.0.33\\wtpwebapps\\JSP_Study

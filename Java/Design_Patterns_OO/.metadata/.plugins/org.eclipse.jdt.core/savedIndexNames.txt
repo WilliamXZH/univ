@@ -1,6 +1,0 @@
-INDEX VERSION 1.129+F:\code\Java\Design_Patterns_OO\.metadata\.plugins\org.eclipse.jdt.core
-3245952837.index
-3814551627.index
-1657330681.index
-3766177579.index
-1968463636.index

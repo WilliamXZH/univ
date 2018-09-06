@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;BadgeView.java&apos; to &apos;bannerDemo_3/src/com.i4evercai.bannerdemo&apos;&#x0D;&#x0A;- Original project: &apos;bannerDemo_2&apos;&#x0D;&#x0A;- Destination element: &apos;bannerDemo_3/src/com.i4evercai.bannerdemo&apos;&#x0D;&#x0A;- Original element: &apos;com.i4evercai.bannerdemo.BadgeView.java&apos;" description="Copy compilation unit" destination="=bannerDemo_3/src&lt;com.i4evercai.bannerdemo" element1="/src&lt;com.i4evercai.bannerdemo{BadgeView.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1481406057948" units="1" version="1.0"/>
-</session>

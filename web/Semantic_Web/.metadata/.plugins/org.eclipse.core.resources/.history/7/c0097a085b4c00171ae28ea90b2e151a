@@ -1,7 +1,0 @@
-package pers.william.model;
-
-public class Matrix {
-	private double[][] dataMatrix;
-	
-	
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;ref.dahua.proxy.std.Proxy&apos; to &apos;RealSubject&apos;&#x0D;&#x0A;- Original project: &apos;Proxy&apos;&#x0D;&#x0A;- Original element: &apos;ref.dahua.proxy.std.Proxy&apos;&#x0D;&#x0A;- Renamed element: &apos;ref.dahua.proxy.std.RealSubject&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Proxy&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ref.dahua.proxy.std{Proxy.java[Proxy" matchStrategy="1" name="RealSubject" qualified="false" references="true" similarDeclarations="false" stamp="1507464277331" textual="false" version="1.0"/>
-</session>

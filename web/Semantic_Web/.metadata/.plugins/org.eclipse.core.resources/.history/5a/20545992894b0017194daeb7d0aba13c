@@ -1,7 +1,0 @@
-package pers.william.util;
-
-import java.util.List;
-
-public interface BaseOperation {
-	//public Double getAverage(List<Double> list);
-}
